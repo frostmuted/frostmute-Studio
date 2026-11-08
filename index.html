@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Frostmute Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&family=Grenze+Gotisch:wght@500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Manrope:wght@300;400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#050408;--g:rgba(255,255,255,.055);--g2:rgba(255,255,255,.09);--bd:rgba(255,255,255,.1);--tx:#f1eefb;--mu:#9c97b3;--v:#8b5cf6;--v2:#c4a7ff;--v3:#5b21b6;--r:22px;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *,*::before,*::after{box-sizing:inherit}
@@ -312,9 +312,10 @@ h3::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(214
 .pk:hover svg{transform:translateY(0)}
 .pk.hop svg{animation:hop .5s ease-out}
 @keyframes hop{35%{transform:translateY(10px) scale(1.05,.92)}}
-.pk .bl{transform-origin:48px 54px;animation:bk 5.5s infinite}
+.pk .bl{transform-origin:48px 46px;animation:bk 5.5s infinite}
 @keyframes bk{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.08)}}
 .pk .ey{transition:transform .15s}
+.say .ti{width:14px;height:14px;vertical-align:-2px;margin-left:6px;color:#d6c2ff}
 .hero .say{position:absolute;right:calc(clamp(70px,13%,170px) + 104px);top:-44px;max-width:none;padding:7px 14px;border-radius:14px 14px 4px 14px;background:rgba(20,12,36,.92);border:1px solid rgba(214,194,255,.35);font-size:12.5px;white-space:nowrap;opacity:0;transform:translateY(6px) scale(.95);transition:all .4s cubic-bezier(.2,1.2,.4,1);pointer-events:none;z-index:3}
 .hero .say.on{opacity:1;transform:none}
 .idea.glass{display:flex;align-items:center;gap:18px;padding:16px 22px;margin-bottom:14px;position:relative;overflow:hidden;border:1px solid transparent;border-radius:18px;background:linear-gradient(rgba(16,10,28,.7),rgba(7,4,12,.82)) padding-box,var(--edge) border-box}
@@ -345,6 +346,267 @@ h3::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(214
 .ent:not(.open){content-visibility:auto;contain-intrinsic-size:auto 54px}
 @media(min-width:821px){.side{background:rgba(5,3,9,.94)}}
 @media(max-width:820px){.side{background:rgba(10,6,18,.95)}}
+
+/* ---- cute loopless fonts + eared toast ---- */
+.jo{font-family:var(--ft)!important;font-size:15px!important}
+:root{--ft:'Manrope','IBM Plex Sans Thai',system-ui,sans-serif;--ft-h:'Cormorant Garamond','Noto Serif Thai',Georgia,serif;--serif:'Cormorant Garamond','Noto Serif Thai',Georgia,serif}
+body{font-size:15px!important;line-height:1.65!important;font-weight:400}
+h1,h2,h3,.title,.stat b,.av,.logo,.brand b,.empty b,.who,.eht b,.tok,.pill,#dz b,.idea b,#intro b{font-weight:500!important;letter-spacing:.01em;font-variant-numeric:lining-nums}
+h1{font-size:clamp(34px,5vw,56px)!important;line-height:1.1!important;letter-spacing:0!important}
+.stat b{font-size:38px!important}.brand b{font-size:19px!important;letter-spacing:.08em}.brand small{letter-spacing:.2em;text-transform:uppercase;font-size:10.5px}
+.nv span,.lb,button{letter-spacing:.02em}
+*,*::before,*::after,button,input,select,textarea{font-family:var(--ft)!important}
+h1,h2,h3,.title,.stat b,.av,.logo,.brand b,.empty b,.who,.eht b,.tok,.pill,#dz b,.idea b,#intro b{font-family:var(--ft-h)!important}
+#toast{border-radius:99px!important;background:rgba(29,19,55,.94)!important;border:1px solid rgba(196,167,255,.45)!important;padding:12px 26px!important;font-weight:500;max-width:calc(100vw - 40px);text-align:center;box-shadow:0 10px 30px -8px rgba(124,58,237,.55)}
+#toast{display:flex;align-items:center;gap:10px;justify-content:center}
+#toast .ti{width:18px;height:18px;flex:none;color:#d6c2ff}
+#toast::before,#toast::after{content:"";position:absolute;top:-10px;width:22px;height:22px;border-radius:50%;box-sizing:border-box;border:1px solid rgba(196,167,255,.45);background:radial-gradient(circle at 50% 66%,#f3eeff 0 30%,transparent 33%),#1d1337;clip-path:inset(0 0 38% 0);pointer-events:none}
+#toast::before{left:10px;transform:rotate(-24deg)}
+#toast::after{right:10px;transform:rotate(24deg)}
+
+/* ---- compact minimal pass ---- */
+body{font-size:14px!important}
+.orbs i{opacity:.16!important;filter:blur(120px)!important}
+.app{gap:14px!important;padding:14px!important}
+@media(min-width:821px){.app{grid-template-columns:208px minmax(0,1fr)!important}}
+@media(max-width:820px){.app{grid-template-columns:minmax(0,1fr)!important;padding:12px 12px 96px!important}}
+.glass,.ed.glass,.lst.glass,.hero.glass{border-radius:14px!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(255,255,255,.022)!important;border:1px solid rgba(255,255,255,.08)!important;box-shadow:none!important}
+@media(min-width:821px){.side{padding:14px 10px!important}}
+.nv{padding:8px 12px!important;border-radius:10px!important;font-size:13.5px}
+.nv.on{background:rgba(196,167,255,.08)!important;box-shadow:none!important;color:#fff}
+.btn{padding:7px 12px!important;border-radius:10px!important;font-size:13px!important;background:transparent!important}
+.btn.pri{background:rgba(196,167,255,.14)!important;border-color:rgba(196,167,255,.4)!important}
+.sec{padding:14px!important;border-radius:12px!important;background:none!important}
+.hero{padding:20px 22px!important}
+h1{font-size:clamp(26px,3.4vw,36px)!important}
+.stats{gap:0!important;border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden;margin-bottom:14px!important}
+.stat.glass{border:0!important;border-radius:0!important;background:none!important;border-right:1px solid rgba(255,255,255,.08)!important;padding:10px 16px!important}
+.stat.glass:last-child{border-right:0!important}
+.stat b{font-size:24px!important}.stat span{font-size:11px!important;letter-spacing:.12em;text-transform:uppercase}
+.lb{font-size:11.5px!important;letter-spacing:.08em}
+.tplrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.kt{margin:0 0 14px;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 14px}
+.kt summary{cursor:pointer;font-size:13px;color:var(--v2)}
+.kt textarea{width:100%;margin:10px 0;min-height:70px}
+.kt .res{font-size:13px;color:#cfc9e6;line-height:1.7}.kt .res b{color:#fff;font-weight:500}.kt .wn{color:#e9c46a}
+
+.hero.glass,.hero{padding-bottom:80px!important}
+.hero .wv{bottom:22px!important;height:32px!important}
+.hero .row{position:relative;z-index:1}
+
+/* ---- depth & blur (transparency unchanged) ---- */
+.glass,.ed.glass,.lst.glass,.hero.glass{backdrop-filter:blur(26px) saturate(165%)!important;-webkit-backdrop-filter:blur(26px) saturate(165%)!important;background-image:linear-gradient(145deg,rgba(255,255,255,.05),transparent 42%)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.22),0 2px 5px rgba(0,0,0,.3),0 24px 50px -22px rgba(0,0,0,.85)!important}
+.stats{backdrop-filter:blur(26px) saturate(165%);-webkit-backdrop-filter:blur(26px) saturate(165%);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 2px 5px rgba(0,0,0,.3),0 24px 50px -22px rgba(0,0,0,.85)}
+.stat.glass{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;background-image:none!important}
+.ed .sec,.ent:not(.open){box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 12px 26px -16px rgba(0,0,0,.75)}
+.btn:not(.pri){box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 5px 12px -6px rgba(0,0,0,.6)}
+.in,.fld input,.fld textarea,.fld select,.title{box-shadow:inset 0 2px 7px rgba(0,0,0,.35)}
+input[type=range]{padding:0!important;height:8px;accent-color:#8b5cf6;background:none!important;border:0!important;box-shadow:none!important}
+.ent{position:relative}.bk{position:absolute;left:14px;top:15px;z-index:3;display:flex}.bk input{width:18px;height:18px;accent-color:#8b5cf6;box-shadow:none}
+.ent.bkm .eht{padding-left:48px}
+.bkb{padding:16px!important;margin:0 0 14px;display:grid;gap:12px}.bkg{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.undo{display:flex;gap:2px;padding:3px;border:1px solid rgba(255,255,255,.12);border-radius:99px;background:rgba(255,255,255,.03);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.undo button{width:28px;height:28px;border:0;border-radius:50%;background:none;display:grid;place-items:center;color:var(--mu);cursor:pointer;padding:0;transition:background .2s,color .2s}
+.undo button:hover{background:rgba(255,255,255,.12);color:var(--tx)}.undo button:active{transform:scale(.92)}
+.undo svg.i{width:15px;height:15px;stroke-width:2}
+.ovw{margin-top:14px}.ovw h4{margin:0 0 8px;font:600 14px Anuphan;color:var(--v2)}.ovw p{margin:6px 0;color:var(--mu);font-size:13px}
+.tbar{height:8px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}.tbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8b5cf6,#c4a7ff)}.tbar.warn i{background:linear-gradient(90deg,#f59e0b,#fcd34d)}.tbar.bad i{background:linear-gradient(90deg,#ef4444,#fca5a5)}
+.ovr{display:grid;grid-template-columns:44px minmax(0,1fr) auto 44px;gap:10px;align-items:center;padding:6px 10px;border-radius:10px;font-size:13px}.ovr:nth-of-type(odd){background:rgba(255,255,255,.03)}.ovr .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ovr.cut{opacity:.5}.ovr.cut .nm{text-decoration:line-through}.ovr em{font-style:normal;font-size:11px;text-align:right}.ovr.cut em{color:#fca5a5}
+.tlg{border-left:2px solid rgba(196,167,255,.3);padding:2px 0 2px 14px;margin:8px 0}.tlg>b{display:block;font-size:12px;color:var(--v2);margin-bottom:4px}.tle{display:flex;gap:10px;align-items:center;font-size:13px;padding:3px 0}.tle span{min-width:34px;text-align:center;font-size:11px;padding:1px 6px;border-radius:99px;background:rgba(139,92,246,.2)}.tle.c span{background:rgba(240,171,252,.25)}.nt{color:var(--mu);font-size:12px}
+input[type=range]{-webkit-appearance:none;appearance:none;height:6px!important;border-radius:99px;background:rgba(255,255,255,.14)!important;margin:8px 0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:#c4a7ff;border:2px solid #6d28d9;cursor:pointer}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#c4a7ff;border:2px solid #6d28d9;cursor:pointer}
+
+/* ---- toast, floating undo, plot, map, check ---- */
+#toast{border-radius:14px!important;background:rgba(14,9,26,.78)!important;backdrop-filter:blur(22px) saturate(160%)!important;-webkit-backdrop-filter:blur(22px) saturate(160%)!important;border:1px solid rgba(255,255,255,.14)!important;padding:11px 18px!important;font-size:14px;font-weight:400!important;gap:11px!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 2px 5px rgba(0,0,0,.35),0 18px 40px -16px rgba(0,0,0,.85)!important}
+#toast::before,#toast::after{display:none!important}
+#toast .td{width:7px;height:7px;border-radius:50%;background:#c4a7ff;box-shadow:0 0 10px 2px rgba(167,139,250,.65);flex:none}
+@media(max-width:820px){#toast{bottom:auto!important;top:calc(14px + env(safe-area-inset-top,0px));transform:translate(-50%,-24px)}#toast.on{transform:translate(-50%,0)}}
+#undoFab{position:fixed;right:14px;bottom:calc(98px + env(safe-area-inset-bottom,0px));z-index:45;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .3s,transform .3s;background:rgba(14,9,26,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 12px 28px -12px rgba(0,0,0,.85)}
+#undoFab.on{opacity:1;pointer-events:auto;transform:none}
+#undoFab button:disabled{opacity:.3;cursor:default;background:none}
+@media(min-width:821px){#undoFab{bottom:24px;right:24px}}
+.plg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media(max-width:820px){.plg{grid-template-columns:1fr}}
+.plc h4{margin:0 0 10px;font:600 14px Anuphan;color:var(--v2)}
+.beat{display:grid;gap:8px;padding:10px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--bd);margin-bottom:10px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 10px 22px -16px rgba(0,0,0,.8)}
+.beat textarea{min-height:56px}
+.ckr{padding:8px 10px;border-left:2px solid #f59e0b;background:rgba(245,158,11,.08);border-radius:8px;margin:6px 0;font-size:13px}.ckr small{color:#fcd34d;margin-right:6px}.ckok{color:#86efac;font-size:13px}
+
+/* ---- soft emboss: raised until pressed ---- */
+:root{--nm1:#1b1525;--nm2:#110d19;--nm3:#0d0914;--nsh:rgba(0,0,0,.72);--nhl:rgba(196,167,255,.08)}
+.btn,.btn.pri,.btn.dg{background:linear-gradient(145deg,var(--nm1),var(--nm2))!important;border:1px solid rgba(214,194,255,.07)!important;box-shadow:5px 5px 12px var(--nsh),-4px -4px 10px var(--nhl),inset 0 1px 0 rgba(255,255,255,.05)!important;transform:none!important;transition:box-shadow .16s ease,background .16s ease,color .16s ease,transform .16s ease}
+.btn.pri{background:linear-gradient(145deg,#2c1f48,#1a1230)!important;color:#efe6ff;font-weight:500}
+.btn:hover{color:#fff;border-color:rgba(214,194,255,.2)!important}
+.btn.dg:hover{color:#fecaca;border-color:rgba(248,113,113,.35)!important}
+.btn:active,.btn.pri:active,.btn.dg:active{background:linear-gradient(145deg,var(--nm3),var(--nm2))!important;box-shadow:inset 4px 4px 10px rgba(0,0,0,.82),inset -3px -3px 8px var(--nhl)!important;transform:scale(.985)!important}
+.btn.sm{box-shadow:4px 4px 9px var(--nsh),-3px -3px 8px var(--nhl),inset 0 1px 0 rgba(255,255,255,.05)!important}
+.btn.sm:active{box-shadow:inset 3px 3px 7px rgba(0,0,0,.82),inset -2px -2px 6px var(--nhl)!important}
+.nv{border:1px solid rgba(214,194,255,.06)!important;border-radius:12px!important;background:linear-gradient(145deg,var(--nm1),var(--nm2))!important;box-shadow:4px 4px 10px var(--nsh),-3px -3px 8px var(--nhl)!important;transition:box-shadow .16s ease,background .16s ease,color .16s ease}
+.nv::after{display:none!important}
+.nv:hover{color:#fff}
+.nv:active,.nv.on{background:linear-gradient(145deg,var(--nm3),var(--nm2))!important;box-shadow:inset 3px 3px 8px rgba(0,0,0,.82),inset -2px -2px 6px var(--nhl)!important;color:var(--v2)}
+@media(max-width:820px){.side{gap:8px!important}}
+.tabs{display:flex!important;width:fit-content;max-width:100%;overflow-x:auto;scrollbar-width:none;background:rgba(0,0,0,.38)!important;border:0!important;border-radius:14px!important;padding:6px!important;gap:8px!important;box-shadow:inset 3px 3px 8px rgba(0,0,0,.75),inset -2px -2px 6px var(--nhl)!important}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;border:0!important;border-radius:10px!important;margin:0!important;padding:8px 14px!important;background:linear-gradient(145deg,var(--nm1),var(--nm2))!important;box-shadow:3px 3px 8px var(--nsh),-2px -2px 6px var(--nhl)!important;transition:box-shadow .16s ease,background .16s ease,color .16s ease}
+.tabs button:active,.tabs button.on{background:linear-gradient(145deg,var(--nm3),var(--nm2))!important;box-shadow:inset 3px 3px 7px rgba(0,0,0,.82),inset -2px -2px 5px var(--nhl)!important;color:var(--v2)!important}
+.seg{background:rgba(0,0,0,.38)!important;border:0!important;border-radius:14px!important;padding:5px!important;gap:6px!important;box-shadow:inset 3px 3px 8px rgba(0,0,0,.75),inset -2px -2px 6px var(--nhl)!important}
+.seg button{border-radius:10px!important;background:linear-gradient(145deg,var(--nm1),var(--nm2))!important;box-shadow:3px 3px 8px var(--nsh),-2px -2px 6px var(--nhl)!important;transition:box-shadow .16s ease,background .16s ease,color .16s ease}
+.seg button:active,.seg button.on{background:linear-gradient(145deg,var(--nm3),var(--nm2))!important;box-shadow:inset 3px 3px 7px rgba(0,0,0,.82),inset -2px -2px 5px var(--nhl)!important;color:var(--v2)!important}
+.sw i{background:rgba(0,0,0,.5)!important;box-shadow:inset 2px 2px 6px rgba(0,0,0,.85),inset -1px -1px 3px var(--nhl)}
+.sw i::after{background:linear-gradient(145deg,#2d2342,#19131f);box-shadow:2px 2px 5px rgba(0,0,0,.75),-1px -1px 3px var(--nhl)}
+.sw input:checked+i{background:rgba(20,10,40,.75)!important}
+.sw input:checked+i::after{background:linear-gradient(145deg,#d6c2ff,#8b5cf6);box-shadow:2px 2px 5px rgba(0,0,0,.75),0 0 10px rgba(167,139,250,.6)}
+#undoFab{opacity:1!important;pointer-events:auto!important;transform:none!important;bottom:calc(104px + env(safe-area-inset-bottom,0px));right:14px;gap:8px;padding:7px;border:1px solid rgba(214,194,255,.07);border-radius:18px;background:linear-gradient(145deg,var(--nm1),var(--nm2));backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:6px 6px 14px var(--nsh),-4px -4px 10px var(--nhl),inset 0 1px 0 rgba(255,255,255,.05)}
+@media(min-width:821px){#undoFab{bottom:24px;right:24px}}
+#undoFab button{width:40px;height:40px;border-radius:12px;color:var(--v2);background:linear-gradient(145deg,var(--nm1),var(--nm2));box-shadow:3px 3px 8px var(--nsh),-2px -2px 6px var(--nhl);transition:box-shadow .16s ease,transform .16s ease,opacity .2s}
+#undoFab button:hover{background:linear-gradient(145deg,var(--nm1),var(--nm2));color:#fff}
+#undoFab button:active:not(:disabled){box-shadow:inset 3px 3px 7px rgba(0,0,0,.85),inset -2px -2px 5px var(--nhl);transform:scale(.95);background:linear-gradient(145deg,var(--nm3),var(--nm2))}
+#undoFab button:disabled{opacity:.4;color:var(--mu);background:linear-gradient(145deg,var(--nm3),var(--nm2));box-shadow:inset 2px 2px 6px rgba(0,0,0,.8),inset -1px -1px 4px var(--nhl)}
+#undoFab svg.i{width:18px;height:18px}
+#toast{border-radius:16px!important;background:linear-gradient(145deg,#1d1629,#120e1b)!important;border:1px solid rgba(214,194,255,.09)!important;padding:10px 20px 10px 12px!important;gap:12px!important;color:#eee8fb;font-size:14px;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:8px 8px 20px rgba(0,0,0,.75),-5px -5px 14px var(--nhl),inset 0 1px 0 rgba(255,255,255,.06)!important}
+#toast.on{pointer-events:auto;cursor:pointer}
+#toast:active{box-shadow:inset 4px 4px 10px rgba(0,0,0,.85),inset -3px -3px 8px var(--nhl)!important}
+#toast .td{width:24px;height:24px;border-radius:50%;background:#0f0a17;position:relative;flex:none;box-shadow:inset 2px 2px 5px rgba(0,0,0,.85),inset -1px -1px 3px var(--nhl)}
+#toast .td::after{content:"";position:absolute;inset:8px;border-radius:50%;background:#c4a7ff;box-shadow:0 0 10px 2px rgba(167,139,250,.7)}
+/* ---- batch 1: theme, tags, drag, search, key helper, versions ---- */
+:root{--ar:157,123,240}
+html[data-th="ice"]{--ar:96,165,250;--v:#60a5fa;--v2:#bfdbfe;--ice:#eef6ff;--bd:rgba(191,219,254,.16)}
+html[data-th="rose"]{--ar:244,114,182;--v:#f472b6;--v2:#fbcfe8;--ice:#fff1f7;--bd:rgba(251,207,232,.16)}
+html[data-th="mist"]{--ar:203,213,225;--v:#cbd5e1;--v2:#e2e8f0;--ice:#f8fafc;--bd:rgba(226,232,240,.15)}
+html[data-th] .orbs i:nth-child(1){background:radial-gradient(circle,rgba(var(--ar),.7),transparent 68%)}
+html[data-th] .orbs i:nth-child(2){background:radial-gradient(circle,rgba(var(--ar),.55),transparent 68%)}
+html[data-th] .orbs i:nth-child(3){background:radial-gradient(circle,rgba(var(--ar),.6),transparent 68%)}
+html[data-th] .hero::after{background:radial-gradient(circle,rgba(var(--ar),.26),transparent 62%)}
+html[data-th] .btn.pri{background:linear-gradient(145deg,rgba(var(--ar),.32),rgba(var(--ar),.08)),#171020!important;color:var(--ice)}
+html[data-th] .sw input:checked+i::after{background:linear-gradient(145deg,var(--v2),var(--v));box-shadow:2px 2px 5px rgba(0,0,0,.75),0 0 10px rgba(var(--ar),.6)}
+html[data-th] .ent:not(.off) .dot{background:var(--v);box-shadow:0 0 12px var(--v)}
+html[data-th] .ent.c .dot{background:#f0abfc;box-shadow:0 0 12px #e879f9}
+html[data-th] .tbar:not(.warn):not(.bad) i{background:linear-gradient(90deg,var(--v),var(--v2))}
+html[data-th] input[type=range]{accent-color:var(--v)}
+html[data-th] input[type=range]::-webkit-slider-thumb{background:var(--v2);border-color:var(--v)}
+html[data-th] input[type=range]::-moz-range-thumb{background:var(--v2);border-color:var(--v)}
+html[data-th] h3::before{background:linear-gradient(135deg,#fff,var(--v));box-shadow:0 0 10px var(--v)}
+html[data-th] h2{background:linear-gradient(100deg,#fff,var(--v2) 50%,#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-th] .stat b{background:linear-gradient(180deg,#fff,var(--v2));-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-th] .ent.open{border-color:rgba(var(--ar),.4);background:rgba(var(--ar),.06)}
+html[data-th] .lst .rc.on{background:linear-gradient(90deg,rgba(var(--ar),.2),transparent);border-color:var(--v2)}
+html[data-th] .av{background:rgba(var(--ar),.1)}
+html[data-th] .pill{background:rgba(var(--ar),.14);border-color:rgba(var(--ar),.3)}
+html[data-th] #toast .td::after{background:var(--v2);box-shadow:0 0 10px 2px rgba(var(--ar),.7)}
+html[data-th] .mark circle{stroke:var(--v2)}
+html[data-th] .mark path{stroke:var(--ice)}
+html[data-th] .sk{background:linear-gradient(135deg,#fff,var(--v2))}
+.thr{display:flex;gap:8px;flex-wrap:wrap}
+.ths{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 8px;border-radius:12px;border:1px solid rgba(214,194,255,.07);background:linear-gradient(145deg,var(--nm1),var(--nm2));box-shadow:4px 4px 10px var(--nsh),-3px -3px 8px var(--nhl);cursor:pointer;color:var(--mu);font-size:13px;transition:box-shadow .16s,background .16s,color .16s}
+.ths i{width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--c) 55%);box-shadow:0 0 10px var(--c)}
+.ths.on,.ths:active{background:linear-gradient(145deg,var(--nm3),var(--nm2));box-shadow:inset 3px 3px 8px rgba(0,0,0,.82),inset -2px -2px 6px var(--nhl);color:#fff}
+.tagbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 14px}
+.chip{border:1px solid var(--bd);background:none;border-radius:99px;padding:4px 12px;font-size:12.5px;color:var(--mu);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chip small{opacity:.7;margin-left:4px}.chip:hover{color:var(--tx)}
+.chip.on{background:rgba(var(--ar),.18);border-color:rgba(var(--ar),.45);color:#fff}
+.ent .grip{position:absolute;left:9px;top:12px;width:16px;height:22px;border-radius:6px;cursor:grab;z-index:3;touch-action:none;background:radial-gradient(circle,var(--mu) 1.5px,transparent 1.8px) 0 0/8px 7px;opacity:.55;transition:opacity .2s}
+.ent .grip:hover,.ent .grip:focus-visible{opacity:1}
+.ent .eht{padding-left:34px}
+.ent.bkm .bk{left:34px}.ent.bkm .eht{padding-left:68px}
+body.dragmode{user-select:none;-webkit-user-select:none;cursor:grabbing}
+.ent.dragging{position:relative;z-index:20;transition:none;box-shadow:0 22px 44px -14px rgba(0,0,0,.9),0 0 0 1px rgba(var(--ar),.5)!important;background:rgba(20,13,34,.96)!important}
+.ent.dragging .ebody{grid-template-rows:0fr!important;transition:none}
+.ent.dt-b::before,.ent.dt-a::after{content:"";position:absolute;left:8px;right:8px;height:3px;border-radius:3px;background:var(--v2);box-shadow:0 0 10px var(--v2);z-index:4;pointer-events:none}
+.ent.dt-b::before{top:0}.ent.dt-a::after{bottom:0}
+#main .flash{animation:flsh 1.7s ease-out!important}
+@keyframes flsh{0%,40%{box-shadow:0 0 0 2px var(--v2),0 0 26px rgba(var(--ar),.55)}100%{box-shadow:0 0 0 0 transparent}}
+.ov.gs{align-items:start;padding-top:min(14vh,110px)}
+.ov.gs .glass{width:100%;max-width:640px;padding:14px;display:grid;gap:10px}
+.gsr{max-height:min(56vh,460px);overflow:auto;display:grid;gap:2px}
+.gsi{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;border:0;border-left:2px solid transparent;background:none;padding:10px 12px;border-radius:10px;cursor:pointer}
+.gsi.on,.gsi:hover{background:rgba(var(--ar),.14);border-left-color:var(--v2)}
+.gst{flex:none;font-size:11px;padding:2px 8px;border-radius:99px;border:1px solid var(--bd);color:var(--v2);margin-top:2px}
+.gsm{min-width:0;display:grid;gap:2px}.gsm b{font-weight:500}.gsm small{color:var(--mu)}
+.gss{color:#b9b3cf;font-size:13px;line-height:1.5;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.gss mark{background:rgba(var(--ar),.35);color:#fff;border-radius:3px;padding:0 2px}
+.ov.kg .glass{max-width:520px;width:100%;display:grid;gap:12px;max-height:88vh;overflow:auto}
+.kg h5{margin:8px 0 6px;font:500 12px/1 var(--ft);color:var(--v2);letter-spacing:.06em}
+.kgr{display:flex;gap:8px;flex-wrap:wrap}
+.kc{cursor:pointer;position:relative}.kc input{position:absolute;opacity:0}
+.kc span{display:inline-block;padding:4px 12px;border-radius:99px;border:1px solid var(--bd);font-size:13px;color:var(--mu);transition:background .2s,color .2s,border-color .2s}
+.kc input:checked+span{background:rgba(var(--ar),.2);border-color:rgba(var(--ar),.5);color:#fff}
+.kc input:focus-visible+span{outline:2px solid var(--v2);outline-offset:2px}
+.kc input:disabled+span{opacity:.45}
+.vlist{flex-basis:100%;display:grid;gap:8px;margin-top:6px}
+.vrow{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 14px;border:1px solid var(--bd);border-radius:12px;background:rgba(255,255,255,.02)}
+.vrow b{font-weight:500}.vrow small{display:block;color:var(--mu);font-size:12px}
+/* ---- batch 4: more-sheet nav, snow, sound, mood, bilingual, cheer, fab ---- */
+.nv span{white-space:nowrap}
+.nv.more{display:none}
+@media(max-width:820px){.nv.mo{display:none!important}.nv.more{display:flex!important}.nv{padding:6px 4px!important}}
+.sheet{position:fixed;inset:0;z-index:75;display:flex;align-items:flex-end;background:rgba(2,1,6,.55);animation:fd .2s}
+.sheet .glass{width:100%;margin:12px 12px calc(96px + env(safe-area-inset-bottom,0px));padding:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:10px;animation:pp .3s}
+.sheet .nv{display:flex!important;flex-direction:column;align-items:center;gap:4px;padding:14px 6px!important;font-size:12px}
+#undoFab{opacity:0!important;pointer-events:none!important;transform:translateY(10px)!important}
+#undoFab.show{opacity:1!important;pointer-events:auto!important;transform:none!important}
+#snow{position:fixed;inset:0;z-index:1;pointer-events:none}
+#toast .td.f{display:grid;place-items:center}#toast .td.f::after{display:none!important}#toast .td.f svg{width:20px;height:20px}
+.pk[class*=" m-"] svg{transform:translateY(0)}
+.pk.m-sleep svg{transform:translateY(22px)}
+.pk.m-sleep .bl{animation:none;transform:scaleY(.1)}
+.pk.m-happy .bl{animation:none;transform:scaleY(.2)}
+.pk.m-shock .bl{animation:none;transform:scale(1.35)}
+.pk.m-happy svg,.pk.m-shock svg{animation:hop .5s ease-out}
+/* ---- perf pass: same look, cheaper paint ---- */
+.orbs i{filter:none!important}
+@media(max-width:820px){.glass,.ed.glass,.lst.glass,.hero.glass,.stats,.side{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+#mf{position:fixed;left:14px;bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:44;width:96px;height:70px;pointer-events:none}
+@media(min-width:821px){#mf{bottom:0;left:24px}}
+#mf .pk{position:absolute;left:0;bottom:0;width:96px;height:70px;overflow:hidden}
+#mf .mb{position:absolute;left:90px;bottom:34px;white-space:nowrap;padding:6px 12px;border-radius:12px 12px 12px 4px;background:rgba(20,12,36,.92);border:1px solid rgba(214,194,255,.35);font-size:12.5px;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+#mf .mb.on{opacity:1;transform:none}
+/* ---- mascot fit fix ---- */
+.say{display:none!important}
+#mf{width:80px;height:58px}
+#mf .pk{width:80px;height:58px}
+#mf .pk svg{width:80px;height:58px;transform:none}
+#mf .mb{left:78px;bottom:30px;width:max-content;max-width:calc(100vw - 130px);white-space:normal;word-break:keep-all;overflow-wrap:anywhere;line-height:1.5}
+#mf .pk{pointer-events:auto;cursor:pointer}
+.hb{position:fixed;z-index:46;width:max-content;white-space:normal;word-break:keep-all;overflow-wrap:anywhere;line-height:1.5;padding:6px 12px;border-radius:12px 12px 4px 12px;background:rgba(20,12,36,.92);border:1px solid rgba(214,194,255,.35);font-size:12.5px;opacity:0;pointer-events:none;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.hb.on{opacity:1;transform:none}
+.pk.m-think .bl{animation:none;transform:scaleY(.55) translateY(-2px)}
+.pk.m-wow .bl{animation:none;transform:scale(1.2)}
+.pk.m-confuse .bl{animation:none;transform:scaleY(.7)}
+.pk.m-confuse svg{transform:translateY(0) rotate(-7deg);transform-origin:48px 60px}
+.pk.m-grin .bl{animation:none;transform:scaleY(.2)}
+.pk.m-wow svg,.pk.m-grin svg{animation:hop .5s ease-out}
+.pk[class*=" m-"]::after{position:absolute;right:6px;top:4px;font:600 18px/1 var(--ft);color:#d6c2ff;animation:ip .4s both}
+.pk.m-happy::after{content:"♪"}.pk.m-shock::after{content:"!"}.pk.m-think::after{content:"…"}.pk.m-wow::after{content:"✦"}.pk.m-confuse::after{content:"?"}.pk.m-grin::after{content:"♥"}.pk.m-sleep::after{content:"z"}
+@keyframes squish{35%{scale:1.1 .84}70%{scale:.97 1.05}}
+.pk.hop svg,.pk.m-happy svg,.pk.m-shock svg,.pk.m-wow svg,.pk.m-grin svg{animation:squish .45s ease-out;transform-origin:50% 100%}
+.pk svg,.pk:hover svg,.pk.hop svg,.pk[class*=" m-"] svg{transform:none!important}
+.pk.m-confuse svg{rotate:-7deg;transform-origin:50% 100%}
+.pk.m-sleep svg{translate:0 6px}
+.bkn{position:fixed;z-index:47;width:max-content;max-width:min(260px,calc(100vw - 24px));padding:10px 12px;border-radius:12px;background:rgba(20,12,36,.96);border:1px solid rgba(214,194,255,.35);font-size:12.5px;line-height:1.5;display:none}
+.bkn.on{display:block;animation:pp .3s}.bkn .row{margin-top:8px;gap:8px}
+.fzb{margin:0 auto 0 10px;padding:2px 9px!important;font-size:11px!important}
+#fz{position:fixed;inset:0;z-index:72;background:#050408;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);display:flex}
+#fz .fzf{margin:0;display:flex;flex-direction:column;width:100%;max-width:820px;margin:0 auto;min-height:0}
+#fz .fzt{display:flex;align-items:center;gap:12px;padding:12px 16px}
+#fz .fzn{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mu);font-size:13px}
+#fz textarea{flex:1;min-height:0!important;resize:none;font-size:16px!important;line-height:1.85;padding:8px 18px 76px!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
+#fz textarea:focus{box-shadow:none!important;outline:0}
+.ent[data-c]{border-left-width:3px;border-left-color:var(--cc)}
+.ent[data-c=r]{--cc:#f87171}.ent[data-c=o]{--cc:#fb923c}.ent[data-c=y]{--cc:#facc15}.ent[data-c=g]{--cc:#4ade80}.ent[data-c=b]{--cc:#60a5fa}.ent[data-c=p]{--cc:#c084fc}
+.ent.cfh{display:none!important}
+.clr{position:absolute;left:30px;top:14px;width:13px;height:13px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);background:var(--cc,transparent);z-index:3;cursor:pointer}
+.clr::before{content:"";position:absolute;inset:-12px}
+.ent .eht{padding-left:56px}.ent.bkm .clr{left:60px}.ent.bkm .eht{padding-left:90px}
+.eht{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+.cd{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px}
+#clrp{position:fixed;z-index:74;display:none;gap:10px;padding:10px 12px;border-radius:14px;background:rgba(20,12,36,.97);border:1px solid rgba(214,194,255,.3)}
+#clrp button{width:26px;height:26px;border-radius:50%;border:2px solid rgba(255,255,255,.25);background:var(--c);padding:0;cursor:pointer}#clrp .x{background:none;color:var(--mu);line-height:1}
+#lpm{position:fixed;z-index:74;display:none;gap:2px;padding:6px;border-radius:14px;background:rgba(20,12,36,.97);border:1px solid rgba(214,194,255,.3);min-width:170px}
+#lpm button{border:0;background:none;text-align:left;padding:11px 14px;border-radius:10px;cursor:pointer;color:var(--tx)}#lpm button:active{background:rgba(255,255,255,.1)}
+.sch{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip.cut{opacity:.45;text-decoration:line-through}.chip.k{border-style:dashed}
+.dpp{white-space:pre-wrap;word-break:break-word;margin:0;font:12px/1.6 var(--ft);max-height:160px;overflow:auto;background:rgba(255,255,255,.03);padding:8px;border-radius:8px}
 </style>
 </head>
 <body>
@@ -353,53 +615,72 @@ h3::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(214
   <nav class="side glass" id="nav"></nav>
   <main id="main"></main>
 </div>
-<input type="file" id="file" accept=".json,application/json" hidden multiple>
+<input type="file" id="file" accept=".json,application/json,.png,image/png" hidden multiple>
 <div id="toast" role="status"></div>
 <script>
+var FXC=['226,210,255','157,123,240'],TAGF='';
 const $=s=>document.querySelector(s);
 function wave(n,h){let s='';for(let i=0;i<n;i++){const k=i/n,a=Math.max(2,Math.round(h*Math.exp(-k*3.4)*(.45+.55*Math.abs(Math.sin(i*.83+Math.cos(i*.31)*2)))));s+=`<i style="--h:${a}px;--d:${(i*-90)%2600}ms"></i>`}return`<div class="wv" aria-hidden="true">${s}</div>`}
 function pulse(){const p=document.querySelector('.pls');if(!p)return;p.classList.remove('blip');void p.getBoundingClientRect();p.classList.add('blip')}
 const TAILSVG='<svg class="tail" viewBox="0 0 110 56" aria-hidden="true"><defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="#eaf1ff" stop-opacity="0"/><stop offset=".55" stop-color="#eaf1ff" stop-opacity=".8"/><stop offset="1" stop-color="#fff"/></linearGradient></defs><path d="M0 46C30 46 56 42 74 32C90 23 97 14 95 8" fill="none" stroke="url(#tg)" stroke-width="8" stroke-linecap="round"/><path d="M96 16C98 12 97 9 95 7" fill="none" stroke="#eaf1ff" stroke-opacity=".55" stroke-width="10.4" stroke-linecap="round"/><path d="M96 16C98 12 97 9 95 7" fill="none" stroke="#05030a" stroke-width="8.6" stroke-linecap="round"/></svg>';
 function TRAIL(){return'<div class="trail" aria-hidden="true">'+Array.from({length:18},(_,k)=>'<i style="--k:'+k+'"></i>').join('')+'</div>'}
 function greet(){const h=new Date().getHours();return L()?(h<5?'ดึกแล้วนะ':h<11?'อรุณสวัสดิ์':h<16?'สวัสดีตอนบ่าย':h<19?'สวัสดียามเย็น':'ราตรีสวัสดิ์'):(h<5?'Up late':h<12?'Good morning':h<18?'Good afternoon':'Good evening')}
-const ID=[['ลองให้ตัวละครมีนิสัยเล็กๆ ที่ไม่มีใครรู้ เช่น แอบกลัวเสียงระฆัง','Give your character a tiny secret habit, like fearing bells'],['ถ้าฉากแรกที่พบกันเป็นวันที่ฝนตกหนัก เรื่องจะเปลี่ยนไปยังไง','What if the first meeting happens in heavy rain?'],['เขียนกฎของโลกหนึ่งข้อที่ทุกคนยอมรับ แต่ไม่มีใครอธิบายที่มา','Write one world rule everyone accepts but nobody explains'],['ตัวละครพูดยังไงเวลาโกหก ลองใส่เป็นตัวอย่างบทสนทนาสักประโยค','How does your character sound when lying? Add it to the example messages'],['ตั้งคีย์ลอร์บุ๊กด้วยชื่อเล่นหรือคำเรียกในหมู่เพื่อน ไม่ใช่แค่ชื่อเต็ม','Trigger lore with nicknames, not just full names'],['ลองเขียนข้อความแรกให้สั้นลงครึ่งหนึ่ง บางทีน้อยแต่จำได้นานกว่า','Try a first message half as long; quiet can be memorable'],['ให้ตัวละครมีของโปรดที่ขัดกับบุคลิก เช่น นักฆ่าที่ชอบขนมหวาน','Give them a favourite that clashes with their persona'],['เพิ่มคำทักทายสำรองอีกแบบ ที่เปิดเรื่องด้วยอารมณ์ตรงข้ามกับแบบแรก','Add an alternate greeting that opens in the opposite mood']];
+const ID=[['ลองให้ตัวละครมีนิสัยเล็กๆ ที่ไม่มีใครรู้ เช่น แอบกลัวเสียงระฆัง','Give your character a tiny secret habit, like fearing bells'],['ถ้าฉากแรกที่พบกันเป็นวันที่ฝนตกหนัก เรื่องจะเปลี่ยนไปยังไง','What if the first meeting happens in heavy rain?'],['เขียนกฎของโลกหนึ่งข้อที่ทุกคนยอมรับ แต่ไม่มีใครอธิบายที่มา','Write one world rule everyone accepts but nobody explains'],['ตัวละครพูดยังไงเวลาโกหก ลองใส่เป็น Dialogue Examples สักประโยค','How does your character sound when lying? Add it to the Dialogue Examples'],['ตั้ง Primary Keywords ของลอร์บุ๊คด้วยชื่อเล่นหรือคำเรียกในหมู่เพื่อน ไม่ใช่แค่ชื่อเต็ม','Trigger lore with nicknames in Primary Keywords, not just full names'],['ลองเขียน First Message ให้สั้นลงครึ่งหนึ่ง บางทีน้อยแต่จำได้นานกว่า','Try a First Message half as long; quiet can be memorable'],['ให้ตัวละครมีของโปรดที่ขัดกับบุคลิก เช่น นักฆ่าที่ชอบขนมหวาน','Give them a favourite that clashes with their persona'],['เพิ่ม Alternate Greeting อีกแบบ ที่เปิดเรื่องด้วยอารมณ์ตรงข้ามกับแบบแรก','Add an Alternate Greeting that opens in the opposite mood']];
 let IDX=Math.floor(Math.random()*ID.length);
 const SPK=[[62,22,12,0],[78,50,8,1.1],[90,16,14,2.2],[47,72,7,.6],[95,62,9,1.7]].map(a=>'<span class="sk" style="left:'+a[0]+'%;top:'+a[1]+'%;--s:'+a[2]+'px;--d:'+a[3]+'s"></span>').join('');
-const MASC='<div class="pk" role="img" aria-label="stoat"><svg viewBox="0 0 96 70"><defs><radialGradient id="hg" cx=".5" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e2d6ff"/></radialGradient></defs><circle cx="22" cy="36" r="10" fill="#f6f1ff"/><circle cx="22" cy="36" r="5" fill="#cdb6ff"/><circle cx="74" cy="36" r="10" fill="#f6f1ff"/><circle cx="74" cy="36" r="5" fill="#cdb6ff"/><ellipse cx="48" cy="60" rx="34" ry="30" fill="url(#hg)"/><g class="bl"><g class="ey"><circle cx="36" cy="54" r="4.4" fill="#120a1f"/><circle cx="60" cy="54" r="4.4" fill="#120a1f"/><circle cx="37.3" cy="52.6" r="1.4" fill="#fff"/><circle cx="61.3" cy="52.6" r="1.4" fill="#fff"/></g></g><ellipse cx="26" cy="63" rx="5.5" ry="3.2" fill="#b79cff" opacity=".5"/><ellipse cx="70" cy="63" rx="5.5" ry="3.2" fill="#b79cff" opacity=".5"/><ellipse cx="48" cy="59" rx="3.2" ry="2.3" fill="#120a1f"/><path d="M43.5 63q4.5 4.5 9 0" fill="none" stroke="#120a1f" stroke-width="1.4" stroke-linecap="round"/><ellipse cx="29" cy="68" rx="8" ry="5" fill="#fff" stroke="#d6c2ff"/><ellipse cx="67" cy="68" rx="8" ry="5" fill="#fff" stroke="#d6c2ff"/></svg></div><div class="say" role="status"></div>';
+const MASC='<div class="pk" role="img" aria-label="stoat"><svg viewBox="0 0 96 70"><defs><radialGradient id="hg" cx=".5" cy=".3" r=".85"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e2d6ff"/></radialGradient></defs><circle cx="25" cy="23" r="9" fill="#f6f1ff" stroke="#3a2a63" stroke-width=".9"/><circle cx="25" cy="24" r="4.6" fill="#cdb6ff"/><circle cx="71" cy="23" r="9" fill="#f6f1ff" stroke="#3a2a63" stroke-width=".9"/><circle cx="71" cy="24" r="4.6" fill="#cdb6ff"/><path d="M48 20C70 20 80 33 78 49C77 61 64 74 48 74C32 74 19 61 18 49C16 33 26 20 48 20Z" fill="url(#hg)"/><ellipse cx="48" cy="62" rx="13" ry="9.5" fill="#fff"/><g class="bl"><g class="ey"><circle cx="36" cy="46" r="3.4" fill="#120a1f"/><circle cx="60" cy="46" r="3.4" fill="#120a1f"/><circle cx="37" cy="44.8" r="1.1" fill="#fff"/><circle cx="61" cy="44.8" r="1.1" fill="#fff"/></g></g><ellipse cx="28" cy="57" rx="5" ry="2.8" fill="#b79cff" opacity=".45"/><ellipse cx="68" cy="57" rx="5" ry="2.8" fill="#b79cff" opacity=".45"/><ellipse cx="48" cy="56.5" rx="3.6" ry="2.6" fill="#120a1f"/><path d="M48 59v3.2M43 64.5q5 3.2 10 0" fill="none" stroke="#120a1f" stroke-width="1.3" stroke-linecap="round"/><path d="M38 60l-13-3M38 63l-14 2M58 60l13-3M58 63l14 2" fill="none" stroke="#b79cff" stroke-width="1" stroke-linecap="round"/><ellipse cx="30" cy="68" rx="7" ry="4.5" fill="#fff" stroke="#d6c2ff"/><ellipse cx="66" cy="68" rx="7" ry="4.5" fill="#fff" stroke="#d6c2ff"/></svg></div><div class="say" role="status"></div>';
 let _dt;const ldeb=f=>{clearTimeout(_dt);_dt=setTimeout(f,180)};
 const uid=()=>Math.random().toString(36).slice(2,9);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const tok=s=>{s=s||'';let a=0,n=0;for(let i=0;i<s.length;i++)s.charCodeAt(i)<128?a++:n++;return Math.ceil(a/4+n/1.6)};
-const ic={home:'<path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',book:'<path d="M4 4h10a4 4 0 014 4v13H8a4 4 0 01-4-4z"/><path d="M8 4v13"/>',gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>',plus:'<path d="M12 5v14M5 12h14"/>',trash:'<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',copy:'<rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/>',down:'<path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>',up:'<path d="M12 16V5M7 9l5-5 5 5M5 20h14"/>',ch:'<path d="M6 9l6 6 6-6"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>'};
+const ic={home:'<path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',book:'<path d="M4 4h10a4 4 0 014 4v13H8a4 4 0 01-4-4z"/><path d="M8 4v13"/>',gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>',plus:'<path d="M12 5v14M5 12h14"/>',trash:'<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',copy:'<rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/>',down:'<path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>',up:'<path d="M12 16V5M7 9l5-5 5 5M5 20h14"/>',ch:'<path d="M6 9l6 6 6-6"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',undo:'<path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 010 12h-3"/>',redo:'<path d="M15 14l5-5-5-5"/><path d="M20 9H10a6 6 0 000 12h3"/>'};
 const I=(n,c='')=>`<svg class="i ${c}" viewBox="0 0 24 24">${ic[n]}</svg>`;
 let S;try{S=JSON.parse(localStorage.getItem('fm_studio_v1')||'null')}catch(e){}
 const L=()=>S.lang==='th';const T=(a,b)=>L()?a:b;
 if(!S){S={lang:'th',creator:'frostmuted',page:'home',cards:[],books:[],cc:null,cb:null,tab:'ed',gi:0};
- const bk={id:uid(),name:'โลกตัวอย่าง',desc:'หนังสือโลกสำหรับทดลองใช้งาน',u:Date.now(),entries:[
+ const bk={id:uid(),name:'โลกตัวอย่าง',desc:'ลอร์บุ๊คสำหรับทดลองใช้งาน',u:Date.now(),entries:[
   {id:uid(),comment:'ราชวงศ์เฟรสต์',keys:['เฟรสต์','ราชวงศ์'],keys2:[],content:'ราชวงศ์เฟรสต์ปกครองดินแดนเหนือสุดมาสามร้อยปี ผู้สืบสายเลือดมีดวงตาสีม่วงจาง',constant:false,selective:false,enabled:true,order:100,pos:0,depth:4,prob:100,open:true},
   {id:uid(),comment:'กฎของโลก',keys:[],keys2:[],content:'เวทมนตร์ต้องแลกด้วยความทรงจำ',constant:true,selective:false,enabled:true,order:50,pos:1,depth:4,prob:100,open:false}]};
  const cd=mkCard();cd.name='ลูน่า (ตัวอย่าง)';cd.description='{{char}} เป็นนักเวทหญิงผู้เงียบขรึม พูดน้อยแต่ใจดี';cd.first_mes='*ลูน่าเงยหน้าจากหนังสือเก่า* มาแล้วเหรอ {{user}} นั่งก่อนสิ ฉันมีเรื่องจะเล่า';cd.tags=['แฟนตาซี'];cd.book=bk.id;
  S.cards=[];S.books=[];S.cc=S.cb=null}
 S.cards=S.cards.filter(c=>c.name!=='ลูน่า (ตัวอย่าง)');S.books=S.books.filter(b=>b.name!=='โลกตัวอย่าง');if(!S.cards.some(c=>c.id===S.cc))S.cc=S.cards[0]?S.cards[0].id:null;if(!S.books.some(b=>b.id===S.cb))S.cb=S.books[0]?S.books[0].id:null;
 function mkCard(){return{id:uid(),name:'ตัวละครใหม่',description:'',personality:'',scenario:'',first_mes:'',mes_example:'',system_prompt:'',post_history_instructions:'',creator_notes:'',alts:[],tags:[],creator:S?S.creator:'frostmuted',version:'1.0',book:'',u:Date.now()}}
-function mkBook(){return{id:uid(),name:'หนังสือโลกใหม่',desc:'',entries:[],u:Date.now()}}
+function mkBook(){return{id:uid(),name:'ลอร์บุ๊คใหม่',desc:'',entries:[],u:Date.now()}}
 function mkEnt(){return{id:uid(),comment:'',keys:[],keys2:[],content:'',constant:false,selective:false,enabled:true,order:100,pos:0,depth:4,prob:100,open:true}}
 const cc=()=>S.cards.find(c=>c.id===S.cc),cb=()=>S.books.find(b=>b.id===S.cb);
-const save=()=>{try{localStorage.setItem('fm_studio_v1',JSON.stringify(S))}catch(e){}pulse()};
-let st;const sv=()=>{clearTimeout(st);st=setTimeout(save,250)};
-let tt;const toast=m=>{const e=$('#toast');e.textContent=m;e.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>e.classList.remove('on'),2200)};
+let H={u:[],r:[],c:null},BULK=false,OVOPEN=false,ovT;const BSEL=new Set();const SCH=new WeakMap();const sj=o=>{let g=(o.u||0)+'|'+(o.name||'');if(o.entries){g+='|'+o.entries.length;for(const e of o.entries)g+=','+(e.content||'').length+(e.enabled?1:0)+(e.constant?2:0)+e.order+e.pos+e.depth+(e.keys||[]).length+(e.color||'')}else g+='|'+(o.description||'').length+'|'+(o.first_mes||'').length;const c=SCH.get(o);if(c&&c.g===g)return c.j;const j=JSON.stringify(o);SCH.set(o,{g,j});return j};
+const snap=()=>'{"cards":['+S.cards.map(sj).join(',')+'],"books":['+S.books.map(sj).join(',')+'],"cc":'+JSON.stringify(S.cc===undefined?null:S.cc)+',"cb":'+JSON.stringify(S.cb===undefined?null:S.cb)+'}';
+function hist(){const n=snap();if(H.c===null){H.c=n;return}if(n===H.c)return;H.u.push(H.c);if(H.u.length>100)H.u.shift();H.c=n;H.r=[];undoUI()}
+const save=()=>{try{localStorage.setItem('fm_studio_v1',JSON.stringify(S))}catch(e){}hist();pulse()};
+let st;const sv=()=>{clearTimeout(st);st=setTimeout(save,600)};
+let tt;const toast=m=>{const e=$('#toast');e.innerHTML='<i class="td"></i><span></span>';e.lastChild.textContent=m;e.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>e.classList.remove('on'),2200)};
 function ask(msg){return new Promise(r=>{const o=document.createElement('div');o.className='ov';o.innerHTML=`<div class="glass" role="dialog" aria-modal="true"><p style="margin:0 0 20px;font-size:16px">${esc(msg)}</p><div class="row" style="justify-content:flex-end"><button class="btn" data-x="0">${T('ยกเลิก','Cancel')}</button><button class="btn pri" data-x="1">${T('ยืนยัน','Confirm')}</button></div></div>`;o.onclick=e=>{const x=e.target.dataset.x;if(x!==undefined||e.target===o){o.remove();r(x==='1')}};document.body.appendChild(o);o.querySelector('[data-x="1"]').focus()})}
 /* export */
 const bookV2=b=>({name:b.name,description:b.desc,scan_depth:4,token_budget:2048,recursive_scanning:false,extensions:{},entries:b.entries.map((e,i)=>({id:i,keys:e.keys,secondary_keys:e.keys2,comment:e.comment,content:e.content,constant:e.constant,selective:e.selective,insertion_order:e.order,enabled:e.enabled,position:e.pos===0?'before_char':'after_char',extensions:{position:e.pos,depth:e.depth,probability:e.prob,useProbability:true}}))});
 const bookST=b=>{const o={};b.entries.forEach((e,i)=>o[i]={uid:i,key:e.keys,keysecondary:e.keys2,comment:e.comment,content:e.content,constant:e.constant,vectorized:false,selective:e.selective,selectiveLogic:0,addMemo:true,order:e.order,position:e.pos,disable:!e.enabled,excludeRecursion:false,preventRecursion:false,probability:e.prob,useProbability:true,depth:e.depth,group:'',displayIndex:i});return{entries:o}};
 const cardOut=c=>{const b=S.books.find(x=>x.id===c.book);const d={name:c.name,description:c.description,personality:c.personality,scenario:c.scenario,first_mes:c.first_mes,mes_example:c.mes_example,creator_notes:c.creator_notes,system_prompt:c.system_prompt,post_history_instructions:c.post_history_instructions,alternate_greetings:c.alts,tags:c.tags,creator:c.creator,character_version:c.version,extensions:{talkativeness:'0.5',fav:false,world:b?b.name:'',depth_prompt:{prompt:'',depth:4,role:'system'}}};if(b)d.character_book=bookV2(b);return{spec:'chara_card_v2',spec_version:'2.0',name:c.name,description:c.description,personality:c.personality,scenario:c.scenario,first_mes:c.first_mes,mes_example:c.mes_example,data:d}};
 const fn=s=>(s||'untitled').replace(/[\\/:*?"<>|]/g,'_').trim();
-async function dl(name,text){if(!window.claude){try{const b=new Blob([text],{type:'application/json'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);toast(T('ดาวน์โหลดแล้ว','Downloaded'));return}catch(e){}}try{const d=window.claude&&await claude.use('downloads');if(!d)throw{code:'unavailable'};await d.save({filename:name,data:text});toast(T('บันทึกไฟล์แล้ว','File saved'))}catch(e){if(e&&e.code==='declined')return;await cp(text);toast(T('ดาวน์โหลดไม่ได้ในหน้านี้ — คัดลอก JSON ให้แล้ว','Download unavailable here — JSON copied instead'))}}
+async function dl(name,text){
+ if(!window.claude){
+  try{
+   const b=new Blob([text],{type:'application/octet-stream'});
+   const u=URL.createObjectURL(b);
+   const a=document.createElement('a');a.href=u;a.download=name;a.style.display='none';
+   document.body.appendChild(a);a.click();
+   setTimeout(()=>{a.remove();URL.revokeObjectURL(u)},8000);
+   toast(T('เกล็ดน้ำแข็งส่งถึงมือแล้ว','Snowflakes delivered'));return
+  }catch(e){}
+  try{
+   const f=new File([text],name,{type:'application/json'});
+   if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f]});return}
+  }catch(e){}
+ }
+ try{const d=window.claude&&await claude.use('downloads');if(!d)throw{code:'unavailable'};await d.save({filename:name,data:text});toast(T('บันทึกไฟล์แล้ว','File saved'))}catch(e){if(e&&e.code==='declined')return;await cp(text);toast(T('ดาวน์โหลดไม่ได้ในหน้านี้ — คัดลอก JSON ให้แล้ว','Download unavailable here — JSON copied instead'))}}
 async function cp(text){try{await navigator.clipboard.writeText(text);return true}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy')}catch(_){}t.remove();return false}}
 /* import */
 function parseBook(j,name){const arr=Array.isArray(j.entries)?j.entries:Object.values(j.entries||{});
  return{id:uid(),name:j.name||name||'Imported',desc:j.description||'',u:Date.now(),entries:arr.map(e=>({id:uid(),comment:e.comment||e.name||'',keys:e.key||e.keys||[],keys2:e.keysecondary||e.secondary_keys||[],content:e.content||'',constant:!!e.constant,selective:!!e.selective,enabled:e.disable!==undefined?!e.disable:e.enabled!==false,order:e.order??e.insertion_order??100,pos:typeof e.position==='number'?e.position:(e.position==='after_char'?1:(e.extensions&&e.extensions.position)||0),depth:e.depth??(e.extensions&&e.extensions.depth)??4,prob:e.probability??(e.extensions&&e.extensions.probability)??100,open:false}))}}
-async function importFiles(files){let n=0;for(const f of files){try{const j=JSON.parse(await f.text());const base=f.name.replace(/\.json$/i,'');
+async function importFiles(files){let n=0;for(const f of files){try{const j=JSON.parse(await readF(f));const base=f.name.replace(/\.(json|png)$/i,'');
  if(j.fm_backup){S.cards=j.cards;S.books=j.books;n++;continue}
  if(j.entries){const b=parseBook(j,base);S.books.push(b);S.cb=b.id;n++;continue}
  const d=j.data||j;if(typeof d.name==='string'){const c=mkCard();Object.assign(c,{name:d.name,description:d.description||'',personality:d.personality||'',scenario:d.scenario||'',first_mes:d.first_mes||'',mes_example:d.mes_example||'',system_prompt:d.system_prompt||'',post_history_instructions:d.post_history_instructions||'',creator_notes:d.creator_notes||'',alts:d.alternate_greetings||[],tags:d.tags||[],creator:d.creator||c.creator,version:d.character_version||'1.0'});
@@ -414,46 +695,46 @@ const SW=(t,f,i,v,lb)=>`<label class="sw"><input type="checkbox" data-t="${t}" d
 const total=c=>['description','personality','scenario','first_mes','mes_example','system_prompt','post_history_instructions'].reduce((s,k)=>s+tok(c[k]),0);
 const mac=(s,c)=>esc(s).replace(/\{\{char\}\}/gi,esc(c.name)).replace(/\{\{user\}\}/gi,T('คุณ','You')).replace(/\*([^*\n]+)\*/g,'<em>$1</em>').replace(/\n/g,'<br>');
 /* pages */
-const NAVS=[['home','home',()=>T('หน้าแรก','Home')],['cards','user',()=>T('การ์ด','Cards')],['lore','book',()=>T('หนังสือโลก','Lorebooks')],['set','gear',()=>T('ตั้งค่า','Settings')]];
+const NAVS=[['home','home',()=>T('หน้าแรก','Home')],['cards','user',()=>T('การ์ด','Cards')],['lore','book',()=>T('ลอร์บุ๊ค','Lorebooks')],['set','gear',()=>T('ตั้งค่า','Settings')]];
 function pHome(){const ents=S.books.reduce((s,b)=>s+b.entries.length,0);
- const rec=[...S.cards.map(c=>({k:'c',id:c.id,n:c.name,u:c.u,s:`${tok(c.description)+tok(c.first_mes)} tok`})),...S.books.map(b=>({k:'b',id:b.id,n:b.name,u:b.u,s:T(`${b.entries.length} เอนทรี`,`${b.entries.length} entries`)}))].sort((a,b)=>b.u-a.u).slice(0,6);
- return`<div class="pg"><section class="hero glass">${SPK}${MASC}${wave(60,34)}${TAILSVG}<h1>${greet()}, ${esc(S.creator)}</h1><p class="lead">${T('แก้การ์ดตัวละครและหนังสือโลกของ SillyTavern ได้ในที่เดียว นำเข้าไฟล์ JSON แก้ไข แล้วส่งออกกลับไปใช้ได้ทันที','Edit SillyTavern character cards and lorebooks in one place. Import JSON, edit, and export it straight back.')}</p>
- <div class="row"><button class="btn pri" data-a="newCard">${I('plus')}${T('การ์ดใหม่','New card')}</button><button class="btn" data-a="newBook">${I('plus')}${T('หนังสือโลกใหม่','New lorebook')}</button><button class="btn" data-a="imp">${I('up')}${T('นำเข้า JSON','Import JSON')}</button></div></section>
- <div class="stats"><div class="stat glass"><b>${S.cards.length}</b><span>${T('การ์ด','Cards')}</span></div><div class="stat glass"><b>${S.books.length}</b><span>${T('หนังสือโลก','Lorebooks')}</span></div><div class="stat glass"><b>${ents}</b><span>${T('เอนทรีทั้งหมด','Total entries')}</span></div></div>
+ const rec=[...S.cards.map(c=>({k:'c',id:c.id,n:c.name,u:c.u,s:`${tok(c.description)+tok(c.first_mes)} tok`})),...S.books.map(b=>({k:'b',id:b.id,n:b.name,u:b.u,s:T(`${b.entries.length} Entry`,`${b.entries.length} entries`)}))].sort((a,b)=>b.u-a.u).slice(0,6);
+ return`<div class="pg"><section class="hero glass">${SPK}${MASC}${wave(60,34)}${TAILSVG}<h1>${greet()}, ${esc(S.creator)}</h1><p class="lead">${T('แก้การ์ดตัวละครและลอร์บุ๊คของ SillyTavern ได้ในที่เดียว นำเข้าไฟล์ JSON แก้ไข แล้วส่งออกกลับไปใช้ได้ทันที','Edit SillyTavern character cards and lorebooks in one place. Import JSON, edit, and export it straight back.')}</p>
+ <div class="row"><button class="btn pri" data-a="newCard">${I('plus')}${T('การ์ดใหม่','New card')}</button><button class="btn" data-a="newBook">${I('plus')}${T('ลอร์บุ๊คใหม่','New lorebook')}</button><button class="btn" data-a="imp">${I('up')}${T('นำเข้า JSON','Import JSON / PNG')}</button></div></section>
+ <div class="stats"><div class="stat glass"><b>${S.cards.length}</b><span>${T('การ์ด','Cards')}</span></div><div class="stat glass"><b>${S.books.length}</b><span>${T('ลอร์บุ๊ค','Lorebooks')}</span></div><div class="stat glass"><b>${ents}</b><span>${T('Entries ทั้งหมด','Total Entries')}</span></div></div>
  <section class="glass idea"><div class="ik"><span class="sk" style="--d:.4s"></span></div><div class="it"><b>${T('ไอเดียจากสโตท','An idea from the stoat')}</b><p id="ideaT">${L()?ID[IDX][0]:ID[IDX][1]}</p></div><button class="btn sm" data-a="idea">${T('สุ่มใหม่','Another')}</button></section>
- <section class="glass" style="padding:20px"><h2>${T('แก้ไขล่าสุด','Recently edited')}</h2>${rec.length?`<div class="rec">${rec.map(r=>`<button class="rc" data-a="${r.k==='c'?'selCard':'selBook'}" data-id="${r.id}"><span class="av ${r.k==='b'?'b':''}">${esc(r.n.trim()[0]||'?')}</span><span style="min-width:0"><span class="nm">${esc(r.n)}</span><small>${r.k==='c'?T('การ์ด','Card'):T('หนังสือโลก','Lorebook')}, ${r.s}</small></span></button>`).join('')}</div>`:`<div class="empty drop" data-a="imp">${wave(40,40)}<b>${T('ลากไฟล์ JSON มาวางที่นี่','Drop a JSON file here')}</b>${T('หรือแตะเพื่อเลือกการ์ดและหนังสือโลกจาก SillyTavern','or tap to pick a SillyTavern card or lorebook')}</div>`}</section></div>`}
+ <section class="glass" style="padding:20px"><h2>${T('แก้ไขล่าสุด','Recently edited')}</h2>${rec.length?`<div class="rec">${rec.map(r=>`<button class="rc" data-a="${r.k==='c'?'selCard':'selBook'}" data-id="${r.id}"><span class="av ${r.k==='b'?'b':''}">${esc(r.n.trim()[0]||'?')}</span><span style="min-width:0"><span class="nm">${esc(r.n)}</span><small>${r.k==='c'?T('การ์ด','Card'):T('ลอร์บุ๊ค','Lorebook')}, ${r.s}</small></span></button>`).join('')}</div>`:`<div class="empty drop" data-a="imp">${wave(40,40)}<b>${T('ลากไฟล์ JSON มาวางที่นี่','Drop a JSON file here')}</b>${T('หรือแตะเพื่อเลือกการ์ดและลอร์บุ๊คจาก SillyTavern','or tap to pick a SillyTavern card or lorebook')}</div>`}</section></div>`}
 function listCards(){const q=(S.q||'').toLowerCase();return S.cards.filter(c=>!q||(c.name+c.tags.join()).toLowerCase().includes(q)).map(c=>`<button class="rc ${c.id===S.cc?'on':''}" id="li-${c.id}" data-a="selCard" data-id="${c.id}"><span class="av">${esc(c.name.trim()[0]||'?')}</span><span style="min-width:0"><span class="nm">${esc(c.name)}</span><small>${c.tags.slice(0,2).map(esc).join(', ')||T('ไม่มีแท็ก','No tags')}</small></span></button>`).join('')||`<div class="empty" style="padding:24px">${T('ไม่พบการ์ด','No cards found')}</div>`}
 function pCards(){const c=cc();
  const side=`<aside class="lst glass"><div class="row" style="flex-wrap:nowrap"><input class="in" id="q" placeholder="${T('ค้นหาการ์ด…','Search cards…')}" value="${esc(S.q||'')}"><button class="btn pri sm" data-a="newCard" aria-label="${T('การ์ดใหม่','New card')}">${I('plus')}</button></div><div id="cl" style="display:flex;flex-direction:column;gap:4px">${listCards()}</div></aside>`;
  if(!c)return`<div class="pg split">${side}<div class="ed glass empty"><b>${T('เลือกหรือสร้างการ์ด','Pick or create a card')}</b>${T('การ์ดของคุณจะแสดงตรงนี้','Your card shows up here.')}</div></div>`;
- const tabs=[['ed',T('แก้ไข','Edit')],['pv',T('พรีวิว','Preview')],['js',T('JSON','JSON')]];let body='';
- if(S.tab==='ed')body=`<div class="sec"><h3>${T('ข้อมูลหลัก','Identity')}</h3><div class="g2" style="margin-bottom:14px">${F(T('แท็ก (คั่นด้วยจุลภาค)','Tags (comma separated)'),'card','tags',c.tags,{k:'list'})}${F(T('ผู้สร้าง','Creator'),'card','creator',c.creator)}${F(T('เวอร์ชัน','Version'),'card','version',c.version)}<label class="fld"><span class="lb">${T('หนังสือโลกที่ผูกไว้','Linked lorebook')}</span><select data-t="card" data-f="book"><option value="">${T('ไม่ผูก','None')}</option>${S.books.map(b=>`<option value="${b.id}" ${b.id===c.book?'selected':''}>${esc(b.name)}</option>`).join('')}</select></label></div>${F(T('คำอธิบายตัวละคร','Description'),'card','description',c.description,{a:1,r:8,tok:1})}${F(T('บุคลิก','Personality'),'card','personality',c.personality,{a:1,r:3,tok:1})}${F(T('สถานการณ์','Scenario'),'card','scenario',c.scenario,{a:1,r:3,tok:1})}</div>
- <div class="sec"><h3>${T('บทสนทนา','Dialogue')}</h3>${F(T('ข้อความแรก','First message'),'card','first_mes',c.first_mes,{a:1,r:7,tok:1})}<div id="alts">${c.alts.map((a,i)=>`<div class="alt">${F(T('คำทักทายสำรอง ','Alternate greeting ')+(i+1),'card','alt',a,{a:1,r:4,i,tok:1})}<button class="btn sm dg" data-a="delAlt" data-i="${i}" aria-label="${T('ลบ','Delete')}">${I('x')}</button></div>`).join('')}</div><button class="btn sm" data-a="addAlt" style="margin-bottom:16px">${I('plus')}${T('เพิ่มคำทักทายสำรอง','Add alternate greeting')}</button>${F(T('ตัวอย่างบทสนทนา','Example messages'),'card','mes_example',c.mes_example,{a:1,r:6,tok:1,ph:'<START>'})}</div>
- <div class="sec"><h3>${T('คำสั่งระบบและหมายเหตุ','System & notes')}</h3>${F(T('System prompt','System prompt'),'card','system_prompt',c.system_prompt,{a:1,r:3,tok:1})}${F(T('Post-history instructions','Post-history instructions'),'card','post_history_instructions',c.post_history_instructions,{a:1,r:3,tok:1})}${F(T('บันทึกของผู้สร้าง','Creator notes'),'card','creator_notes',c.creator_notes,{a:1,r:3})}</div>`;
- else if(S.tab==='pv'){const gs=[c.first_mes,...c.alts];const g=Math.min(S.gi,gs.length-1);body=`<div class="chat"><div class="msg"><span class="av">${esc(c.name.trim()[0]||'?')}</span><div><span class="who">${esc(c.name)}</span><div class="bub">${gs[g]?mac(gs[g],c):`<span style="color:var(--mu)">${T('ยังไม่มีข้อความแรก','No first message yet')}</span>`}</div>${gs.length>1?`<div class="row" style="margin-top:12px"><button class="btn sm" data-a="gprev">‹</button><span class="pill">${g+1} / ${gs.length}</span><button class="btn sm" data-a="gnext">›</button></div>`:''}</div></div></div>`}
- else body=`<div class="row" style="margin-bottom:12px"><button class="btn pri sm" data-a="expCard">${I('down')}${T('ดาวน์โหลด','Download')}</button><button class="btn sm" data-a="cpCard">${I('copy')}${T('คัดลอก','Copy')}</button></div><textarea class="in jo" readonly>${esc(JSON.stringify(cardOut(c),null,2))}</textarea>`;
+ const tabs=[['ed',T('แก้ไข','Edit')],['pv',T('พรีวิว','Preview')],['pl',T('โครงเรื่อง','Plot')],['ck',T('ตรวจ','Check')],['js',T('JSON','JSON')]];let body='';
+ if(S.tab==='ed')body=`<div class="sec"><h3>${T('Character Definitions','Character Definitions')}</h3><div class="g2" style="margin-bottom:14px">${F(T('Tags (คั่นด้วยจุลภาค)','Tags (comma separated)'),'card','tags',c.tags,{k:'list'})}${F(T('Created by','Created by'),'card','creator',c.creator)}${F(T('Character Version','Character Version'),'card','version',c.version)}<label class="fld"><span class="lb">${T('Primary Lorebook','Primary Lorebook')}</span><select data-t="card" data-f="book"><option value="">${T('ไม่ผูก','None')}</option>${S.books.map(b=>`<option value="${b.id}" ${b.id===c.book?'selected':''}>${esc(b.name)}</option>`).join('')}</select></label></div><div class="tplrow"><button class="btn sm" data-a="tpl">${I('plus')}${T('ใส่โครงหัวข้อ','Insert outline')}</button><span class="pill" id="ctot">${ctot(c)}</span></div>${F(T('Description','Description'),'card','description',c.description,{a:1,r:8,tok:1})}${F(T('Personality','Personality'),'card','personality',c.personality,{a:1,r:3,tok:1})}${F(T('Scenario','Scenario'),'card','scenario',c.scenario,{a:1,r:3,tok:1})}</div>
+ <div class="sec"><h3>${T('First Message & Dialogue','First Message & Dialogue')}</h3>${F(T('First Message','First Message'),'card','first_mes',c.first_mes,{a:1,r:7,tok:1})}<div id="alts">${c.alts.map((a,i)=>`<div class="alt">${F(T('Alternate Greeting ','Alternate Greeting ')+(i+1),'card','alt',a,{a:1,r:4,i,tok:1})}<button class="btn sm dg" data-a="delAlt" data-i="${i}" aria-label="${T('ลบ','Delete')}">${I('x')}</button></div>`).join('')}</div><button class="btn sm" data-a="addAlt" style="margin-bottom:16px">${I('plus')}${T('เพิ่ม Alternate Greeting','Add Alternate Greeting')}</button>${F(T('Dialogue Examples','Dialogue Examples'),'card','mes_example',c.mes_example,{a:1,r:6,tok:1,ph:'<START>'})}</div>
+ <div class="sec"><h3>${T('Prompt Overrides','Prompt Overrides')}</h3>${F(T('Main Prompt','Main Prompt'),'card','system_prompt',c.system_prompt,{a:1,r:3,tok:1})}${F(T('Post-History Instructions','Post-History Instructions'),'card','post_history_instructions',c.post_history_instructions,{a:1,r:3,tok:1})}${F(T('Creator’s Notes','Creator’s Notes'),'card','creator_notes',c.creator_notes,{a:1,r:3})}</div>`;
+ else if(S.tab==='pv'){const gs=[c.first_mes,...c.alts];const g=Math.min(S.gi,gs.length-1);body=`<div class="chat"><div class="msg"><span class="av">${esc(c.name.trim()[0]||'?')}</span><div><span class="who">${esc(c.name)}</span><div class="bub">${gs[g]?mac(gs[g],c):`<span style="color:var(--mu)">${T('ยังไม่มี First Message','No First Message yet')}</span>`}</div>${gs.length>1?`<div class="row" style="margin-top:12px"><button class="btn sm" data-a="gprev">‹</button><span class="pill">${g+1} / ${gs.length}</span><button class="btn sm" data-a="gnext">›</button></div>`:''}</div></div></div>`}
+ else if(S.tab==='pl')body=plotHtml(c);else if(S.tab==='ck')body=ckHtml(c);else body=`<div class="row" style="margin-bottom:12px"><button class="btn pri sm" data-a="expCard">${I('down')}${T('ดาวน์โหลด','Download')}</button><button class="btn sm" data-a="cpCard">${I('copy')}${T('คัดลอก','Copy')}</button><button class="btn sm" data-a="expPng">${I('down')}PNG</button><button class="btn sm" data-a="cpMd">MD</button><button class="btn sm" data-a="dlTxt">TXT</button></div><textarea class="in jo" readonly>${esc(JSON.stringify(cardOut(c),null,2))}</textarea>`;
  return`<div class="pg split">${side}<section class="ed glass"><div class="eh"><input class="title" data-t="card" data-f="name" value="${esc(c.name)}" aria-label="${T('ชื่อ','Name')}"><div class="row"><span class="pill" id="tot">~${total(c)} tok</span><button class="btn sm" data-a="dupCard" title="${T('ทำสำเนา','Duplicate')}">${I('copy')}</button><button class="btn sm pri" data-a="expCard">${I('down')}${T('ส่งออก','Export')}</button><button class="btn sm dg" data-a="delCard" title="${T('ลบ','Delete')}">${I('trash')}</button></div></div><div class="tabs" role="tablist">${tabs.map(([k,l])=>`<button role="tab" class="${S.tab===k?'on':''}" data-a="tab" data-id="${k}">${l}</button>`).join('')}</div>${body}</section></div>`}
-const POS=()=>[T('ก่อนข้อมูลตัวละคร','Before character'),T('หลังข้อมูลตัวละคร','After character'),T('ก่อน Author’s Note','Before Author’s Note'),T('หลัง Author’s Note','After Author’s Note'),T('ที่ความลึก (@D)','At depth (@D)')];
+const POS=()=>[T('Before Char Defs','Before Char Defs'),T('After Char Defs','After Char Defs'),T('Before AN','Before AN'),T('After AN','After AN'),T('@D','@D')];
 const etitle=e=>e.comment||e.keys[0]||T('(ยังไม่มีชื่อ)','(untitled)');
-function entHtml(e,i){return`<div class="ent ${e.open?'open':''} ${e.enabled?'':'off'} ${e.constant?'c':''}" id="en${i}"><button class="eht" data-a="togEnt" data-i="${i}"><span class="dot"></span><b id="et${i}">${esc(etitle(e))}</b><small>${e.constant?T('ใช้ตลอด','Always on'):T(e.keys.length+' คีย์',e.keys.length+' keys')}</small>${I('ch','ch')}</button><div class="ebody"><div><div class="pd">
- ${F(T('ชื่อ/บันทึก','Title / memo'),'entry','comment',e.comment,{i})}${F(T('คีย์หลัก (คั่นด้วยจุลภาค)','Primary keys (comma separated)'),'entry','keys',e.keys,{i,k:'list'})}${F(T('คีย์รอง (ไม่บังคับ)','Secondary keys (optional)'),'entry','keys2',e.keys2,{i,k:'list'})}${F(T('เนื้อหา','Content'),'entry','content',e.content,{i,a:1,r:6,tok:1})}
- <div class="g3" style="margin-bottom:14px"><label class="fld"><span class="lb">${T('ตำแหน่งแทรก','Position')}</span><select data-t="entry" data-f="pos" data-i="${i}" data-k="num">${POS().map((p,j)=>`<option value="${j}" ${e.pos===j?'selected':''}>${p}</option>`).join('')}</select></label>${F(T('ลำดับ','Order'),'entry','order',e.order,{i,k:'num',n:1})}${F(T('ความลึก','Depth'),'entry','depth',e.depth,{i,k:'num',n:1})}</div>
- <div class="row" style="justify-content:space-between"><div class="row" style="gap:18px">${SW('entry','enabled',i,e.enabled,T('เปิดใช้','Enabled'))}${SW('entry','constant',i,e.constant,T('ใช้ตลอด','Constant'))}${SW('entry','selective',i,e.selective,T('เลือกเฉพาะ','Selective'))}</div><button class="btn sm dg" data-a="delEnt" data-i="${i}">${I('trash')}${T('ลบเอนทรี','Delete entry')}</button></div></div></div></div></div>`}
+function entHtml(e,i){return`<div class="ent ${BULK?'bkm':''} ${e.open?'open':''} ${e.enabled?'':'off'} ${e.constant?'c':''}" id="en${i}">${BULK?`<label class="bk"><input type="checkbox" data-b="${i}" ${BSEL.has(i)?'checked':''}></label>`:''}<span class="grip" data-g="${i}" role="button" tabindex="0" aria-label="${T('ลากเพื่อสลับลำดับ (หรือกดลูกศรขึ้น/ลง)','Drag to reorder (or press arrow up/down)')}"></span><button class="eht" data-a="togEnt" data-i="${i}"><span class="dot"></span><b id="et${i}">${esc(etitle(e))}</b><small>${e.constant?T('Constant','Constant'):T(e.keys.length+' Keywords',e.keys.length+' keywords')}</small>${I('ch','ch')}</button><div class="ebody"><div><div class="pd">
+ ${F(T('Title/Memo','Title/Memo'),'entry','comment',e.comment,{i})}${F(T('Primary Keywords (คั่นด้วยจุลภาค)','Primary Keywords (comma separated)'),'entry','keys',e.keys,{i,k:'list'})}<div class="tplrow"><button class="btn sm" data-a="keyGen" data-i="${i}">✦ ${T('ช่วยสร้างคีย์ไทย-อังกฤษ','Thai–English key helper')}</button></div>${F(T('Optional Filter','Optional Filter'),'entry','keys2',e.keys2,{i,k:'list'})}${F(T('Tags (ใช้กรองรายการ)','Tags (for filtering)'),'entry','tags',e.tags||[],{i,k:'list'})}${F(T('Content','Content'),'entry','content',e.content,{i,a:1,r:6,tok:1})}
+ <div class="g3" style="margin-bottom:14px"><label class="fld"><span class="lb">${T('Position','Position')}</span><select data-t="entry" data-f="pos" data-i="${i}" data-k="num">${POS().map((p,j)=>`<option value="${j}" ${e.pos===j?'selected':''}>${p}</option>`).join('')}</select></label>${F(T('Order','Order'),'entry','order',e.order,{i,k:'num',n:1})}${F(T('Depth','Depth'),'entry','depth',e.depth,{i,k:'num',n:1})}</div>
+ <div class="row" style="justify-content:space-between"><div class="row" style="gap:18px">${SW('entry','enabled',i,e.enabled,T('Enabled','Enabled'))}${SW('entry','constant',i,e.constant,T('Constant','Constant'))}${SW('entry','selective',i,e.selective,T('Selective','Selective'))}</div><button class="btn sm dg" data-a="delEnt" data-i="${i}">${I('trash')}${T('ลบ Entry','Delete Entry')}</button></div></div></div></div></div>`}
 function pLore(){const b=cb();
- const side=`<aside class="lst glass"><div class="row" style="flex-wrap:nowrap"><button class="btn pri" data-a="newBook" style="flex:1;justify-content:center">${I('plus')}${T('หนังสือโลกใหม่','New lorebook')}</button></div><div style="display:flex;flex-direction:column;gap:4px">${S.books.map(x=>`<button class="rc ${x.id===S.cb?'on':''}" data-a="selBook" data-id="${x.id}"><span class="av b">${esc(x.name.trim()[0]||'?')}</span><span style="min-width:0"><span class="nm">${esc(x.name)}</span><small>${T(x.entries.length+' เอนทรี',x.entries.length+' entries')}</small></span></button>`).join('')||`<div class="empty" style="padding:24px">${T('ยังไม่มีหนังสือโลก','No lorebooks yet')}</div>`}</div></aside>`;
- if(!b)return`<div class="pg split">${side}<div class="ed glass empty"><b>${T('เลือกหรือสร้างหนังสือโลก','Pick or create a lorebook')}</b>${T('เอนทรีทั้งหมดจะอยู่ตรงนี้','All entries live here.')}</div></div>`;
- return`<div class="pg split">${side}<section class="ed glass"><div class="eh"><input class="title" data-t="book" data-f="name" value="${esc(b.name)}" aria-label="${T('ชื่อ','Name')}"><div class="row"><span class="pill" id="btot">~${b.entries.reduce((s,e)=>s+tok(e.content),0)} tok</span><button class="btn sm" data-a="cpBook">${I('copy')}</button><button class="btn sm pri" data-a="expBook">${I('down')}${T('ส่งออก','Export')}</button><button class="btn sm dg" data-a="delBook">${I('trash')}</button></div></div>
- ${F(T('คำอธิบาย','Description'),'book','desc',b.desc,{a:1,r:2})}
- <div class="tb"><input class="in" id="eq" placeholder="${T('ค้นหาเอนทรี…','Search entries…')}"><button class="btn" data-a="allEnt">${T('ย่อ/ขยายทั้งหมด','Collapse / expand all')}</button><button class="btn pri" data-a="addEnt">${I('plus')}${T('เพิ่มเอนทรี','Add entry')}</button></div>
- <div id="ents">${b.entries.map(entHtml).join('')||`<div class="empty"><b>${T('ยังไม่มีเอนทรี','No entries yet')}</b>${T('กดเพิ่มเอนทรีเพื่อเริ่ม','Add an entry to begin.')}</div>`}</div></section></div>`}
+ const side=`<aside class="lst glass"><div class="row" style="flex-wrap:nowrap"><button class="btn pri" data-a="newBook" style="flex:1;justify-content:center">${I('plus')}${T('ลอร์บุ๊คใหม่','New lorebook')}</button></div><div style="display:flex;flex-direction:column;gap:4px">${S.books.map(x=>`<button class="rc ${x.id===S.cb?'on':''}" data-a="selBook" data-id="${x.id}"><span class="av b">${esc(x.name.trim()[0]||'?')}</span><span style="min-width:0"><span class="nm">${esc(x.name)}</span><small>${T(x.entries.length+' Entries',x.entries.length+' Entries')}</small></span></button>`).join('')||`<div class="empty" style="padding:24px">${T('ยังไม่มีลอร์บุ๊ค','No lorebooks yet')}</div>`}</div></aside>`;
+ if(!b)return`<div class="pg split">${side}<div class="ed glass empty"><b>${T('เลือกหรือสร้างลอร์บุ๊ค','Pick or create a Lorebook')}</b>${T('Entries ทั้งหมดจะอยู่ตรงนี้','All Entries live here.')}</div></div>`;
+ return`<div class="pg split">${side}<section class="ed glass"><div class="eh"><input class="title" data-t="book" data-f="name" value="${esc(b.name)}" aria-label="${T('ชื่อ','Name')}"><div class="row"><span class="pill" id="btot">~${b.entries.reduce((s,e)=>s+tok(e.content),0)} tok</span><button class="btn sm" data-a="cpBook">${I('copy')}</button><button class="btn sm" data-a="cpMd">MD</button><button class="btn sm" data-a="dlTxt">TXT</button><button class="btn sm pri" data-a="expBook">${I('down')}${T('ส่งออก','Export')}</button><button class="btn sm dg" data-a="delBook">${I('trash')}</button></div></div>
+ ${F(T('Description','Description'),'book','desc',b.desc,{a:1,r:2})}
+ <details class="kt"><summary>${T('ทดสอบ Keywords','Keyword tester')}</summary><textarea class="in" id="ktIn" placeholder="${T('วางข้อความแชตตรงนี้ เพื่อดูว่า Entry ไหนจะถูกเรียกใช้','Paste chat text to see which entries trigger')}"></textarea><div class="res" id="ktOut"></div></details>${ovHtml(b)}<div class="tb"><input class="in" id="eq" placeholder="${T('ค้นหา Entry…','Search Entries…')}"><button class="btn ${BULK?'pri':''}" data-a="bulk">${T('แก้หลาย Entry','Bulk edit')}</button><button class="btn" data-a="allEnt">${T('ย่อ/ขยายทั้งหมด','Collapse / expand all')}</button><button class="btn pri" data-a="addEnt">${I('plus')}${T('เพิ่ม Entry','Add Entry')}</button></div>
+ ${BULK?bulkBar():''}${tagBar(b)}<div id="ents">${b.entries.map(entHtml).join('')||`<div class="empty"><b>${T('ยังไม่มี Entry','No Entries yet')}</b>${T('กดเพิ่ม Entry เพื่อเริ่ม','Add an Entry to begin.')}</div>`}</div></section></div>`}
 function pSet(){return`<div class="pg"><h1>${T('ตั้งค่า','Settings')}</h1><p class="lead">${T('ข้อมูลทั้งหมดเก็บอยู่ในเบราว์เซอร์ของคุณเท่านั้น สำรองไฟล์ไว้เป็นระยะนะ','Everything is stored in your browser only. Back up now and then.')}</p><section class="glass" style="padding:8px 24px">
  <div class="setr"><div>${T('ภาษา','Language')}<small>${T('ภาษาของหน้าเว็บ','Interface language')}</small></div><div class="seg"><button class="${L()?'on':''}" data-a="lang" data-id="th">ไทย</button><button class="${L()?'':'on'}" data-a="lang" data-id="en">English</button></div></div>
  <div class="setr"><div>${T('ชื่อผู้สร้างเริ่มต้น','Default creator name')}<small>${T('ใช้กับการ์ดใหม่','Used for new cards')}</small></div><input class="in" style="max-width:240px" data-t="set" data-f="creator" value="${esc(S.creator)}"></div>
- <div class="setr"><div>${T('สำรองข้อมูล','Backup')}<small>${T('ดาวน์โหลดการ์ดและหนังสือโลกทั้งหมดเป็นไฟล์เดียว','Download all cards and lorebooks as one file')}</small></div><div class="row"><button class="btn" data-a="backup">${I('down')}${T('สำรอง','Back up')}</button><button class="btn" data-a="imp">${I('up')}${T('กู้คืน/นำเข้า','Restore / import')}</button></div></div>
- <div class="setr"><div>${T('ล้างข้อมูลทั้งหมด','Erase all data')}<small>${T('ลบการ์ดและหนังสือโลกในเบราว์เซอร์นี้','Removes every card and lorebook here')}</small></div><button class="btn dg" data-a="reset">${I('trash')}${T('ล้างข้อมูล','Erase')}</button></div></section>
+ ${setExtra()}<div class="setr"><div>${T('สำรองข้อมูล','Backup')}<small>${T('ดาวน์โหลดการ์ดและลอร์บุ๊คทั้งหมดเป็นไฟล์เดียว','Download all cards and lorebooks as one file')}</small></div><div class="row"><button class="btn" data-a="backup">${I('down')}${T('สำรอง','Back up')}</button><button class="btn" data-a="imp">${I('up')}${T('กู้คืน/นำเข้า','Restore / import')}</button></div></div>
+ <div class="setr"><div>${T('ล้างข้อมูลทั้งหมด','Erase all data')}<small>${T('ลบการ์ดและลอร์บุ๊คในเบราว์เซอร์นี้','Removes every card and lorebook here')}</small></div><button class="btn dg" data-a="reset">${I('trash')}${T('ล้างข้อมูล','Erase')}</button></div></section>
  <p style="color:var(--mu);margin-top:22px;text-align:center">Frostmute Studio · by ${esc(S.creator)}</p></div>`}
-function render(keep){$('#nav').innerHTML=`<div class="brand"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M9 17L7 5l9 6z" fill="#0b0712" stroke="#d6c2ff" stroke-width="1.4" stroke-linejoin="round"/><path d="M31 17l2-12-9 6z" fill="#0b0712" stroke="#d6c2ff" stroke-width="1.4" stroke-linejoin="round"/><circle cx="20" cy="22" r="13" fill="none" stroke="#d6c2ff" stroke-width="1.4"/><path d="M8 22h5l2.5-6 3 12 3-9 2 3h8" fill="none" stroke="#eaf1ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>frostmute</b><small>studio</small></span><svg class="pls" viewBox="0 0 60 16" aria-hidden="true"><path class="fl" d="M0 8h60"/><path class="bp" pathLength="100" d="M0 8h18l3-6 4 12 3-6h32"/></svg></div>`+NAVS.map(([k,i,l])=>`<button class="nv ${S.page===k?'on':''}" data-a="nav" data-id="${k}">${I(i)}<span>${l()}</span></button>`).join('')+`<span class="sp"></span><div class="foot">by ${esc(S.creator)}</div>`;
- $('#main').innerHTML=({home:pHome,cards:pCards,lore:pLore,set:pSet})[S.page]()+TRAIL();document.documentElement.lang=S.lang;if(!keep)window.scrollTo({top:0})}
+function render(keep){$('#nav').innerHTML=`<div class="brand"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="11" cy="10" r="5" fill="#0b0712" stroke="#d6c2ff" stroke-width="1.4"/><circle cx="29" cy="10" r="5" fill="#0b0712" stroke="#d6c2ff" stroke-width="1.4"/><circle cx="20" cy="22" r="13" fill="none" stroke="#d6c2ff" stroke-width="1.4"/><path d="M8 22h5l2.5-6 3 12 3-9 2 3h8" fill="none" stroke="#eaf1ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>frostmute</b><small>studio</small></span><svg class="pls" viewBox="0 0 60 16" aria-hidden="true"><path class="fl" d="M0 8h60"/><path class="bp" pathLength="100" d="M0 8h18l3-6 4 12 3-6h32"/></svg></div>`+NAVS.map(([k,i,l])=>`<button class="nv ${S.page===k?'on':''}" data-a="nav" data-id="${k}">${I(i)}<span>${l()}</span></button>`).join('')+`<span class="sp"></span><div class="foot">by ${esc(S.creator)}</div>`;
+ $('#main').innerHTML=(({home:pHome,cards:pCards,lore:pLore,set:pSet})[S.page]||pHome)()+TRAIL();document.documentElement.lang=S.lang;if(!keep)window.scrollTo({top:0})}
 /* events */
 document.addEventListener('input',e=>{const el=e.target;if(el.id==='q'){S.q=el.value;$('#cl').innerHTML=listCards();return}
  if(el.id==='eq'){const q=el.value.toLowerCase(),b=cb();b.entries.forEach((x,i)=>{$('#en'+i).style.display=!q||(x.comment+x.keys.join()+x.content).toLowerCase().includes(q)?'':'none'});return}
@@ -466,8 +747,8 @@ document.addEventListener('input',e=>{const el=e.target;if(el.id==='q'){S.q=el.v
  if(t==='card'){ldeb(()=>{const e=$('#tot');if(e)e.textContent='~'+total(cc())+' tok'});if(f==='name'){const n=$('#li-'+o.id+' .nm');if(n)n.textContent=v;const a=$('#li-'+o.id+' .av');if(a)a.textContent=v.trim()[0]||'?'}}
  if(t==='book'&&f==='name')render(true);
  if(t==='entry'){ldeb(()=>{const e=$('#btot'),b=cb();if(e&&b)e.textContent='~'+b.entries.reduce((s,x)=>s+tok(x.content),0)+' tok'});const row=$('#en'+i);
-  if(f==='enabled')row.classList.toggle('off',!v);if(f==='constant'){row.classList.toggle('c',v);row.querySelector('small').textContent=v?T('ใช้ตลอด','Always on'):T(o.keys.length+' คีย์',o.keys.length+' keys')}
-  if(f==='comment'||f==='keys')$('#et'+i).textContent=etitle(o);if(f==='keys'&&!o.constant)row.querySelector('small').textContent=T(o.keys.length+' คีย์',o.keys.length+' keys')}});
+  if(f==='enabled')row.classList.toggle('off',!v);if(f==='constant'){row.classList.toggle('c',v);row.querySelector('small').textContent=v?T('Constant','Constant'):T(o.keys.length+' Keywords',o.keys.length+' keywords')}
+  if(f==='comment'||f==='keys')$('#et'+i).textContent=etitle(o);if(f==='keys'&&!o.constant)row.querySelector('small').textContent=T(o.keys.length+' Keywords',o.keys.length+' keywords')}});
 document.addEventListener('change',e=>{if(e.target.dataset.t==='card'&&e.target.dataset.f==='name'){render(true)}});
 $('#file').onchange=e=>{importFiles([...e.target.files]);e.target.value=''};
 document.addEventListener('dragover',e=>e.preventDefault());document.addEventListener('drop',e=>{e.preventDefault();if(e.dataTransfer.files.length)importFiles([...e.dataTransfer.files])});
@@ -482,26 +763,26 @@ document.addEventListener('click',async e=>{const el=e.target.closest('[data-a]'
  else if(a==='addAlt'){cc().alts.push('');save();render(true)}
  else if(a==='delAlt'){cc().alts.splice(i,1);save();render(true)}
  else if(a==='gprev'||a==='gnext'){const n=cc().alts.length+1;S.gi=(S.gi+(a==='gnext'?1:-1)+n)%n;render(true)}
- else if(a==='expCard'){dl(fn(cc().name)+'.json',JSON.stringify(cardOut(cc()),null,2))}
+ else if(a==='expCard'){if(!await chkCard(cc()))return;dl(fn(cc().name)+'.json',JSON.stringify(cardOut(cc()),null,2))}
  else if(a==='cpCard'){await cp(JSON.stringify(cardOut(cc()),null,2));toast(T('คัดลอกแล้ว','Copied'))}
  else if(a==='newBook'){const b=mkBook();S.books.unshift(b);S.cb=b.id;go('lore')}
  else if(a==='selBook'){S.cb=id;go('lore')}
- else if(a==='delBook'){if(await ask(T(`ลบหนังสือโลก “${cb().name}” ใช่ไหม`,`Delete “${cb().name}”?`))){const d=S.cb;S.books=S.books.filter(b=>b.id!==d);S.cards.forEach(c=>{if(c.book===d)c.book=''});S.cb=S.books[0]?S.books[0].id:null;save();render(true);toast(T('ลบแล้ว','Deleted'))}}
+ else if(a==='delBook'){if(await ask(T(`ลบลอร์บุ๊ค “${cb().name}” ใช่ไหม`,`Delete “${cb().name}”?`))){const d=S.cb;S.books=S.books.filter(b=>b.id!==d);S.cards.forEach(c=>{if(c.book===d)c.book=''});S.cb=S.books[0]?S.books[0].id:null;save();render(true);toast(T('ลบแล้ว','Deleted'))}}
  else if(a==='addEnt'){cb().entries.push(mkEnt());save();render(true);const n=cb().entries.length-1;setTimeout(()=>{const r=$('#en'+n);r&&r.scrollIntoView({behavior:'smooth',block:'center'})},60)}
- else if(a==='delEnt'){if(await ask(T('ลบเอนทรีนี้ใช่ไหม','Delete this entry?'))){cb().entries.splice(i,1);save();render(true)}}
+ else if(a==='delEnt'){if(await ask(T('ลบ Entry นี้ใช่ไหม','Delete this Entry?'))){cb().entries.splice(i,1);save();render(true)}}
  else if(a==='togEnt'){const e2=cb().entries[i];e2.open=!e2.open;$('#en'+i).classList.toggle('open',e2.open);sv()}
  else if(a==='allEnt'){const b=cb(),o=!b.entries.every(x=>x.open);b.entries.forEach((x,j)=>{x.open=o;$('#en'+j).classList.toggle('open',o)});sv()}
- else if(a==='expBook'){dl(fn(cb().name)+'.json',JSON.stringify(bookST(cb()),null,2))}
- else if(a==='cpBook'){await cp(JSON.stringify(bookST(cb()),null,2));toast(T('คัดลอกแล้ว','Copied'))}
+ else if(a==='expBook'){if(!await chkBook(cb()))return;dl(fn(cb().name)+'.json',JSON.stringify(bookST(cb()),null,2))}
+ else if(a==='cpBook'){if(!await chkBook(cb()))return;await cp(JSON.stringify(bookST(cb()),null,2));toast(T('คัดลอกแล้ว','Copied'))}
  else if(a==='imp'){$('#file').click()}
  else if(a==='lang'){S.lang=id;save();render(true)}
  else if(a==='backup'){dl('frostmute-backup.json',JSON.stringify({fm_backup:1,cards:S.cards,books:S.books},null,2))}
  else if(a==='reset'){if(await ask(T('ลบข้อมูลทั้งหมดถาวรเลยนะ','This permanently erases everything.'))){S.cards=[];S.books=[];S.cc=S.cb=null;save();render(true);toast(T('ล้างข้อมูลแล้ว','Erased'))}}
 });
-render();
+$('#toast').addEventListener('click',()=>$('#toast').classList.remove('on'));render();H.c=snap();
 (()=>{const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,rt=document.documentElement;
 addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;
- const el=e.target.closest&&e.target.closest('.stat,.rc,.sec');if(el){const r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')}
+ const nw=performance.now(),el=(e.pointerType!=='mouse'||nw-(window._pm||0)<32)?null:(window._pm=nw,e.target.closest&&e.target.closest('.stat,.rc,.sec'));if(el){const r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')}
  if(rm)return;
  },{passive:true});
 const enh=()=>{document.querySelectorAll('#main .stat,#main .rc,#main .ed .sec,#main .ent').forEach((el,i)=>el.style.setProperty('--d',Math.min(i,14)*60+'ms'));
@@ -510,21 +791,536 @@ new MutationObserver(enh).observe($('#main'),{childList:true});enh();
 const cv=$('#fx'),cx=cv.getContext('2d');let W=0,H=0,D=1;const P=[];
 const rs=()=>{D=1;W=cv.width=innerWidth*D;H=cv.height=innerHeight*D};rs();addEventListener('resize',rs);
 for(let i=0;i<36;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.5+.3,s:Math.random()*.00005+.00002,p:Math.random()*6.28,h:Math.random()});
-let lt=0;function tick(t){if(document.hidden||t-lt<32){requestAnimationFrame(tick);return}lt=t;cx.clearRect(0,0,W,H);for(const p of P){p.y-=p.s*16;if(p.y<0){p.y=1;p.x=Math.random()}const a=.2+.5*Math.pow(Math.sin(t/900+p.p),2);cx.beginPath();cx.fillStyle=p.h>.6?'rgba(226,210,255,'+a+')':'rgba(157,123,240,'+a*.8+')';cx.arc(p.x*W+Math.sin(t/3000+p.p)*14*D,p.y*H,p.r*D,0,6.283);cx.fill()}requestAnimationFrame(tick)}
+let lt=0;function tick(t){if(document.hidden||t-lt<32){requestAnimationFrame(tick);return}lt=t;cx.clearRect(0,0,W,H);for(const p of P){p.y-=p.s*16;if(p.y<0){p.y=1;p.x=Math.random()}const a=.2+.5*Math.pow(Math.sin(t/900+p.p),2);cx.beginPath();cx.fillStyle=p.h>.6?'rgba('+FXC[0]+','+a+')':'rgba('+FXC[1]+','+a*.8+')';cx.arc(p.x*W+Math.sin(t/3000+p.p)*14*D,p.y*H,p.r*D,0,6.283);cx.fill()}requestAnimationFrame(tick)}
 if(!rm)requestAnimationFrame(tick);
 let dc=0;const dz=document.createElement('div');dz.id='dz';dz.innerHTML=wave(44,60)+'<b></b>';document.body.appendChild(dz);
 addEventListener('dragenter',e=>{if(e.dataTransfer&&[...e.dataTransfer.types].includes('Files')){dc++;dz.querySelector('b').textContent=T('ปล่อยไฟล์เพื่อนำเข้า','Drop to import');dz.classList.add('on')}});
 addEventListener('dragleave',()=>{dc=Math.max(0,dc-1);if(!dc)dz.classList.remove('on')});
 addEventListener('drop',()=>{dc=0;dz.classList.remove('on')});
-const say=m=>{const s=document.querySelector('.say');if(!s)return;s.textContent=m;s.classList.add('on');clearTimeout(say.t);say.t=setTimeout(()=>s.classList.remove('on'),2800)};
-const SAY=()=>L()?['ชู่วว… เงียบๆ นะ','อยากกอดหางตัวเองจัง','วันนี้เขียนอะไรดี?','ขอบคุณที่แวะมานะ ❄','เห็นมั้ย ตาตามเมาส์ได้ด้วย']:['Shh… quiet now','I could hug my own tail','What shall we write today?','Thanks for dropping by ❄','See? My eyes follow you'];
+const say=m=>{const s=document.querySelector('.say');if(!s)return;s.textContent='';const [t,ic]=m.split('§');s.append(t);if(ic!==undefined){s.insertAdjacentHTML('beforeend','<svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/><path d="M9.5 3.8L12 6l2.5-2.2M9.5 20.2L12 18l2.5 2.2M3.2 10.6l3.2.3-.9-3.1M20.8 13.4l-3.2-.3.9 3.1M3.2 13.4l3.2-.3-.9 3.1M20.8 10.6l-3.2.3.9-3.1"/></svg>')}s.classList.add('on');clearTimeout(say.t);say.t=setTimeout(()=>s.classList.remove('on'),2800)};
+const SAY=()=>L()?['ชู่วว… เงียบๆ นะ','อยากกอดหางตัวเองจัง','วันนี้เขียนอะไรดี?','ขอบคุณที่แวะมานะ§','เห็นมั้ย ตาตามเมาส์ได้ด้วย']:['Shh… quiet now','I could hug my own tail','What shall we write today?','Thanks for dropping by§','See? My eyes follow you'];
 document.addEventListener('click',e=>{
  if(e.target.closest('.pk')){const p=document.querySelector('.pk');p.classList.remove('hop');void p.offsetWidth;p.classList.add('hop');const a=SAY();say(a[Math.floor(Math.random()*a.length)])}
  if(e.target.closest('[data-a="idea"]')){let n;do{n=Math.floor(Math.random()*ID.length)}while(n===IDX);IDX=n;const q=$('#ideaT');q.textContent=L()?ID[n][0]:ID[n][1];q.classList.remove('sw');void q.offsetWidth;q.classList.add('sw')}});
 addEventListener('pointermove',e=>{const ey=document.querySelector('.pk .ey');if(!ey||rm)return;const r=ey.ownerSVGElement.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height*.75),d=Math.hypot(dx,dy)||1,k=Math.min(1,d/260)*2.4;ey.style.transform='translate('+(dx/d*k)+'px,'+(dy/d*k)+'px)'},{passive:true});
 setTimeout(()=>say(L()?'ชู่วว… ยินดีต้อนรับ':'Shh… welcome'),3400);
 try{if(!rm&&!sessionStorage.getItem('fm_i')){sessionStorage.setItem('fm_i','1');const o=document.createElement('div');o.id='intro';o.innerHTML=document.querySelector('.mark').outerHTML+'<b>frostmute</b><svg viewBox="0 0 200 20"><path pathLength="100" d="M0 10h70l6-8 8 16 6-8h110"/></svg>';document.body.appendChild(o);setTimeout(()=>o.classList.add('out'),2000);setTimeout(()=>o.remove(),2900)}}catch(e){}
-addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();save();toast(T('บันทึกในเบราว์เซอร์แล้ว','Saved in this browser'))}})})();
+addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();save();toast(T('บันทึกในเบราว์เซอร์แล้ว','Saved in this browser'))}})
+})();
+/* ---- extras: png io, outline, keyword tester ---- */
+function ctot(c){return '~'+['description','personality','scenario','first_mes','mes_example','system_prompt','post_history_instructions'].reduce((n,k)=>n+tok(c[k]),0)+' tok'}
+const TPL='STORY:\n- \n\nIDENTITY:\n- Full Name:\n- Age:\n- Gender:\n- Occupation:\n\nAPPEARANCE:\n- Hair:\n- Eyes:\n- Height:\n- Clothing:\n\nBACKGROUND:\n- \n\nPERSONALITY:\n- Core Traits:\n\nPSYCHOLOGY:\n- Core Belief:\n- Core Fear:\n\nREACTIONS:\n- When ... →\n\nRELATIONSHIPS:\n- {{user}}:\n\nSPEECH:\n- Tone:\n- Address:\n\nQUIRKS:\n- ';
+const crcT=(()=>{const t=[];for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xedb88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
+const crc=u=>{let c=-1;for(let i=0;i<u.length;i++)c=crcT[(c^u[i])&255]^(c>>>8);return(c^-1)>>>0};
+function pngChunks(u){const o=[],dv=new DataView(u.buffer,u.byteOffset,u.length);let p=8;while(p+8<=u.length){const l=dv.getUint32(p);o.push({t:String.fromCharCode(u[p+4],u[p+5],u[p+6],u[p+7]),d:u.subarray(p+8,p+8+l),s:p});p+=12+l}return o}
+function pngText(u){for(const c of pngChunks(u)){if(c.t!=='tEXt')continue;const i=c.d.indexOf(0),k=new TextDecoder().decode(c.d.subarray(0,i));if(k==='chara'||k==='ccv3'){const b=atob(new TextDecoder().decode(c.d.subarray(i+1))),a=new Uint8Array(b.length);for(let j=0;j<b.length;j++)a[j]=b.charCodeAt(j);return new TextDecoder().decode(a)}}return null}
+async function readF(f){if(/\.png$/i.test(f.name)||f.type==='image/png'){const t=pngText(new Uint8Array(await f.arrayBuffer()));if(!t)throw 0;return t}return f.text()}
+async function expPng(c){const cv=document.createElement('canvas');cv.width=600;cv.height=900;const x=cv.getContext('2d');
+ const g=x.createLinearGradient(0,0,0,900);g.addColorStop(0,'#1a1030');g.addColorStop(1,'#050408');x.fillStyle=g;x.fillRect(0,0,600,900);
+ x.strokeStyle='rgba(214,194,255,.35)';x.lineWidth=1.5;x.strokeRect(24,24,552,852);x.save();x.translate(300,380);for(let i=0;i<6;i++){x.rotate(Math.PI/3);x.beginPath();x.moveTo(0,0);x.lineTo(0,110);x.moveTo(0,70);x.lineTo(24,92);x.moveTo(0,70);x.lineTo(-24,92);x.stroke()}x.restore();
+ x.fillStyle='#f1eefb';x.textAlign='center';x.font="500 46px 'Cormorant Garamond','Noto Serif Thai',serif";let n=c.name||'';while(x.measureText(n).width>500&&n.length>1)n=n.slice(0,-1);x.fillText(n,300,640);
+ x.fillStyle='#9c97b3';x.font="400 15px 'Manrope',sans-serif";x.fillText('F R O S T M U T E   S T U D I O',300,800);
+ const blob=await new Promise(r=>cv.toBlob(r,'image/png')),u=new Uint8Array(await blob.arrayBuffer());
+ const js=new TextEncoder().encode(JSON.stringify(cardOut(c)));let bs='';for(let i=0;i<js.length;i+=8192)bs+=String.fromCharCode.apply(null,js.subarray(i,i+8192));
+ const key=new TextEncoder().encode('chara\0'),val=new TextEncoder().encode(btoa(bs)),body=new Uint8Array(4+key.length+val.length);
+ body.set(new TextEncoder().encode('tEXt'));body.set(key,4);body.set(val,4+key.length);
+ const ch=new Uint8Array(12+key.length+val.length),dv=new DataView(ch.buffer);dv.setUint32(0,key.length+val.length);ch.set(body,4);dv.setUint32(ch.length-4,crc(body));
+ const ie=pngChunks(u).pop(),out=new Uint8Array(u.length+ch.length);out.set(u.subarray(0,ie.s));out.set(ch,ie.s);out.set(u.subarray(ie.s),ie.s+ch.length);
+ const url=URL.createObjectURL(new Blob([out],{type:'image/png'})),a=document.createElement('a');a.href=url;a.download=fn(c.name)+'.png';a.style.display='none';document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(url)},8000);
+ toast(T('ส่งออกเป็นภาพแล้ว','Exported as image'))}
+function ktRun(){const b=cb(),i=$('#ktIn'),o=$('#ktOut');if(!b||!i||!o)return;const t=i.value.toLowerCase(),has=a=>(a||[]).some(k=>k&&t.includes(k.toLowerCase()));
+ const hit=t?b.entries.filter(e=>e.enabled!==false&&(e.constant||has(e.keys))&&(e.constant||!e.selective||!(e.keys2||[]).length||has(e.keys2))):b.entries.filter(e=>e.enabled!==false&&e.constant);
+ const cnt={};b.entries.forEach(e=>e.keys.forEach(k=>{k=k.trim().toLowerCase();if(k)(cnt[k]=cnt[k]||new Set()).add(e.id)}));const dup=Object.keys(cnt).filter(k=>cnt[k].size>1);
+ o.innerHTML=`<b>${hit.length}</b> ${T('Entries ถูกเรียกใช้','Entries triggered')} · ~${hit.reduce((n,e)=>n+tok(e.content),0)} tok<br>${hit.map(e=>esc(e.comment||'—')).join(' · ')}${dup.length?`<br><span class="wn">${T('Keywords ซ้ำกันหลาย Entries: ','Keywords shared by several Entries: ')}${esc(dup.slice(0,8).join(', '))}${dup.length>8?' +'+(dup.length-8):''}</span>`:''}`}
+document.addEventListener('input',e=>{const t=e.target;if(t.id==='ktIn')ktRun();else if(t.dataset&&t.dataset.t==='card'){const p=$('#ctot'),c=cc();if(p&&c)p.textContent=ctot(c)}});
+document.addEventListener('click',e=>{const el=e.target.closest('[data-a="tpl"],[data-a="expPng"]');if(!el)return;const c=cc();if(!c)return;
+ if(el.dataset.a==='tpl'){c.description=c.description?c.description+'\n\n'+TPL:TPL;save();render(true);toast(T('ใส่โครงหัวข้อแล้ว','Outline added'))}else expPng(c)});
+document.addEventListener('toggle',e=>{if(e.target.classList&&e.target.classList.contains('kt'))ktRun()},true);
+
+/* ---- batch 1: undo/redo, pre-export check, bulk edit, text export ---- */
+function applySnap(j){const o=JSON.parse(j);S.cards=o.cards;S.books=o.books;S.cc=o.cc;S.cb=o.cb;if(!S.cards.some(c=>c.id===S.cc))S.cc=S.cards[0]?S.cards[0].id:null;if(!S.books.some(b=>b.id===S.cb))S.cb=S.books[0]?S.books[0].id:null;BSEL.clear();try{localStorage.setItem('fm_studio_v1',JSON.stringify(S))}catch(e){}render(true);undoUI()}
+function undo(){clearTimeout(st);save();if(!H.u.length){toast(T('ไม่มีอะไรให้ย้อนแล้ว','Nothing to undo'));return}H.r.push(H.c);H.c=H.u.pop();applySnap(H.c);toast('Undo')}
+function redo(){clearTimeout(st);save();if(!H.r.length){toast(T('ไม่มีอะไรให้ทำซ้ำ','Nothing to redo'));return}H.u.push(H.c);H.c=H.r.pop();applySnap(H.c);toast('Redo')}
+addEventListener('keydown',e=>{if(!(e.ctrlKey||e.metaKey))return;const k=e.key.toLowerCase();if(k==='z'&&!e.shiftKey){e.preventDefault();undo()}else if((k==='z'&&e.shiftKey)||k==='y'){e.preventDefault();redo()}});
+function lint(b){const out=[],cnt={};let nk=0,nc=0;b.entries.forEach(e=>{if(e.enabled===false)return;if(!e.constant&&!(e.keys||[]).length)nk++;if(!(e.content||'').trim())nc++;(e.keys||[]).forEach(k=>{k=k.trim().toLowerCase();if(k)(cnt[k]=cnt[k]||new Set()).add(e.id)})});
+ const dup=Object.keys(cnt).filter(k=>cnt[k].size>1);
+ if(nk)out.push(T(nk+' Entry ไม่มี Primary Keywords',nk+' Entries without Primary Keywords'));
+ if(nc)out.push(T(nc+' Entry ไม่มี Content',nc+' Entries with empty Content'));
+ if(dup.length)out.push(T('Keywords ซ้ำ: ','Duplicate Keywords: ')+dup.slice(0,5).join(', ')+(dup.length>5?' +'+(dup.length-5):''));
+ return out}
+async function chkBook(b){const w=lint(b);if(!w.length)return true;return ask(T('พบจุดที่ควรเช็กก่อนส่งออก: ','Check before export: ')+w.join(' / ')+T(' ส่งออกต่อไหม','. Export anyway?'))}
+async function chkCard(c){const w=[];if(!(c.name||'').trim())w.push(T('ยังไม่มีชื่อ','No name'));if(!(c.description||'').trim())w.push(T('Description ว่าง','Empty Description'));if(!(c.first_mes||'').trim())w.push(T('First Message ว่าง','Empty First Message'));if(!w.length)return true;return ask(T('พบจุดที่ควรเช็กก่อนส่งออก: ','Check before export: ')+w.join(' / ')+T(' ส่งออกต่อไหม','. Export anyway?'))}
+function bulkBar(){const tri=id=>`<select id="${id}"><option value="">—</option><option value="1">${T('เปิด','On')}</option><option value="0">${T('ปิด','Off')}</option></select>`;
+ return`<div class="bkb glass"><div class="row"><button class="btn sm" data-a="bulkAll">${T('เลือกทั้งหมด','Select all')}</button><span class="pill" id="bkn">${BSEL.size} / ${cb().entries.length}</span></div><div class="bkg"><label class="fld"><span class="lb">Position</span><select id="bkPos"><option value="">—</option>${POS().map((p,j)=>`<option value="${j}">${p}</option>`).join('')}</select></label><label class="fld"><span class="lb">Depth</span><input type="number" id="bkDepth" placeholder="—"></label><label class="fld"><span class="lb">Order</span><input type="number" id="bkOrder" placeholder="—"></label><label class="fld"><span class="lb">Probability %</span><input type="number" id="bkProb" min="0" max="100" placeholder="—"></label><label class="fld"><span class="lb">Enabled</span>${tri('bkEn')}</label><label class="fld"><span class="lb">Constant</span>${tri('bkCon')}</label></div><button class="btn pri" data-a="bulkApply">${T('ใช้กับ Entry ที่เลือก','Apply to selected')}</button></div>`}
+function fmt(m){const h1=t=>m?'# '+t:t.toUpperCase()+'\n'+'='.repeat(Math.min(t.length,40)),h2=t=>m?'## '+t:'--- '+t+' ---',bb=(k,v)=>m?'**'+k+':** '+v:k+': '+v,out=[];
+ if(S.page==='lore'){const b=cb();if(!b)return'';out.push(h1(b.name||'Lorebook'));if(b.desc)out.push(b.desc);
+  b.entries.forEach(e=>{const l=[h2(etitle(e))];if((e.keys||[]).length)l.push(bb('Primary Keywords',e.keys.join(', ')));if((e.keys2||[]).length)l.push(bb('Optional Filter',e.keys2.join(', ')));
+   const meta=['Position: '+POS()[e.pos],'Order: '+e.order];if(e.pos===4)meta.push('Depth: '+e.depth);if(e.constant)meta.push('Constant');if(e.selective)meta.push('Selective');if(e.enabled===false)meta.push('Disabled');if(e.prob!==undefined&&e.prob<100)meta.push('Probability: '+e.prob+'%');
+   l.push(meta.join(' | '));if((e.content||'').trim())l.push('\n'+e.content.trim());out.push(l.join('\n'))})}
+ else{const c=cc();if(!c)return'';out.push(h1(c.name||'Character'));out.push([c.creator?'Created by '+c.creator:'','v'+(c.version||'1.0'),(c.tags||[]).length?'Tags: '+c.tags.join(', '):''].filter(Boolean).join(' · '));
+  const sec=(t,v,fence)=>{if((v||'').trim())out.push(h2(t)+'\n'+(m&&fence?'```\n'+v.trim()+'\n```':v.trim()))};
+  sec('Description',c.description);sec('Personality',c.personality);sec('Scenario',c.scenario);sec('First Message',c.first_mes);c.alts.forEach((a,i)=>sec('Alternate Greeting '+(i+1),a));sec('Dialogue Examples',c.mes_example,1);sec('Main Prompt',c.system_prompt);sec('Post-History Instructions',c.post_history_instructions);sec('Creator’s Notes',c.creator_notes)}
+ return out.join('\n\n')}
+document.addEventListener('change',e=>{const b=e.target.dataset&&e.target.dataset.b;if(b===undefined)return;e.target.checked?BSEL.add(+b):BSEL.delete(+b);const n=$('#bkn');if(n)n.textContent=BSEL.size+' / '+cb().entries.length});
+document.addEventListener('click',async e=>{const el=e.target.closest('[data-a]');if(!el)return;const a=el.dataset.a;
+ if(a==='undo')undo();else if(a==='redo')redo();
+ else if(a==='bulk'){BULK=!BULK;BSEL.clear();render(true)}
+ else if(a==='bulkAll'){const E=cb().entries;if(BSEL.size===E.length)BSEL.clear();else E.forEach((_,i)=>BSEL.add(i));render(true)}
+ else if(a==='bulkApply'){const E=cb().entries,sel=[...BSEL].filter(i=>E[i]);if(!sel.length){toast(T('ยังไม่ได้เลือก Entry','No Entries selected'));return}
+  const v=id=>{const x=$('#'+id);return x?x.value:''},num=(id,lo,hi)=>{const t=v(id);if(t===''||isNaN(+t))return null;return Math.max(lo,Math.min(hi,Math.round(+t)))};
+  const pos=v('bkPos'),d=num('bkDepth',0,9999),o=num('bkOrder',-9999,99999),p=num('bkProb',0,100),en=v('bkEn'),co=v('bkCon');
+  if(pos===''&&d===null&&o===null&&p===null&&en===''&&co===''){toast(T('ยังไม่ได้ตั้งค่าอะไร','Nothing to change'));return}
+  sel.forEach(i=>{const x=E[i];if(pos!=='')x.pos=+pos;if(d!==null)x.depth=d;if(o!==null)x.order=o;if(p!==null)x.prob=p;if(en!=='')x.enabled=en==='1';if(co!=='')x.constant=co==='1'});
+  cb().u=Date.now();save();render(true);toast(T('แก้แล้ว '+sel.length+' Entry','Updated '+sel.length+' Entries'))}
+ else if(a==='cpMd'){await cp(fmt(true));toast(T('คัดลอก Markdown แล้ว','Markdown copied'))}
+ else if(a==='dlTxt'){const x=S.page==='lore'?cb():cc();if(x)dl(fn(x.name)+'.txt',fmt(false))}});
+
+/* ---- batch 2: token budget simulator, Constant meter, insertion timeline ---- */
+function ovInner0(b){const TBv=S.tb||2048,E=b.entries.filter(e=>e.enabled!==false).map(e=>({e,t:tok(e.content||'')}));
+ const con=E.filter(x=>x.e.constant),ct=con.reduce((n,x)=>n+x.t,0),pc=TBv?ct/TBv:0,lv=pc>=1?'bad':pc>=.5?'warn':'ok';
+ const msg=lv==='bad'?T('Constant กินงบหมดแล้ว','Constant Entries use up the whole budget'):lv==='warn'?T('Constant กินงบเกินครึ่ง เหลือที่ให้ Entry อื่นน้อย','Constant Entries take over half of the budget'):T('อยู่ในระดับปลอดภัย','Looks healthy');
+ let used=0,over=false;const sim=[...E].sort((a,c)=>(c.e.order||0)-(a.e.order||0)).map(x=>{if(!over&&used+x.t>TBv)over=true;if(!over)used+=x.t;return{...x,kept:!over}});
+ const kept=sim.filter(x=>x.kept).length,first=sim.find(x=>!x.kept);
+ const tl=POS().map((pn,p)=>{const g=E.filter(x=>(x.e.pos||0)===p).sort((a,c)=>(c.e.order||0)-(a.e.order||0));if(!g.length)return'';return`<div class="tlg"><b>${pn}</b>${g.map(x=>`<div class="tle ${x.e.constant?'c':''}"><span>${x.e.order}</span>${esc(etitle(x.e))}${p===4?` <small>D${x.e.depth}</small>`:''}</div>`).join('')}</div>`}).join('');
+ return`<div class="ovw"><h4>${T('มิเตอร์ Constant','Constant meter')}</h4><div class="tbar ${lv}"><i style="width:${Math.min(100,pc*100).toFixed(1)}%"></i></div><p>${con.length} Entries · ${ct} / ${TBv} tok (${Math.round(pc*100)}%) · ${msg}</p></div>
+<div class="ovw"><h4>${T('จำลอง Token Budget','Token Budget simulator')}</h4><p>${kept} / ${E.length} Entries ${T('เข้างบ','fit')} · ${used} tok${first?' · '+T('ถูกตัดก่อน: ','Cut first: ')+esc(etitle(first.e)):''}</p>${sim.map(x=>`<div class="ovr ${x.kept?'':'cut'}"><span>${x.e.order}</span><span class="nm">${esc(etitle(x.e))}</span><small>${x.t} tok</small><em>${x.kept?T('เข้า','Kept'):T('ตัด','Cut')}</em></div>`).join('')||`<p>${T('ยังไม่มี Entry','No Entries yet')}</p>`}<small class="nt">${T('จำลองโดยสมมติว่า Entry ที่เปิดอยู่ทุกอันถูกเรียกใช้ และค่า Order สูงเข้างบก่อน','Assumes every enabled Entry triggers, higher Order is added first.')}</small></div>
+<div class="ovw"><h4>${T('ไทม์ไลน์ลำดับการเรียกใช้','Insertion timeline')}</h4>${tl||`<p>${T('ยังไม่มี Entry','No Entries yet')}</p>`}</div>`}
+function ovHtml(b){const TBv=S.tb||2048;return`<details class="kt" id="ovD" ${OVOPEN?'open':''}><summary>${T('ภาพรวม','Overview')}</summary><label class="fld" style="margin-top:12px"><span class="lb">Token Budget <b id="tbV">${TBv}</b></span><input type="range" id="tbR" min="256" max="8192" step="64" value="${TBv}"></label><div id="ovBody">${ovInner(b)}</div></details>`}
+document.addEventListener('toggle',e=>{if(e.target.id==='ovD')OVOPEN=e.target.open},true);
+document.addEventListener('input',e=>{const el=e.target;if(el.id==='tbR'){S.tb=+el.value;sv();$('#tbV').textContent=el.value;$('#ovBody').innerHTML=ovInner(cb());return}
+ if(el.dataset&&el.dataset.t==='entry'){clearTimeout(ovT);ovT=setTimeout(()=>{const o=$('#ovBody');if(o&&cb())o.innerHTML=ovInner(cb())},300)}});
+
+/* ---- batch 3: undo pill, consistency check, plot board ---- */
+(()=>{const d=document.createElement('div');d.className='undo';d.id='undoFab';d.innerHTML=`<button data-a="undo" title="Undo (Ctrl+Z)" aria-label="Undo">${I('undo')}</button><button data-a="redo" title="Redo (Ctrl+Shift+Z)" aria-label="Redo">${I('redo')}</button>`;document.body.appendChild(d);undoUI()})();
+function undoUI(){const d=$('#undoFab');if(!d)return;d.classList.toggle('on',H.u.length>0||H.r.length>0);d.children[0].disabled=!H.u.length;d.children[1].disabled=!H.r.length}
+const KNOWN=new Set(['char','user','original','input','time','date','weekday','isotime','isodate','idle_duration','lastmessage','newline','trim','random','roll','pick','model','persona','description','personality','scenario','charprompt','charjailbreak','mesexamples','group','groupnotmuted','notchar','charversion','version','banned','noop','lastmessageid','lastcharmessage','lastusermessage','charifnotgroup','mesexamplesraw','systemprompt','chatstart','summary','getvar','setvar','addvar','incvar','decvar','getglobalvar','setglobalvar']);
+const CP=[[['ผมสั้น','short hair'],['ผมยาว','long hair']],[['ผมสีดำ','black hair'],['ผมสีขาว','white hair'],['ผมสีบลอนด์','blonde hair'],['ผมสีแดง','red hair'],['ผมสีน้ำตาล','brown hair'],['ผมสีเงิน','silver hair']],[['ตาสีฟ้า','blue eyes'],['ตาสีน้ำตาล','brown eyes'],['ตาสีเขียว','green eyes'],['ตาสีแดง','red eyes'],['ตาสีดำ','black eyes'],['ตาสีม่วง','purple eyes']],[['ตัวสูง'],['ตัวเตี้ย','ตัวเล็ก']],[['ขี้อาย','shy'],['กล้าแสดงออก','outgoing']],[['ใจดี'],['ใจร้าย','cruel']]];
+const lev=(a,b)=>{const m=a.length,n=b.length,d=[];for(let i=0;i<=m;i++){d[i]=[i];}for(let j=1;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]};
+function near1(a,b){if(a===b)return false;const la=a.length,lb=b.length;if(Math.abs(la-lb)>1)return false;let i=0;while(i<la&&i<lb&&a[i]===b[i])i++;if(la===lb)return a.slice(i+1)===b.slice(i+1)||(a[i]===b[i+1]&&a[i+1]===b[i]&&a.slice(i+2)===b.slice(i+2));return la>lb?a.slice(i+1)===b.slice(i):b.slice(i+1)===a.slice(i)}
+function ckDocs(cards,b){const D=[],F=[['description','Description'],['personality','Personality'],['scenario','Scenario'],['first_mes','First Message'],['mes_example','Dialogue Examples'],['system_prompt','Main Prompt'],['post_history_instructions','Post-History Instructions'],['creator_notes','Creator’s Notes']];
+ cards.forEach(c=>{const nm=c.name||'?';F.forEach(([k,l])=>{if((c[k]||'').trim())D.push({g:c.id,src:nm+' · '+l,text:c[k].slice(0,8000)})});(c.alts||[]).forEach((a,i)=>{if((a||'').trim())D.push({g:c.id,src:nm+' · Alternate Greeting '+(i+1),text:a.slice(0,8000)})})});
+ if(b)b.entries.forEach(e=>{if((e.content||'').trim())D.push({g:e.id,src:'Entry · '+etitle(e),text:e.content.slice(0,8000)})});return D}
+function consist(cards,b){const docs=ckDocs(cards,b),out=[];
+ docs.forEach(d=>{const mm=new Set();
+  d.text.replace(/(^|[^{])\{\s*(char|user)\s*\}(?!\})/gi,(m0,a,w)=>{mm.add(T('ใช้ {'+w+'} ปีกกาเดียว ควรเป็น {{'+w.toLowerCase()+'}}','Single braces {'+w+'}, use {{'+w.toLowerCase()+'}}'));return m0});
+  d.text.replace(/\{\{\s*(char|user)\s*\}(?!\})/gi,(m0,w)=>{mm.add(T('{{'+w+'} ปิดปีกกาไม่ครบ','{{'+w+'} is missing a closing brace'));return m0});
+  const re=/\{\{([^{}]*)\}\}/g;let m;while((m=re.exec(d.text))){const n=m[1].trim().toLowerCase();if(!n||n==='char'||n==='user'||KNOWN.has(n)||/[^a-z_]/.test(n))continue;if(lev(n,'char')<=2||lev(n,'user')<=2)mm.add(T('{{'+m[1]+'}} อาจพิมพ์ผิด','{{'+m[1]+'}} may be a typo'))}
+  mm.forEach(x=>out.push({k:'macro',m:x+' ('+d.src+')'}))});
+ const nm=new Map(),add=x=>{x=(x||'').trim();if(x.length>=4&&x.length<=24&&!/\n/.test(x)){const k=x.toLowerCase();if(!nm.has(k))nm.set(k,x)}};
+ cards.forEach(c=>add(c.name));if(b)b.entries.forEach(e=>{add(e.comment);(e.keys||[]).forEach(add)});
+ let nh=0;const seen=new Set();
+ for(const n of [...nm.keys()].slice(0,40)){if(nh>=12)break;const lat=/^[a-z0-9 ]+$/.test(n),L=n.length;
+  for(const d of docs){const t=d.text.toLowerCase();
+   for(let len=Math.max(3,L-1);len<=L+1;len++)for(let i=0;i+len<=t.length;i++){
+    if(lat&&((i>0&&/[a-z]/.test(t[i-1]))||(i+len<t.length&&/[a-z]/.test(t[i+len]))))continue;
+    const w=t.substr(i,len);if(w.includes(n)||n.includes(w)||(!/\s/.test(n)&&/\s/.test(w)))continue;
+    if(near1(n,w)){const key=n+'>'+w;if(seen.has(key))continue;seen.add(key);nh++;out.push({k:'name',m:T('“'+nm.get(n)+'” อาจสะกดเป็น “'+d.text.substr(i,len)+'”','“'+nm.get(n)+'” may be misspelled as “'+d.text.substr(i,len)+'”')+' ('+d.src+')'})}}}}
+ const grp={};docs.forEach(d=>{(grp[d.g]=grp[d.g]||{src:d.src.split(' · ')[0]==='Entry'?d.src:d.src.split(' · ')[0],t:''}).t+='\n'+d.text.toLowerCase()});
+ const has=(t,p)=>/[a-z]/.test(p)?new RegExp('(^|[^a-z])'+p+'($|[^a-z])').test(t):t.includes(p);
+ Object.values(grp).forEach(g=>CP.forEach(set=>{const hit=set.map(ph=>ph.find(p=>has(g.t,p))).filter(Boolean);if(hit.length>1)out.push({k:'contra',m:T('อาจขัดกัน: “'+hit[0]+'” กับ “'+hit[1]+'”','May conflict: “'+hit[0]+'” vs “'+hit[1]+'”')+' ('+g.src+')'})}));
+ return out}
+function ckList(list){const lb={macro:'{{char}} / {{user}}',name:T('ชื่อ','Name'),contra:T('ขัดกัน','Conflict')};
+ return(list.length?list.slice(0,30).map(x=>`<div class="ckr"><small>${lb[x.k]}</small>${esc(x.m)}</div>`).join(''):`<p class="ckok">${T('ไม่พบจุดที่น่าสงสัย','Nothing suspicious found')}</p>`)+`<small class="nt">${T('ตรวจแบบประมาณจากรายการคำที่กำหนดไว้ อาจพลาดหรือเตือนเกินได้','Approximate check based on fixed word lists, it can miss things or over-warn.')}</small>`}
+function ckHtml(c){return`<div class="sec"><h3>${T('ตรวจความสม่ำเสมอ','Consistency check')}</h3>${ckList(consist([c],S.books.find(x=>x.id===c.book)))}</div>`}
+function ovInner(b){return ovInner0(b)+`<div class="ovw"><h4>${T('ตรวจความสม่ำเสมอ','Consistency check')}</h4>${ckList(consist(S.cards.filter(c=>c.book===b.id),b))}</div>`}
+/* plot board */
+const ACTS=()=>[T('ช่วงต้น','Beginning'),T('ช่วงกลาง','Middle'),T('ช่วงท้าย','End')];
+function beatHtml(b,i){return`<div class="beat"><input class="in" data-bt="title" data-bi="${i}" value="${esc(b.title||'')}" placeholder="${T('จุดเปลี่ยน เช่น ความลับถูกเปิดเผย','Beat, e.g. the secret comes out')}"><textarea class="in" rows="2" data-bt="note" data-bi="${i}" placeholder="${T('รายละเอียด','Notes')}">${esc(b.note||'')}</textarea><input class="in" data-bt="gate" data-bi="${i}" value="${esc(b.gate||'')}" placeholder="${T('Reveal gate: เปิดเผยเมื่อ…','Reveal gate: reveal when…')}"><div class="row"><select class="in" data-bsel="${i}" style="flex:1;width:auto">${ACTS().map((n,k)=>`<option value="${k}" ${b.act===k?'selected':''}>${n}</option>`).join('')}</select><button class="btn sm" data-a="beatUp" data-i="${i}" aria-label="Up">↑</button><button class="btn sm" data-a="beatDn" data-i="${i}" aria-label="Down">↓</button><button class="btn sm dg" data-a="delBeat" data-i="${i}" aria-label="${T('ลบ','Delete')}">${I('trash')}</button></div></div>`}
+function plotHtml(c){const P=c.plot||[],g=P.filter(x=>(x.gate||'').trim()).length;return`<div class="sec"><h3>${T('กระดานโครงเรื่อง','Plot board')}</h3><p class="nt" style="margin:0 0 12px">${P.length} ${T('จุดเปลี่ยน','beats')} · ${g} Reveal gate</p><div class="plg">${ACTS().map((an,a)=>`<div class="plc"><h4>${an}</h4>${P.map((b,i)=>b.act===a?beatHtml(b,i):'').join('')}<button class="btn sm" data-a="addBeat" data-act="${a}">${I('plus')}${T('เพิ่มจุดเปลี่ยน','Add beat')}</button></div>`).join('')}</div></div>`}
+document.addEventListener('input',e=>{const el=e.target;if(el.dataset&&el.dataset.bt){const c=cc();if(!c||!c.plot||!c.plot[+el.dataset.bi])return;c.plot[+el.dataset.bi][el.dataset.bt]=el.value;c.u=Date.now();sv()}});
+document.addEventListener('change',e=>{const el=e.target;if(el.dataset&&el.dataset.bsel!==undefined){const c=cc();c.plot[+el.dataset.bsel].act=+el.value;c.u=Date.now();save();render(true)}});
+document.addEventListener('click',async e=>{const el=e.target.closest('[data-a]');
+ if(!el)return;
+ const a=el.dataset.a,c=cc();
+ if(a==='addBeat'){c.plot=c.plot||[];c.plot.push({act:+el.dataset.act,title:'',note:'',gate:''});c.u=Date.now();save();render(true)}
+ else if(a==='delBeat'){c.plot.splice(+el.dataset.i,1);c.u=Date.now();save();render(true)}
+ else if(a==='beatUp'||a==='beatDn'){const i=+el.dataset.i,d=a==='beatUp'?-1:1;let j=i+d;while(j>=0&&j<c.plot.length&&c.plot[j].act!==c.plot[i].act)j+=d;if(j>=0&&j<c.plot.length){[c.plot[i],c.plot[j]]=[c.plot[j],c.plot[i]];c.u=Date.now();save();render(true)}}
+});
+/* ---- batch 1: theme, version history, tags + drag reorder, global search, key helper ---- */
+ic.search='<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>';
+let GS=[],GSI=0,tgT;
+/* theme */
+const FXS={amethyst:['226,210,255','157,123,240'],ice:['219,234,254','96,165,250'],rose:['252,231,243','244,114,182'],mist:['241,245,249','203,213,225']};
+function applyTheme(){const t='amethyst',h=document.documentElement;if(t==='amethyst')h.removeAttribute('data-th');else h.setAttribute('data-th',t);FXC=FXS[t]}
+applyTheme();
+/* version history */
+const hash32=s=>{let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0};
+function VER(){try{return JSON.parse(localStorage.getItem('fm_versions_v1')||'[]')}catch(e){return[]}}
+function VERW(l){for(;;){try{localStorage.setItem('fm_versions_v1',JSON.stringify(l));return true}catch(e){if(l.length<=1)return false;l.pop()}}}
+function verSave(k){if(!S.cards.length&&!S.books.length)return false;const h=hash32(JSON.stringify([S.cards,S.books])),V=VER();if(V[0]&&V[0].h===h)return false;
+ V.unshift({id:uid(),t:Date.now(),k,h,json:snap(),n:{c:S.cards.length,b:S.books.length,e:S.books.reduce((s,x)=>s+x.entries.length,0)}});
+ while(V.length>30){let x=-1;for(let i=V.length-1;i>=0;i--)if(V[i].k==='auto'){x=i;break}V.splice(x<0?V.length-1:x,1)}
+ return VERW(V)}
+function verList(){const V=VER();if(!V.length)return`<p class="nt">${T('ยังไม่มีสแนปชอต','No snapshots yet')}</p>`;
+ const lb={auto:T('อัตโนมัติ','Auto'),manual:T('บันทึกเอง','Manual'),restore:T('ก่อนคืนค่า','Before restore'),del:T('ก่อนลบ','Before delete'),imp:T('ก่อนนำเข้า','Before import')};
+ return V.map(v=>`<div class="vrow"><div><b>${esc(new Date(v.t).toLocaleString(L()?'th-TH':'en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}))}</b><small>${esc(lb[v.k]||v.k)} · ${v.n.c} ${T('การ์ด','cards')} · ${v.n.b} ${T('ลอร์บุ๊ค','lorebooks')} · ${v.n.e} Entries</small></div><div class="row"><button class="btn sm" data-a="verRestore" data-id="${v.id}">${T('คืนค่า','Restore')}</button><button class="btn sm dg" data-a="verDel" data-id="${v.id}" aria-label="${T('ลบ','Delete')}">${I('x')}</button></div></div>`).join('')}
+function refVL(){const v=$('.vlist');if(v)v.innerHTML=verList()}
+async function verRestore(id){const v=VER().find(x=>x.id===id);if(!v)return;
+ if(!await ask(T('คืนค่าเป็นเวอร์ชันนี้ไหม สถานะปัจจุบันจะถูกเก็บเป็นสแนปชอตก่อน และกด Undo ย้อนได้','Restore this version? The current state is snapshotted first, and Undo still works.')))return;
+ clearTimeout(st);save();verSave('restore');H.u.push(H.c);H.c=v.json;H.r=[];applySnap(v.json);toast(T('คืนค่าเวอร์ชันแล้ว','Version restored'))}
+function setExtra(){const th=S.theme||'amethyst',TH=[['amethyst',T('ม่วงอเมทิสต์','Amethyst'),'#9d7bf0'],['ice',T('ฟ้าน้ำแข็ง','Ice blue'),'#60a5fa'],['rose',T('กุหลาบ','Rose'),'#f472b6'],['mist',T('ขาวหมอก','Mist white'),'#e2e8f0']];
+ return`
+<div class="setr"><div>${T('ประวัติเวอร์ชัน','Version history')}<small>${T('เก็บสแนปชอตอัตโนมัติในเบราว์เซอร์นี้ ย้อนกลับได้','Auto snapshots kept in this browser, restorable')}</small></div><button class="btn" data-a="verNow">${I('plus')}${T('บันทึกสแนปชอตตอนนี้','Snapshot now')}</button><div class="vlist">${verList()}</div></div>`}
+/* tags + filter */
+function tagList(b){const m=new Map();b.entries.forEach(e=>(e.tags||[]).forEach(t=>{t=t.trim();if(t)m.set(t,(m.get(t)||0)+1)}));return[...m.entries()].sort((x,y)=>y[1]-x[1]||x[0].localeCompare(y[0]))}
+function tagInner(b){const l=tagList(b);if(TAGF&&!l.some(x=>x[0]===TAGF))TAGF='';
+ return l.length?`<div class="tagbar"><span class="nt">${T('แท็ก','Tags')}</span><button class="chip ${TAGF?'':'on'}" data-a="tagf" data-id="">${T('ทั้งหมด','All')}</button>${l.map(([t,n])=>`<button class="chip ${TAGF===t?'on':''}" data-a="tagf" data-id="${esc(t)}">${esc(t)}<small>${n}</small></button>`).join('')}</div>`:''}
+function tagBar(b){return`<div id="tagwrap">${tagInner(b)}</div>`}
+function applyEF(){const b=cb();if(!b||S.page!=='lore')return;const qe=$('#eq'),q=qe?qe.value.toLowerCase():'';
+ b.entries.forEach((x,i)=>{const n=$('#en'+i);if(!n)return;const okq=!q||(x.comment+x.keys.join()+x.content+(x.tags||[]).join()).toLowerCase().includes(q),okt=!TAGF||(x.tags||[]).includes(TAGF);n.style.display=okq&&okt?'':'none'})}
+/* drag reorder */
+(()=>{let d=null,raf=0;const isEnt=n=>n.classList&&n.classList.contains('ent')&&/^en\d+$/.test(n.id),vis=n=>isEnt(n)&&n.style.display!=='none';
+ function upd(){if(!d)return;const py=d.cy+scrollY;d.row.style.transform='translateY('+(py-d.y0)+'px)';
+  d.box.querySelectorAll('.dt-b,.dt-a').forEach(n=>n.classList.remove('dt-b','dt-a'));d.before=null;d.last=null;
+  const sibs=[...d.box.children].filter(n=>vis(n)&&n!==d.row);let before=null;
+  for(const s of sibs){const r=s.getBoundingClientRect();if(py<r.top+scrollY+r.height/2){before=s;break}}
+  let nx=d.row.nextElementSibling;while(nx&&!vis(nx))nx=nx.nextElementSibling;
+  if(before){if(before!==nx){before.classList.add('dt-b');d.before=before}}
+  else{const ls=sibs[sibs.length-1];if(ls&&(ls.compareDocumentPosition(d.row)&4)===0){ls.classList.add('dt-a');d.last=ls}}}
+ function loop(){if(!d)return;if(d.cy<90)scrollBy(0,-16);else if(d.cy>innerHeight-90)scrollBy(0,16);upd();raf=requestAnimationFrame(loop)}
+ document.addEventListener('pointerdown',e=>{const g=e.target.closest&&e.target.closest('.grip');if(!g||(e.pointerType==='mouse'&&e.button!==0))return;const row=g.closest('.ent'),box=$('#ents');if(!row||!box)return;e.preventDefault();
+  d={row,box,pid:e.pointerId,y0:e.clientY+scrollY,cy:e.clientY,before:null,last:null};try{g.setPointerCapture(e.pointerId)}catch(_){}row.classList.add('dragging');document.body.classList.add('dragmode');loop()});
+ document.addEventListener('pointermove',e=>{if(!d||e.pointerId!==d.pid)return;d.cy=e.clientY;upd()});
+ function dragEnd(e){if(!d||(e&&e.pointerId!==d.pid))return;cancelAnimationFrame(raf);const {row,box,before,last}=d;d=null;row.classList.remove('dragging');row.style.transform='';document.body.classList.remove('dragmode');box.querySelectorAll('.dt-b,.dt-a').forEach(n=>n.classList.remove('dt-b','dt-a'));
+  const b=cb();if(!b||(!before&&!last))return;const ids=[...box.children].filter(isEnt).map(n=>+n.id.slice(2)),me=+row.id.slice(2),rest=ids.filter(x=>x!==me);
+  const at=before?rest.indexOf(+before.id.slice(2)):rest.indexOf(+last.id.slice(2))+1;rest.splice(at,0,me);if(rest.every((v,i)=>v===i))return;
+  const E=b.entries;b.entries=rest.map(i=>E[i]);b.u=Date.now();BSEL.clear();save();render(true);toast(T('ย้ายลำดับ Entry แล้ว','Entry moved'))}
+ document.addEventListener('pointerup',dragEnd);document.addEventListener('pointercancel',dragEnd);
+ document.addEventListener('keydown',e=>{const g=e.target.closest&&e.target.closest('.grip');if(!g||(e.key!=='ArrowUp'&&e.key!=='ArrowDown'))return;e.preventDefault();
+  const b=cb(),i=+g.dataset.g,j=i+(e.key==='ArrowUp'?-1:1);if(!b||j<0||j>=b.entries.length)return;[b.entries[i],b.entries[j]]=[b.entries[j],b.entries[i]];b.u=Date.now();BSEL.clear();save();render(true);const n=$('.grip[data-g="'+j+'"]');if(n)n.focus()})})();
+/* global search */
+function gsFind(raw){const terms=raw.toLowerCase().split(/\s+/).filter(Boolean);if(!terms.length)return[];const R=[];
+ const add=(m,P,head)=>{const all=P.map(p=>p.t||'').join('\n').toLowerCase();if(!terms.every(x=>all.includes(x)))return;m.f=P.find(p=>(p.t||'').toLowerCase().includes(terms[0]))||P[0];const hd=(head||'').toLowerCase();m.sc=terms.every(x=>hd.includes(x))?0:1;R.push(m)};
+ S.cards.forEach(c=>{const P=[{k:'name',l:T('ชื่อ','Name'),t:c.name},{k:'tags',l:'Tags',t:(c.tags||[]).join(', ')}];
+  [['description','Description'],['personality','Personality'],['scenario','Scenario'],['first_mes','First Message'],['mes_example','Dialogue Examples'],['system_prompt','Main Prompt'],['post_history_instructions','Post-History'],['creator_notes','Creator’s Notes']].forEach(([k,l])=>P.push({k,l,t:c[k]}));
+  (c.alts||[]).forEach((a,i)=>P.push({k:'alt',l:'Alternate Greeting '+(i+1),t:a,ai:i}));(c.plot||[]).forEach(p=>P.push({k:'plot',l:T('โครงเรื่อง','Plot'),t:[p.title,p.note,p.gate].join(' ')}));
+  add({t:'c',id:c.id,title:c.name||'—',sub:T('การ์ด','Card')},P,c.name)});
+ S.books.forEach(b=>b.entries.forEach((e,i)=>{const P=[{k:'comment',l:'Title',t:e.comment},{k:'keys',l:'Keywords',t:(e.keys||[]).join(', ')},{k:'keys2',l:'Optional Filter',t:(e.keys2||[]).join(', ')},{k:'tags',l:'Tags',t:(e.tags||[]).join(', ')},{k:'content',l:'Content',t:e.content}];
+  add({t:'e',bid:b.id,i,title:etitle(e),sub:b.name},P,e.comment+' '+(e.keys||[]).join(' '))}));
+ return R.sort((a,b)=>a.sc-b.sc).slice(0,60)}
+function gsSnip(t,k){t=String(t||'').replace(/\s+/g,' ');const i=t.toLowerCase().indexOf(k);if(i<0)return esc(t.slice(0,110));const s=Math.max(0,i-28);return(s?'…':'')+esc(t.slice(s,i))+'<mark>'+esc(t.slice(i,i+k.length))+'</mark>'+esc(t.slice(i+k.length,i+k.length+90))}
+function gsMark(){document.querySelectorAll('#gsr .gsi').forEach((n,i)=>{n.classList.toggle('on',i===GSI);if(i===GSI)n.scrollIntoView({block:'nearest'})})}
+function gsDraw(){const q=$('#gsq').value.trim(),r=$('#gsr'),h=$('#gsh');GS=gsFind(q);
+ if(!q){r.innerHTML='';h.textContent=T('พิมพ์คำที่ต้องการค้นหา · ↑↓ เลือก · Enter เปิด · Esc ปิด','Type to search · ↑↓ select · Enter open · Esc close');return}
+ const t0=q.toLowerCase().split(/\s+/)[0];
+ r.innerHTML=GS.length?GS.map((m,i)=>`<button class="gsi ${i===GSI?'on':''}" data-gi="${i}"><span class="gst">${m.t==='c'?T('การ์ด','Card'):'Entry'}</span><span class="gsm"><b>${esc(m.title)}</b><small>${esc(m.sub)} · ${esc(m.f.l)}</small><span class="gss">${gsSnip(m.f.t,t0)}</span></span></button>`).join(''):`<div class="empty" style="padding:24px">${T('ไม่พบผลลัพธ์','No results')}</div>`;
+ h.textContent=GS.length?GS.length+(GS.length>=60?'+ ':' ')+T('ผลลัพธ์','results'):''}
+function gsClose(){const o=$('#gs');if(o)o.remove()}
+function gsOpen(){if($('#gs'))return;const o=document.createElement('div');o.id='gs';o.className='ov gs';
+ o.innerHTML=`<div class="glass" role="dialog" aria-modal="true"><input class="in" id="gsq" placeholder="${T('ค้นหาทั้งการ์ดและลอร์บุ๊ค…','Search all cards and lorebooks…')}" autocomplete="off"><div class="gsr" id="gsr"></div><small class="nt" id="gsh"></small></div>`;document.body.appendChild(o);GSI=0;$('#gsq').focus();gsDraw();
+ o.onclick=ev=>{if(ev.target===o){gsClose();return}const it=ev.target.closest('[data-gi]');if(it)gsGo(GS[+it.dataset.gi])};
+ $('#gsq').addEventListener('input',()=>{GSI=0;gsDraw()});
+ o.addEventListener('keydown',ev=>{if(ev.key==='Escape')gsClose();else if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){ev.preventDefault();if(!GS.length)return;GSI=(GSI+(ev.key==='ArrowDown'?1:-1)+GS.length)%GS.length;gsMark()}else if(ev.key==='Enter'&&!ev.isComposing){ev.preventDefault();if(GS[GSI])gsGo(GS[GSI])}})}
+function flashEl(n){if(!n)return;n.scrollIntoView({behavior:'smooth',block:'center'});n.classList.add('flash');setTimeout(()=>n.classList.remove('flash'),1800)}
+function gsGo(r){if(!r)return;gsClose();TAGF='';
+ if(r.t==='c'){S.cc=r.id;S.gi=0;S.q='';S.page='cards';S.tab=r.f.k==='plot'?'pl':'ed';save();render();
+  setTimeout(()=>{let t=null;if(r.f.k==='name')t=$('.title');else if(r.f.k!=='plot')t=$('[data-t="card"][data-f="'+r.f.k+'"]'+(r.f.ai!==undefined?'[data-i="'+r.f.ai+'"]':''));if(t)flashEl(t.closest('.fld')||t)},90)}
+ else{S.cb=r.bid;S.page='lore';const b=cb();if(b&&b.entries[r.i])b.entries[r.i].open=true;save();render();setTimeout(()=>flashEl($('#en'+r.i)),90)}}
+/* Thai-English key helper */
+/*KG-START*/
+const KDS='ดาบ=sword;มังกร=dragon;ราชวงศ์=royal family/dynasty;ราชา=king;กษัตริย์=king;ราชินี=queen;เจ้าชาย=prince;เจ้าหญิง=princess;อัศวิน=knight;พ่อมด=wizard;แม่มด=witch;เวทมนตร์=magic;คำสาป=curse;ปราสาท=castle;พระราชวัง=palace;วัง=palace;เมือง=city;หมู่บ้าน=village;ป่า=forest;ภูเขา=mountain;ทะเล=sea;แม่น้ำ=river;วัด=temple;โรงเรียน=school;มหาวิทยาลัย=university;ครู=teacher;นักเรียน=student;หมอ=doctor;ตำรวจ=police;ทหาร=soldier;โจร=thief/bandit;นักฆ่า=assassin;มาเฟีย=mafia;แก๊ง=gang;บริษัท=company;ครอบครัว=family;พ่อ=father;แม่=mother;พี่ชาย=older brother;พี่สาว=older sister;น้องชาย=younger brother;น้องสาว=younger sister;เพื่อน=friend;ศัตรู=enemy;คนรัก=lover;สามี=husband;ภรรยา=wife;ความลับ=secret;ความทรงจำ=memory;ความฝัน=dream;ความรัก=love;สงคราม=war;สันติภาพ=peace;ศาสนา=religion;เทพเจ้า=god;เทพ=god;ปีศาจ=demon;ผี=ghost;วิญญาณ=spirit/soul;แวมไพร์=vampire;มนุษย์หมาป่า=werewolf;เอลฟ์=elf;คนแคระ=dwarf;ออร์ค=orc;ยา=medicine/potion;ยาพิษ=poison;พิษ=poison;เลือด=blood;หิมะ=snow;น้ำแข็ง=ice;ไฟ=fire;น้ำ=water;ลม=wind;ดิน=earth;ฟ้าผ่า=lightning;ดวงจันทร์=moon;ดวงอาทิตย์=sun;ดวงดาว=star;กลางคืน=night;ราตรี=night;กลางวัน=day;ฤดูหนาว=winter;ฤดูร้อน=summer;เทศกาล=festival;พิธี=ceremony;คำทำนาย=prophecy;ตำนาน=legend;ประวัติศาสตร์=history;กฎ=rule;กฎหมาย=law;ภาษา=language;เงิน=money;ทอง=gold;เพชร=diamond;มงกุฎ=crown;บัลลังก์=throne;ธนู=bow;โล่=shield;ปืน=gun;มีด=knife;แผนที่=map;หนังสือ=book;จดหมาย=letter;กุญแจ=key;ประตู=door;ห้อง=room;บ้าน=house;คฤหาสน์=mansion;หอคอย=tower;ห้องใต้ดิน=cellar/basement;คาเฟ่=cafe;ร้านกาแฟ=cafe/coffee shop;โรงพยาบาล=hospital;สถานีตำรวจ=police station;ท่าเรือ=port/harbor;เรือ=ship/boat;รถไฟ=train;สนามบิน=airport;คอนโด=condo;หอพัก=dormitory;ห้องสมุด=library;สวน=garden;ทะเลสาบ=lake;ถ้ำ=cave;ทะเลทราย=desert;เกาะ=island;ดวงตา=eye;หัวใจ=heart;คำสัญญา=promise/vow;คำสาบาน=oath;มรดก=inheritance;ทายาท=heir;ขุนนาง=noble;ดยุค=duke;เคานต์=count;บารอน=baron;จักรพรรดิ=emperor;จักรวรรดิ=empire;อาณาจักร=kingdom;สภา=council;องครักษ์=bodyguard/guard;ผู้พิทักษ์=guardian;ผู้กล้า=hero;นักเวท=mage;นักบวช=priest;ผู้เฒ่า=elder;เด็กกำพร้า=orphan;ทาส=slave;พ่อค้า=merchant;ช่างตีเหล็ก=blacksmith;นักล่า=hunter;หมาป่า=wolf;เสือ=tiger;แมว=cat;สุนัข=dog;นก=bird;ม้า=horse;งู=snake;จิ้งจอก=fox;สัตว์ประหลาด=monster;ความมืด=darkness;แสงสว่าง=light;โชคชะตา=fate/destiny;พลัง=power/energy';
+const KT=new Map(),KE=new Map();
+KDS.split(';').forEach(p=>{const q=p.split('=');if(q.length<2)return;const t=q[0].trim(),es=q[1].split('/').map(s=>s.trim()).filter(Boolean);if(!t||!es.length)return;KT.set(t,(KT.get(t)||[]).concat(es));es.forEach(x=>{const k=x.toLowerCase();if(!KE.has(k))KE.set(k,[]);KE.get(k).push(t)})});
+const hasTh=s=>/[\u0E00-\u0E7F]/.test(s);
+function keyGen(a,b,kind){a=(a||'').trim().replace(/\s+/g,' ');b=(b||'').trim().replace(/\s+/g,' ');const G=[],seen=new Set();
+ const add=(id,lb,w,on)=>{w=(w||'').trim();if(w.length<2)return;const k=w.toLowerCase();if(seen.has(k))return;seen.add(k);let r=G.find(x=>x.id===id);if(!r)G.push(r={id,g:lb,items:[]});r.items.push({w,on})};
+ if(!a)return G;const src=[a];if(b)src.push(b);
+ const look=w=>hasTh(w)?(KT.get(w)||[]):(KE.get(w.toLowerCase())||[]);
+ src.forEach(s=>add('o',T('ต้นฉบับ','Original'),s,true));
+ const dict=[];src.forEach(s=>look(s).forEach(x=>dict.push(x)));
+ dict.forEach(x=>add('d',T('คู่แปลจากพจนานุกรมในตัว','Built-in dictionary pairs'),x,true));
+ dict.forEach(x=>look(x).forEach(y=>add('y',T('คำพ้อง','Synonyms'),y,false)));
+ if(kind==='name')src.forEach(s=>{const t=s.split(' ');if(t.length>1)t.forEach(p=>{if(p.length>=3)add('p',T('ส่วนของชื่อ','Name parts'),p,true)})});
+ src.forEach(s=>{const t=s.split(' ');if(t.length>1){const th=hasTh(s);add('s',T('เว้นวรรค / ขีด','Spacing / hyphen'),t.join(''),th);if(!th)add('s',T('เว้นวรรค / ขีด','Spacing / hyphen'),t.join('-'),false)}});
+ src.forEach(s=>{if(!hasTh(s))return;[['ต์','ท์'],['ท์','ต์'],['ส์','ซ์'],['ซ์','ส์']].forEach(([x,y])=>{if(s.includes(x))add('w',T('สะกดอื่นที่เป็นไปได้','Possible alt spellings'),s.split(x).join(y),false)})});
+ return G}
+/*KG-END*/
+function kgOpen(i){const b=cb(),e=b&&b.entries[i];if(!e)return;const o=document.createElement('div');o.className='ov kg';const seed=(e.comment||'').trim()||(e.keys[0]||'');const have=new Set(e.keys.map(k=>k.trim().toLowerCase()));
+ o.innerHTML=`<div class="glass" role="dialog" aria-modal="true"><h3 style="margin:0">${T('ตัวช่วยสร้างคีย์ไทย-อังกฤษ','Thai–English key helper')}</h3><div class="g2"><label class="fld"><span class="lb">${T('คำหลัก (ไทยหรืออังกฤษ)','Main word (Thai or English)')}</span><input class="in" id="kgA" value="${esc(seed)}" autocomplete="off"></label><label class="fld"><span class="lb">${T('คู่คำ (ไม่บังคับ)','Paired word (optional)')}</span><input class="in" id="kgB" autocomplete="off" placeholder="${T('เช่น ลูน่า ↔ Luna','e.g. Luna ↔ ลูน่า')}"></label></div><label class="fld"><span class="lb">${T('ประเภทคำ','Word type')}</span><select class="in" id="kgK"><option value="name">${T('ชื่อเฉพาะ (คน สถานที่ กลุ่ม)','Proper name (person, place, group)')}</option><option value="gen">${T('คำทั่วไป','General word')}</option></select></label><div id="kgR"></div><div class="row" style="justify-content:flex-end"><button class="btn" data-q="0">${T('ยกเลิก','Cancel')}</button><button class="btn pri" data-q="1" id="kgOk"></button></div></div>`;document.body.appendChild(o);
+ const q=s=>o.querySelector(s),upd=()=>{q('#kgOk').textContent=T('เพิ่มคีย์ที่เลือก','Add selected')+' ('+o.querySelectorAll('input[data-w]:checked').length+')'};
+ const draw=()=>{const A=q('#kgA').value,B=q('#kgB').value,G=keyGen(A,B,q('#kgK').value);
+  q('#kgR').innerHTML=G.map(r=>`<h5>${esc(r.g)}</h5><div class="kgr">${r.items.map(it=>{const h=have.has(it.w.toLowerCase());return`<label class="kc"><input type="checkbox" data-w="${esc(it.w)}" ${it.on&&!h?'checked':''} ${h?'disabled':''}><span>${esc(it.w)}${h?' ✓':''}</span></label>`}).join('')}</div>`).join('')+(!A.trim()?`<p class="nt">${T('พิมพ์คำเพื่อสร้างคีย์','Type a word to generate keys')}</p>`:!B.trim()&&!G.some(r=>r.id==='d')?`<p class="nt">${T('ไม่พบคู่แปลในพจนานุกรมในตัว กรอกช่อง “คู่คำ” เองเพื่อได้คีย์สองภาษา','No built-in pair found. Fill in “Paired word” yourself to get both languages.')}</p>`:'');upd()};
+ draw();q('#kgA').focus();q('#kgA').select();
+ o.addEventListener('input',ev=>{if(ev.target.id==='kgA'||ev.target.id==='kgB')draw()});
+ o.addEventListener('change',ev=>{if(ev.target.id==='kgK')draw();else upd()});
+ o.addEventListener('keydown',ev=>{if(ev.key==='Escape')o.remove();else if(ev.key==='Enter'&&!ev.isComposing&&ev.target.id!=='kgK'){ev.preventDefault();q('#kgOk').click()}});
+ o.onclick=ev=>{const t=ev.target.closest('[data-q]');if(ev.target===o||(t&&t.dataset.q==='0')){o.remove();return}
+  if(t&&t.dataset.q==='1'){const ws=[...o.querySelectorAll('input[data-w]:checked')].map(x=>x.dataset.w);if(!ws.length){toast(T('ยังไม่ได้เลือกคีย์','No keys selected'));return}
+   const cur=e.keys.slice(),sn=new Set(cur.map(k=>k.toLowerCase()));let n=0;ws.forEach(w=>{if(!sn.has(w.toLowerCase())){sn.add(w.toLowerCase());cur.push(w);n++}});e.keys=cur;b.u=Date.now();o.remove();save();render(true);toast(T('เพิ่ม '+n+' คีย์','Added '+n+' key(s)'))}}}
+/* wiring */
+function decorate(){const n=$('#nav .sp');if(n&&!$('#nav [data-a="gsearch"]'))n.insertAdjacentHTML('beforebegin',`<button class="nv" data-a="gsearch" aria-label="${T('ค้นหา','Search')}">${I('search')}<span>${T('ค้นหา','Search')}</span></button>`);applyEF()}
+const _r0=render;render=function(k){_r0(k);decorate()};
+const _if0=importFiles;importFiles=function(){verSave('imp');return _if0.apply(this,arguments)};
+document.addEventListener('click',e=>{if(e.target.closest&&e.target.closest('[data-a="delCard"],[data-a="delBook"],[data-a="reset"]')){clearTimeout(st);verSave('del')}},true);
+document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el)return;const a=el.dataset.a,id=el.dataset.id;
+ if(a==='gsearch')gsOpen();
+ else if(a==='theme'){S.theme=id;save();applyTheme();render(true)}
+ else if(a==='verNow'){clearTimeout(st);save();if(verSave('manual')){toast(T('บันทึกสแนปชอตแล้ว','Snapshot saved'));refVL()}else toast(T('เหมือนสแนปชอตล่าสุดอยู่แล้ว','Same as the latest snapshot'))}
+ else if(a==='verDel'){VERW(VER().filter(v=>v.id!==id));refVL()}
+ else if(a==='verRestore')verRestore(id);
+ else if(a==='keyGen')kgOpen(+el.dataset.i);
+ else if(a==='tagf'){TAGF=id||'';const w=$('#tagwrap');if(w&&cb())w.innerHTML=tagInner(cb());applyEF()}});
+document.addEventListener('input',e=>{const el=e.target;if(el.id==='eq'){applyEF();return}
+ if(el.dataset&&el.dataset.t==='entry'&&el.dataset.f==='tags'){clearTimeout(tgT);tgT=setTimeout(()=>{const w=$('#tagwrap'),b=cb();if(w&&b){w.innerHTML=tagInner(b);applyEF()}},300)}});
+addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();gsOpen()}});
+setInterval(()=>{if(document.hidden)return;const V=VER();if(Date.now()-(V[0]?V[0].t:0)>=300000&&verSave('auto'))refVL()},60000);
+const verHide=()=>{if(document.hidden){const V=VER();if(!V[0]||Date.now()-V[0].t>=60000)verSave('auto')}};
+document.addEventListener('visibilitychange',verHide);addEventListener('pagehide',()=>{const V=VER();if(!V[0]||Date.now()-V[0].t>=60000)verSave('auto')});
+setTimeout(()=>verSave('auto'),4000);
+decorate();
+</script>
+<script>
+/* ---- batch 4 ---- */
+addEventListener('pagehide',()=>{try{clearTimeout(st);save()}catch(e){}});document.addEventListener('visibilitychange',()=>{if(document.hidden){try{clearTimeout(st);save()}catch(e){}}});
+(()=>{
+const FX={snow:1,snd:0};try{Object.assign(FX,JSON.parse(localStorage.getItem('fm_fx4')))}catch(e){}
+const fxSave=()=>{try{localStorage.setItem('fm_fx4',JSON.stringify(FX))}catch(e){}};
+const $$=s=>[...document.querySelectorAll(s)];
+/* snow */
+const cv=document.createElement('canvas');cv.id='snow';cv.setAttribute('aria-hidden','true');document.body.insertBefore(cv,document.querySelector('.app'));
+const cx=cv.getContext('2d');let fl=[],W,Hh,dp,run=false,boost=0,sl=0;
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function sz(){dp=1;W=innerWidth;Hh=innerHeight;cv.width=W*dp;cv.height=Hh*dp}
+const mk=top=>({x:Math.random()*W,y:top?-8:Math.random()*Hh,r:Math.random()*1.7+.6,v:Math.random()*.5+.3,p:Math.random()*6.28,s:Math.random()*.5+.2});
+function snLoop(t){if(!run)return;if(document.hidden||t-sl<33){requestAnimationFrame(snLoop);return}const dt=Math.min(3,(t-sl)/16.7);sl=t;cx.setTransform(dp,0,0,dp,0,0);cx.clearRect(0,0,W,Hh);
+ const n=Math.round((W<700?24:46)*(1+boost*3));while(fl.length<n)fl.push(mk(1));if(fl.length>n)fl.shift();
+ boost=Math.max(0,boost-.004*dt);cx.fillStyle='rgba(240,236,255,.6)';cx.beginPath();
+ for(const f of fl){f.p+=.012*dt;f.x+=(Math.sin(f.p)*f.s+boost*.6)*dt;f.y+=f.v*(1+boost*2.4)*dt;if(f.y>Hh+8||f.x>W+8){Object.assign(f,mk(1))}
+  cx.moveTo(f.x+f.r,f.y);cx.arc(f.x,f.y,f.r,0,6.283)}
+ cx.fill();requestAnimationFrame(snLoop)}
+function snowSet(on){if(on&&!rm){if(!run){run=true;sz();requestAnimationFrame(snLoop)}}else{run=false;fl=[];cx.clearRect(0,0,cv.width,cv.height)}}
+addEventListener('resize',()=>{if(run)sz()});snowSet(FX.snow);
+const burst=()=>{if(FX.snow)boost=1};
+/* sound */
+let ac;function tk(a=1700,b=900,g=.035,d=.04){if(!FX.snd)return;try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();const o=ac.createOscillator(),n=ac.createGain(),t=ac.currentTime;o.frequency.setValueAtTime(a,t);o.frequency.exponentialRampToValueAtTime(b,t+d);n.gain.setValueAtTime(g,t);n.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(n);n.connect(ac.destination);o.start(t);o.stop(t+d+.02)}catch(e){}}
+const chime=()=>{tk(880,1320,.04,.12);setTimeout(()=>tk(1180,1760,.035,.16),120)};
+document.addEventListener('click',e=>{if(e.target.closest&&e.target.closest('.btn,.nv,.tabs button,.seg button,.chip,.ths,.rc,.eht,.sw'))tk()},true);
+/* settings rows */
+const _se=setExtra;setExtra=function(){const row=(k,t,s)=>`<div class="setr"><div>${t}<small>${s}</small></div><label class="sw"><input type="checkbox" data-fx="${k}" ${FX[k]?'checked':''}><i></i><span>${T('เปิด','On')}</span></label></div>`;
+ return _se()+row('snow',T('หิมะตกเบาๆ','Gentle snow'),T('ตกหนักขึ้นตอนส่งออกไฟล์','Falls harder when you export'))+row('snd',T('เสียงติ๊กเบาๆ','Soft click sound'),T('ติ๊กตอนกดปุ่ม และมีเสียงสั้นๆ ตอนส่งออก','A tick on buttons, a short chime on export'))};
+document.addEventListener('change',e=>{const k=e.target.dataset&&e.target.dataset.fx;if(!k)return;FX[k]=e.target.checked?1:0;fxSave();if(k==='snow')snowSet(FX.snow);else tk()});
+/* stoat mood: toast face + hero stoat */
+const FC={happy:'<path d="M6 11q2-3 4 0M14 11q2-3 4 0M8 15q4 4 8 0"/>',shock:'<circle cx="8" cy="10" r="2"/><circle cx="16" cy="10" r="2"/><ellipse cx="12" cy="17" rx="2" ry="2.6"/>'};
+let pend=null,pt;const sy=m=>{const s=document.querySelector('.say');if(!s)return;s.textContent=m;s.classList.add('on');clearTimeout(sy.t);sy.t=setTimeout(()=>s.classList.remove('on'),2800)};
+const mf=document.createElement('div');mf.id='mf';mf.innerHTML='<span class="mb"></span>'+MASC;document.body.appendChild(mf);
+Object.assign(FC,{wow:'<circle cx="8" cy="10" r="2"/><circle cx="16" cy="10" r="2"/><path d="M8 15q4 5 8 0"/>',grin:'<path d="M6 11q2-3 4 0M14 11q2-3 4 0"/><path d="M7 15h10q-1 5-5 5t-5-5z"/>'});
+const mbE=mf.querySelector('.mb'),hb=document.createElement('div');hb.className='hb';document.body.appendChild(hb);let mbT;
+const bubble=t=>{const hp=document.querySelector('.hero .pk');let el=mbE;if(S.page==='home'&&hp){const r=hp.getBoundingClientRect();el=hb;hb.style.right=Math.max(8,innerWidth-r.left+6)+'px';hb.style.top=Math.max(8,r.top+8)+'px';hb.style.maxWidth=Math.max(120,r.left-20)+'px'}
+ mbE.classList.remove('on');hb.classList.remove('on');el.textContent=t;el.classList.add('on');clearTimeout(mbT);mbT=setTimeout(()=>el.classList.remove('on'),2600)};
+const mb=bubble;
+const MT={happy:['เย้ ส่งออกสำเร็จ!','Yay, exported!'],shock:['เอ๊ะ! ลบแล้วเหรอ?!','Eek! Deleted?!'],think:['ย้อนกลับให้แล้วนะ','Rewound it for you'],wow:['ได้ของใหม่มาแล้ว!','Got something new!'],confuse:['ตรงนี้เขียนผิดหรือเปล่า?','Is something off here?'],grin:['ไทยอังกฤษครบแล้ว','Thai and English, all set']};
+function mood(m){bubble(MT[m][L()?0:1]);if(FC[m]){pend=m;clearTimeout(pt);pt=setTimeout(()=>pend=null,6000)}const p=document.querySelector('.pk');if(p){[...p.classList].forEach(c=>/^m-/.test(c)&&p.classList.remove(c));void p.offsetWidth;p.classList.add('m-'+m);setTimeout(()=>p.classList.remove('m-'+m),2600)}}
+window.fmMood=mood;window.fmBubble=bubble;
+const TQ=[['ชู่วว… เงียบๆ นะ','Shh… quiet now'],['อยากกอดหางตัวเองจัง','I could hug my own tail'],['วันนี้เขียนอะไรดี?','What shall we write today?'],['ขอบคุณที่แวะมานะ','Thanks for dropping by'],['เห็นมั้ย ตาตามเมาส์ได้ด้วย','See? My eyes follow you']];let tq=-1;
+document.addEventListener('click',e=>{const p=e.target.closest&&e.target.closest('.pk');if(!p)return;let i;do{i=Math.floor(Math.random()*TQ.length)}while(i===tq);tq=i;bubble(TQ[i][L()?0:1]);p.classList.remove('hop');void p.offsetWidth;p.classList.add('hop');setTimeout(()=>p.classList.remove('hop'),600)});
+document.addEventListener('click',e=>{if(e.target.closest&&e.target.closest('[data-a="undo"],[data-a="redo"]'))mood('think')},true);
+addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&/^[zy]$/i.test(e.key)&&(H.u.length||H.r.length))mood('think')});
+const _if=importFiles;importFiles=function(){const n0=S.cards.length+S.books.length,r=_if.apply(this,arguments);Promise.resolve(r).then(()=>{if(S.cards.length+S.books.length>n0)mood('wow')});return r};
+new MutationObserver(()=>{const d=document.querySelector('#toast .td');if(!d||d.classList.contains('f'))return;let m=pend;if(!m&&/ลบ|ล้าง|Delet|Eras/.test($('#toast').textContent))m='shock';if(!m)return;pend=null;d.classList.add('f');d.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="#c4a7ff" stroke-width="1.8" stroke-linecap="round">'+FC[m]+'</svg>';if(m==='shock'){mood('shock');pend=null}}).observe($('#toast'),{childList:true});
+const _dl=dl;dl=function(){burst();mood('happy');chime();return _dl.apply(this,arguments)};
+const _ep=expPng;expPng=function(){burst();mood('happy');chime();return _ep.apply(this,arguments)};
+let idle;const wake=()=>{if(window.__fz)return;clearTimeout(idle);const p=document.querySelector('.pk');if(p&&p.classList.contains('m-sleep')){p.classList.remove('m-sleep');sy(L()?'อ๊ะ ตื่นแล้ว':'Oh, I am awake');mb(L()?'อ๊ะ ตื่นแล้ว':'Oh, I am awake')}
+ idle=setTimeout(()=>{const p=document.querySelector('.pk');if(p&&!document.hidden){p.classList.add('m-sleep');sy('Zzz…');mb('Zzz…')}},45000)};
+['pointerdown','keydown','pointermove','scroll'].forEach(ev=>addEventListener(ev,wake,{passive:true}));wake();
+/* working-only undo/redo */
+let fOn=false,fT;const fab=()=>{const d=$('#undoFab');if(d)d.classList.toggle('show',fOn&&(S.page==='cards'||S.page==='lore')&&(H.u.length>0||H.r.length>0))};
+const poke=()=>{fOn=true;fab();clearTimeout(fT);fT=setTimeout(()=>{fOn=false;fab()},8000)};
+const pk2=e=>{if(e.target.closest&&e.target.closest('#main,#undoFab'))setTimeout(poke,400)};
+document.addEventListener('input',pk2,true);document.addEventListener('click',pk2,true);
+addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&/^[zy]$/i.test(e.key))setTimeout(poke,100)});
+const _u=undoUI;undoUI=function(){_u();fab()};
+/* more sheet: any nav button with class "mo" lands here on phones */
+const DOTS='<svg class="i" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/></svg>';
+function sheet(){const mo=$$('#nav .nv.mo');const o=document.createElement('div');o.className='sheet';
+ o.innerHTML='<div class="glass">'+mo.map((b,i)=>`<button class="nv ${b.classList.contains('on')?'on':''}" data-mi="${i}">${b.innerHTML}</button>`).join('')+'</div>';
+ o.onclick=e=>{const b=e.target.closest('[data-mi]');if(b||e.target===o){o.remove();if(b)mo[+b.dataset.mi].click()}};document.body.appendChild(o)}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-a]');if(!a)return;if(a.dataset.a==='more')sheet();else if(a.dataset.a==='biBook')biOpen()});
+/* bilingual whole-book converter */
+function biPlan(b){return b.entries.map((e,i)=>{const have=new Set(e.keys.map(k=>k.trim().toLowerCase())),add=[];
+ e.keys.forEach(k=>keyGen(k,'','gen').forEach(r=>{if(r.id==='d')r.items.forEach(it=>{const l=it.w.toLowerCase();if(!have.has(l)&&!add.some(x=>x.toLowerCase()===l))add.push(it.w)})}));return{i,add}}).filter(x=>x.add.length)}
+function biOpen(){const b=cb();if(!b)return;const P=biPlan(b),o=document.createElement('div');o.className='ov kg';
+ o.innerHTML=`<div class="glass" role="dialog" aria-modal="true"><h3 style="margin:0">${T('แปลงหนังสือโลกเป็นสองภาษา','Make this lorebook bilingual')}</h3><p class="nt" style="margin:0">${P.length?T(`พบคู่คำไทย-อังกฤษใน ${P.length} จาก ${b.entries.length} Entry เลือกอันที่จะเพิ่มคีย์`,`Found Thai–English pairs in ${P.length} of ${b.entries.length} entries. Pick which to extend.`):T('ไม่พบคู่คำในพจนานุกรมในตัว ลองใช้ตัวช่วยสร้างคีย์ทีละ Entry แทน','No pairs found in the built-in dictionary. Try the key helper per entry.')}</p>`
+ +P.map(x=>{const e=b.entries[x.i];return`<label class="vrow"><span><b>${esc(e.comment||e.keys[0]||'#'+(x.i+1))}</b><small>+ ${esc(x.add.join(', '))}</small></span><span class="kc"><input type="checkbox" data-bi="${x.i}" checked><span>${T('เพิ่ม','Add')}</span></span></label>`}).join('')
+ +`<div class="row" style="justify-content:flex-end"><button class="btn" data-q="0">${T('ยกเลิก','Cancel')}</button>${P.length?`<button class="btn pri" data-q="1">${T('เพิ่มคีย์','Add keys')}</button>`:''}</div></div>`;
+ o.onclick=e=>{const q=e.target.closest('[data-q]');if(e.target===o||(q&&q.dataset.q==='0'))o.remove();else if(q){const ch=[...o.querySelectorAll('[data-bi]:checked')].map(c=>+c.dataset.bi);verSave('bi');let n=0;P.forEach(x=>{if(ch.includes(x.i)){b.entries[x.i].keys.push(...x.add);n+=x.add.length}});b.u=Date.now();save();o.remove();render(true);toast(T(`เพิ่ม ${n} คีย์แล้ว`,`Added ${n} keys`));mood('grin')}};
+ document.body.appendChild(o)}
+/* per-render decoration */
+function d4(){const nav=$('#nav');if(nav){nav.querySelectorAll('[data-id="set"],[data-a="gsearch"]').forEach(b=>b.classList.add('mo'));
+  if(!nav.querySelector('.more')){const h=`<button class="nv more" data-a="more" aria-label="${T('เพิ่มเติม','More')}">${DOTS}<span>${T('เพิ่มเติม','More')}</span></button>`,sp=nav.querySelector('.sp');if(sp)sp.insertAdjacentHTML('beforebegin',h);else nav.insertAdjacentHTML('beforeend',h)}
+  nav.querySelector('.more').classList.toggle('on',S.page==='set'||S.page==='rx')}
+ const tb=S.page==='lore'&&$('#main .tb');if(tb&&!tb.querySelector('[data-a="biBook"]'))tb.insertAdjacentHTML('beforeend',`<button class="btn" data-a="biBook">${T('แปลงสองภาษา','Bilingual keys')}</button>`);
+ mfPos();fab()}
+function mfPos(){const m=$('#mf'),n=$('#nav');if(!m)return;m.style.display=S.page==='home'?'none':'';if(n&&matchMedia('(max-width:820px)').matches){const t=n.getBoundingClientRect().top;if(t>0)m.style.bottom=(innerHeight-t+2)+'px'}else m.style.bottom=''}
+addEventListener('resize',()=>mfPos());
+const _r4=render;render=function(k){_r4(k);d4()};d4();
+})();
+</script>
+<script>
+/* ---- batch 5: UI / regex preview page ---- */
+(()=>{
+const $$=s=>[...document.querySelectorAll(s)];
+const KEY='fm_rx';let R={l:[],s:0,d:1};try{Object.assign(R,JSON.parse(localStorage.getItem(KEY)))}catch(e){}
+const sv2=()=>{try{localStorage.setItem(KEY,JSON.stringify(R))}catch(e){}};
+let lastErr='';const cur=()=>R.l[R.s];
+const TP=[['แชตมือถือ / Phone chat','/<phone>([\\s\\S]*?)<\\/phone>/g','<div style="max-width:260px;margin:8px auto;padding:12px 14px;border-radius:18px 18px 18px 4px;background:#2a2340;color:#f1eefb;font-size:13px">📱 $1</div>','เมื่อกี้เรื่องอะไร <phone>ถึงบ้านแล้วนะ</phone>'],
+['ความคิดในใจ / Inner thought','/\\(\\((.*?)\\)\\)/g','<span style="font-style:italic;color:#a78bfa;border-left:2px solid #a78bfa;padding-left:8px">💭 $1</span>','เขายิ้มให้ ((ทำไมใจเต้นแรงแบบนี้))'],
+['แจ้งเตือน / Notification','/\\[notify:(.*?)\\]/g','<div style="display:flex;gap:8px;align-items:center;padding:8px 12px;border-radius:12px;background:#1d1a2b;color:#eee;font-size:13px;margin:6px 0">🔔 <b>$1</b></div>','[notify:ข้อความใหม่ 1 รายการ]'],
+['แผงสถานะ / Status panel','/<status>([\\s\\S]*?)<\\/status>/g','<div style="padding:10px 14px;border:1px solid #6d5bd0;border-radius:12px;background:rgba(109,91,208,.12);font-size:13px">⚙️ $1</div>','<status>เวลา 22:10 · ฝนตก · อารมณ์ดี</status>']];
+const mkRe=s=>{const m=s.match(/^\/([\s\S]*)\/([a-z]*)$/);return m?new RegExp(m[1],m[2]):new RegExp(s,'g')};
+const fromTp=t=>({scriptName:t[0].split(' / ')[L()?0:1],findRegex:t[1],replaceString:t[2],sample:t[3]});
+function pRx(){const c=cur();
+ return`<div class="pg"><h1>${T('พรีวิว UI','UI preview')}</h1><p class="lead">${T('นำเข้าไฟล์ regex ของ SillyTavern แก้หรือสร้างใหม่ แล้วดูผลกับข้อความตัวอย่างทันที','Import SillyTavern regex files, edit or create them, and see the result on sample text instantly.')}</p>
+<div class="split"><aside class="lst glass"><div class="row"><button class="btn pri sm" data-a="rxNew">${T('สร้างใหม่','New')}</button><button class="btn sm" data-a="rxImp">${T('นำเข้า','Import')}</button><button class="btn sm" data-a="rxExpAll">${T('ส่งออกทั้งหมด','Export all')}</button></div>
+${R.l.map((x,i)=>`<button class="rc ${i===R.s?'on':''}" data-a="rxSel" data-id="${i}"><span class="av">${esc((x.scriptName||'?')[0])}</span><span class="nm">${esc(x.scriptName||'(no name)')}</span></button>`).join('')}</aside>
+<section class="ed glass">${c?`<div class="row" style="margin-bottom:12px"><select class="in" id="rxTp" style="max-width:240px"><option value="">${T('เริ่มจากแม่แบบ…','Start from a template…')}</option>${TP.map((t,i)=>`<option value="${i}">${t[0].split(' / ')[L()?0:1]}</option>`).join('')}</select><button class="btn sm" data-a="rxTh">${R.d?T('พรีวิวโหมดสว่าง','Preview light'):T('พรีวิวโหมดมืด','Preview dark')}</button><button class="btn sm" data-a="rxExp">${T('ส่งออกอันนี้','Export this')}</button><button class="btn sm dg" data-a="rxDel">${T('ลบ','Delete')}</button></div>
+<label class="fld"><span class="lb">${T('ชื่อสคริปต์','Script name')}</span><input class="in" data-rx="scriptName" value="${esc(c.scriptName)}"></label>
+<label class="fld"><span class="lb">${T('Find regex  (เช่น /pattern/g)','Find regex (e.g. /pattern/g)')}</span><input class="in" data-rx="findRegex" value="${esc(c.findRegex)}"></label>
+<label class="fld"><span class="lb">${T('Replace  ($1 = กลุ่มที่จับ, {{match}} = ทั้งก้อน)','Replace  ($1 = group, {{match}} = whole match)')}</span><textarea data-rx="replaceString" rows="4">${esc(c.replaceString)}</textarea></label>
+<label class="fld"><span class="lb">${T('ข้อความตัวอย่าง','Sample text')}</span><textarea data-rx="sample" rows="3">${esc(c.sample)}</textarea></label><div id="rxOut"></div>`:`<div class="empty"><b>${T('ยังไม่มีสคริปต์','No scripts yet')}</b>${T('กดสร้างใหม่ หรือนำเข้าไฟล์ .json','Tap New or import a .json file.')}<div class="row" style="justify-content:center;margin-top:14px"><select class="in" id="rxTp" style="max-width:240px"><option value="">${T('เริ่มจากแม่แบบ…','Start from a template…')}</option>${TP.map((t,i)=>`<option value="${i}">${t[0].split(' / ')[L()?0:1]}</option>`).join('')}</select></div></div>`}</section></div></div>`}
+function rxDraw(){const o=$('#rxOut'),c=cur();if(!o||!c)return;let re;try{re=mkRe(c.findRegex)}catch(e){if(lastErr!==e.message){lastErr=e.message;window.fmMood&&fmMood('confuse')}o.innerHTML=`<p class="ckr">${esc(e.message)}</p>`;return}lastErr='';
+ const g=new RegExp(re.source,re.flags.includes('g')?re.flags:re.flags+'g'),ms=[...c.sample.matchAll(g)].slice(0,30);
+ let out;try{out=c.sample.replace(re,c.replaceString.replace(/\{\{match\}\}/gi,()=>'$&'))}catch(e){out=c.sample}
+ const bg=R.d?'#14101f':'#faf8ff',fg=R.d?'#eee':'#222';
+ o.innerHTML=`<h3>${T('พรีวิว','Preview')}</h3><iframe sandbox style="width:100%;height:240px;border:1px solid var(--bd);border-radius:12px"></iframe><h3 style="margin-top:14px">${T('ที่จับได้','Matches')} (${ms.length})</h3>`+(ms.map(m=>`<div class="ckr"><small>#${m.index}</small>${esc(m[0].slice(0,80))}${m.length>1?' → '+m.slice(1).map((x,i)=>'$'+(i+1)+'='+esc(String(x).slice(0,40))).join(' · '):''}</div>`).join('')||`<p class="ckok">${T('ไม่ตรงกับข้อความตัวอย่าง','No match in the sample')}</p>`);
+ o.querySelector('iframe').srcdoc=`<body style="margin:12px;font:14px/1.6 sans-serif;background:${bg};color:${fg}">`+out.replace(/\n/g,'<br>')}
+const norm=o=>({scriptName:o.scriptName||o.name||'regex',findRegex:o.findRegex||'',replaceString:o.replaceString||'',sample:o.sample||'',raw:o});
+const stOut=c=>Object.assign({id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),trimStrings:[],placement:[2],disabled:false,markdownOnly:true,promptOnly:false,runOnEdit:true,substituteRegex:0,minDepth:null,maxDepth:null},c.raw||{},{scriptName:c.scriptName,findRegex:c.findRegex,replaceString:c.replaceString});
+const fi=document.createElement('input');fi.type='file';fi.accept='.json,application/json';fi.multiple=true;fi.hidden=true;document.body.appendChild(fi);
+fi.onchange=async()=>{let n=0;for(const f of fi.files){try{const j=JSON.parse(await f.text());(Array.isArray(j)?j:[j]).forEach(o=>{if(o&&(o.findRegex!==undefined||o.scriptName)){R.l.push(norm(o));n++}})}catch(e){}}fi.value='';if(n){R.s=R.l.length-1;sv2();render(true)}if(n&&window.fmMood)fmMood('wow');toast(n?T(`นำเข้า ${n} สคริปต์แล้ว`,`Imported ${n} scripts`):T('ไม่พบสคริปต์ regex ในไฟล์','No regex scripts found'))};
+document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el||!el.dataset.a.startsWith('rx'))return;const a=el.dataset.a;
+ if(a==='rxNew'){R.l.push(norm({scriptName:T('สคริปต์ใหม่','New script'),findRegex:'/(.+)/g',replaceString:'<b>$1</b>',sample:'ข้อความตัวอย่าง'}));R.s=R.l.length-1;sv2();render(true)}
+ else if(a==='rxImp')fi.click();
+ else if(a==='rxSel'){R.s=+el.dataset.id;sv2();render(true)}
+ else if(a==='rxTh'){R.d=R.d?0:1;sv2();render(true)}
+ else if(a==='rxExp'){const c=cur();if(c)dl((c.scriptName||'regex').replace(/[\\/:*?"<>|]/g,'_')+'.json',JSON.stringify(stOut(c),null,2))}
+ else if(a==='rxExpAll'){if(R.l.length)dl('regex-scripts.json',JSON.stringify(R.l.map(stOut),null,2));else toast(T('ยังไม่มีสคริปต์','No scripts yet'))}
+ else if(a==='rxDel'){R.l.splice(R.s,1);R.s=Math.max(0,Math.min(R.s,R.l.length-1));sv2();render(true);toast(T('ลบสคริปต์แล้ว','Script deleted'))}});
+document.addEventListener('input',e=>{const f=e.target.dataset&&e.target.dataset.rx;if(!f||!cur())return;cur()[f]=e.target.value;sv2();if(f==='scriptName'){const n=document.querySelector('.rc.on .nm');if(n)n.textContent=e.target.value||'(no name)'}rxDraw()});
+document.addEventListener('change',e=>{if(e.target.id!=='rxTp'||e.target.value==='')return;const t=fromTp(TP[+e.target.value]);if(cur())Object.assign(cur(),t,{raw:cur().raw});else R.l.push(norm(t));if(!cur())R.s=0;sv2();render(true)});
+const _r5=render;render=function(k){if(S.page!=='rx'){_r5(k);return}
+ S.page='home';_r5(k);S.page='rx';$$('#nav .nv[data-id]').forEach(b=>b.classList.toggle('on',b.dataset.id==='rx'));const m=document.querySelector('#nav .more');if(m)m.classList.add('on');
+ document.querySelector('#main').innerHTML=pRx();rxDraw();if(!k)scrollTo({top:0})};
+const _d=document.querySelector('#nav');
+const addNav=()=>{const n=document.querySelector('#nav'),mr=n&&n.querySelector('.more');if(mr&&!n.querySelector('[data-id="rx"]'))mr.insertAdjacentHTML('beforebegin',`<button class="nv mo" data-a="nav" data-id="rx"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg><span>${T('พรีวิว UI','UI preview')}</span></button>`)};
+const _r6=render;render=function(k){_r6(k);addNav();if(S.page==='rx'){const m=document.querySelector('#nav .more');if(m)m.classList.add('on');document.querySelectorAll('#nav .nv[data-id="rx"]').forEach(b=>b.classList.add('on'))}};addNav();if(S.page==='rx')render(true);
+})();
+</script>
+<script>
+/* ---- batch 6: backup reminder by stoat + focus writing mode ---- */
+(()=>{
+const $$=s=>[...document.querySelectorAll(s)];
+const lg=k=>+localStorage.getItem(k)||0,ls=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+const LK='fm_lastbk',SK='fm_bksnz',D=864e5;if(!lg(LK))ls(LK,Date.now());
+const _dl2=dl;dl=function(n){if(n==='frostmute-backup.json'){ls(LK,Date.now());hideBk()}return _dl2.apply(this,arguments)};
+const bn=document.createElement('div');bn.className='bkn';document.body.appendChild(bn);let bnT;
+const hideBk=()=>bn.classList.remove('on');
+function place(){const hp=document.querySelector('.hero .pk'),m=document.getElementById('mf');bn.style.left=bn.style.right=bn.style.top=bn.style.bottom='';
+ if(S.page==='home'&&hp){const r=hp.getBoundingClientRect();bn.style.right=Math.max(8,innerWidth-r.left+6)+'px';bn.style.top=Math.max(8,r.top+8)+'px'}
+ else{const r=m.getBoundingClientRect();bn.style.left='14px';bn.style.bottom=Math.max(8,innerHeight-r.top+6)+'px'}}
+function showBk(){const d=Math.floor((Date.now()-lg(LK))/D);
+ bn.innerHTML=`<div>${T(`ไม่ได้สำรองมา ${d} วันแล้วนะ`,`No backup for ${d} days`)}</div><div class="row"><button class="btn sm pri" data-bk="1">${T('สำรองเลย','Back up now')}</button><button class="btn sm" data-bk="0">${T('ไว้ก่อน','Later')}</button></div>`;
+ place();bn.classList.add('on');const p=document.querySelector('.pk');if(p){p.classList.remove('hop');void p.offsetWidth;p.classList.add('hop');setTimeout(()=>p.classList.remove('hop'),600)}
+ clearTimeout(bnT);bnT=setTimeout(hideBk,15000)}
+bn.onclick=e=>{const b=e.target.closest('[data-bk]');if(!b)return;if(b.dataset.bk==='1')dl('frostmute-backup.json',JSON.stringify({fm_backup:1,cards:S.cards,books:S.books},null,2));else{ls(SK,Date.now()+3*D);hideBk()}};
+function chkBk(){if(window.__fz||document.hidden||!(S.cards.length||S.books.length)||bn.classList.contains('on'))return;if(Date.now()-lg(LK)>7*D&&Date.now()>lg(SK))showBk()}
+setTimeout(chkBk,6000);setInterval(chkBk,600000);
+/* focus writing mode */
+let ph,ta,saved='';
+function fzOpen(t){if(window.__fz)return;const l=t.closest('.fld').querySelector('.lb'),m=document.getElementById('mf'),o=document.createElement('div');o.id='fz';
+ o.innerHTML=`<div class="fld fzf"><div class="fzt"><span class="fzn"></span><span class="tok"></span><button class="btn sm" type="button" data-fzx="1">${T('ออกโหมดโฟกัส','Exit focus')}</button></div></div>`;
+ const f=o.firstChild;f.querySelector('.fzn').textContent=(l.firstChild&&l.firstChild.textContent||'').trim();const ot=l.querySelector('.tok');f.querySelector('.tok').textContent=ot?ot.textContent:'';
+ ph=document.createComment('fz');t.parentNode.insertBefore(ph,t);ta=t;f.appendChild(t);document.body.appendChild(o);
+ window.__fz=1;hideBk();saved=m.style.cssText;m.style.cssText+=';display:block;z-index:73;bottom:10px;left:12px';const p=m.querySelector('.pk');[...p.classList].forEach(c=>/^m-/.test(c)&&p.classList.remove(c));p.classList.add('m-sleep');
+ o.onclick=e=>{if(e.target.closest('[data-fzx]'))fzClose()};t.focus()}
+function fzClose(){const o=document.getElementById('fz');if(!o)return;if(ph&&ph.isConnected)ph.replaceWith(ta);o.remove();window.__fz=0;
+ const m=document.getElementById('mf');m.style.cssText=saved;const p=m.querySelector('.pk');p.classList.remove('m-sleep');p.classList.add('hop');setTimeout(()=>p.classList.remove('hop'),600);window.fmBubble&&fmBubble(L()?'ขอบคุณที่ตั้งใจเขียนนะ':'Nice focus!')}
+addEventListener('keydown',e=>{if(e.key==='Escape'&&window.__fz)fzClose()});
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-a="focus"]');if(!b)return;e.preventDefault();const t=b.closest('.fld').querySelector('textarea');if(t)fzOpen(t)});
+function fzInject(){$$('#main .fld textarea[data-f]').forEach(t=>{const l=t.closest('.fld').querySelector('.lb');if(l&&!l.querySelector('[data-a="focus"]')){const k=l.querySelector('.tok'),h=`<button class="btn sm fzb" type="button" data-a="focus">${T('โฟกัส','Focus')}</button>`;if(k)k.insertAdjacentHTML('beforebegin',h);else l.insertAdjacentHTML('beforeend',h)}})}
+const _r7=render;render=function(k){_r7(k);fzInject()};fzInject();window.fzInject=fzInject;
+})();
+</script>
+<script>
+/* ---- batch 7: lazy entries, colors, long-press, find/replace, duplicates, chat simulator ---- */
+(()=>{
+const $$=s=>[...document.querySelectorAll(s)];
+const CLRS=[['r','#f87171'],['o','#fb923c'],['y','#facc15'],['g','#4ade80'],['b','#60a5fa'],['p','#c084fc']];
+/* lazy entry bodies + color dot */
+const _eh=entHtml;
+entHtml=function(e,i){let h=_eh(e,i);
+ h=h.replace('<button class="eht"',`<span class="clr" data-a="clr" data-i="${i}" role="button" tabindex="0" aria-label="${T('ติดป้ายสี','Color label')}"></span><button class="eht"`);
+ if(e.color)h=h.replace('class="ent ',`data-c="${e.color}" class="ent `);
+ if(!e.open)h=h.replace(/<div class="ebody">[\s\S]*<\/div>$/,'<div class="ebody"><div></div></div></div>').replace('class="ent ','data-lz="1" class="ent ');
+ return h};
+function hyd(n){if(!n||!n.dataset||!n.dataset.lz)return;const b=cb(),i=+n.id.slice(2);if(!b||!b.entries[i])return;const t=document.createElement('div');t.innerHTML=_eh(b.entries[i],i);n.querySelector('.ebody').innerHTML=t.querySelector('.ebody').innerHTML;delete n.dataset.lz;window.fzInject&&fzInject()}
+const hydAll=()=>$$('#main .ent[data-lz]').forEach(hyd);
+new MutationObserver(ms=>{for(const m of ms){const n=m.target;if(n.classList&&n.classList.contains('open')&&n.dataset&&n.dataset.lz)hyd(n)}}).observe($('#main'),{attributes:true,attributeFilter:['class'],subtree:true});
+const _gg=gsGo;gsGo=function(){hydAll();return _gg.apply(this,arguments)};
+/* color labels */
+const cp0=document.createElement('div');cp0.id='clrp';document.body.appendChild(cp0);let cpI=-1,CF='';
+function clrOpen(el){cpI=+el.dataset.i;const r=el.getBoundingClientRect();cp0.innerHTML=CLRS.map(([k,c])=>`<button type="button" data-ck="${k}" style="--c:${c}" aria-label="${k}"></button>`).join('')+'<button type="button" data-ck="" class="x" aria-label="clear">×</button>';cp0.style.cssText=`display:flex;left:${Math.max(8,Math.min(r.left-8,innerWidth-250))}px;top:${r.bottom+8}px`}
+cp0.onclick=e=>{const b=e.target.closest('[data-ck]');if(!b)return;const bk=cb(),en=bk&&bk.entries[cpI];if(en){if(b.dataset.ck)en.color=b.dataset.ck;else delete en.color;bk.u=Date.now();const n=$('#en'+cpI);if(n){if(en.color)n.dataset.c=en.color;else delete n.dataset.c}save();clrBar()}cp0.style.display='none'};
+function applyCF(){const b=cb();if(!b)return;b.entries.forEach((e,i)=>{const n=$('#en'+i);if(n)n.classList.toggle('cfh',!!CF&&e.color!==CF)})}
+function clrBar(){const b=cb(),tb=$('#main .tb');$$('#main .clrbar').forEach(n=>n.remove());if(S.page!=='lore'||!b||!tb)return;const used=CLRS.filter(([k])=>b.entries.some(e=>e.color===k));if(CF&&!used.some(x=>x[0]===CF))CF='';
+ if(used.length)tb.insertAdjacentHTML('afterend',`<div class="clrbar tagbar"><span class="nt">${T('สี','Color')}</span><button class="chip ${CF?'':'on'}" data-a="cf" data-id="">${T('ทั้งหมด','All')}</button>${used.map(([k,c])=>`<button class="chip ${CF===k?'on':''}" data-a="cf" data-id="${k}"><i class="cd" style="background:${c}"></i>${b.entries.filter(e=>e.color===k).length}</button>`).join('')}</div>`);applyCF()}
+/* long-press menu */
+let lpT,lpX,lpY,lpF=false;const lpm=document.createElement('div');lpm.id='lpm';document.body.appendChild(lpm);
+function lpOpen(i,x,y){lpm.innerHTML=`<button data-lp="dup">${T('ทำสำเนา','Duplicate')}</button><button data-lp="top">${T('ย้ายขึ้นบนสุด','Move to top')}</button><button data-lp="keys">${T('คัดลอกคีย์','Copy keys')}</button>`;lpm.dataset.i=i;lpm.style.cssText=`display:grid;left:${Math.max(8,Math.min(x,innerWidth-190))}px;top:${Math.max(8,Math.min(y,innerHeight-160))}px`}
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('#lpm'))lpm.style.display='none';if(!e.target.closest('#clrp,[data-a="clr"]'))cp0.style.display='none';const h=e.target.closest&&e.target.closest('.eht');if(!h||(e.pointerType==='mouse'&&e.button!==0))return;lpX=e.clientX;lpY=e.clientY;lpF=false;clearTimeout(lpT);lpT=setTimeout(()=>{lpF=true;lpOpen(+h.dataset.i,lpX,lpY);navigator.vibrate&&navigator.vibrate(15)},500)},true);
+['pointerup','pointercancel'].forEach(t=>document.addEventListener(t,()=>clearTimeout(lpT),true));
+document.addEventListener('pointermove',e=>{if(lpT&&Math.hypot(e.clientX-lpX,e.clientY-lpY)>8)clearTimeout(lpT)},true);
+document.addEventListener('scroll',()=>clearTimeout(lpT),true);
+document.addEventListener('click',e=>{if(lpF&&e.target.closest&&e.target.closest('.eht')){e.stopPropagation();e.preventDefault();lpF=false}},true);
+document.addEventListener('contextmenu',e=>{if(e.target.closest&&e.target.closest('.eht'))e.preventDefault()});
+lpm.onclick=async e=>{const b=e.target.closest('[data-lp]');if(!b)return;const i=+lpm.dataset.i,bk=cb(),E=bk&&bk.entries,en=E&&E[i];lpm.style.display='none';if(!en)return;
+ if(b.dataset.lp==='dup'){const c=JSON.parse(JSON.stringify(en));c.id=uid();c.comment=(c.comment||'')+T(' (สำเนา)',' (copy)');c.open=false;E.splice(i+1,0,c);bk.u=Date.now();BSEL.clear();save();render(true);toast(T('ทำสำเนา Entry แล้ว','Entry duplicated'))}
+ else if(b.dataset.lp==='top'){E.unshift(E.splice(i,1)[0]);bk.u=Date.now();BSEL.clear();save();render(true);scrollTo({top:0});toast(T('ย้ายขึ้นบนสุดแล้ว','Moved to top'))}
+ else{await cp(en.keys.join(', '));toast(T('คัดลอกคีย์แล้ว','Keys copied'))}};
+/* find & replace */
+function frOpen(){const b=cb();if(!b)return;const o=document.createElement('div');o.className='ov kg';
+ o.innerHTML=`<div class="glass" role="dialog" aria-modal="true"><h3 style="margin:0">${T('ค้นหาและแทนที่ทั้งเล่ม','Find & replace in this lorebook')}</h3><label class="fld"><span class="lb">${T('ค้นหา','Find')}</span><input class="in" id="frA" autocomplete="off"></label><label class="fld"><span class="lb">${T('แทนที่ด้วย','Replace with')}</span><input class="in" id="frB" autocomplete="off"></label><div class="kgr"><label class="kc"><input type="checkbox" id="frC"><span>${T('แยกตัวพิมพ์ใหญ่เล็ก','Match case')}</span></label><label class="kc"><input type="checkbox" data-sc="t" checked><span>${T('ชื่อ','Title')}</span></label><label class="kc"><input type="checkbox" data-sc="k" checked><span>${T('คีย์','Keys')}</span></label><label class="kc"><input type="checkbox" data-sc="c" checked><span>${T('เนื้อหา','Content')}</span></label></div><p class="nt" id="frR" style="margin:0"></p><div class="row" style="justify-content:flex-end"><button class="btn" data-q="0">${T('ยกเลิก','Cancel')}</button><button class="btn pri" data-q="1" id="frGo">${T('แทนที่ทั้งหมด','Replace all')}</button></div></div>`;
+ document.body.appendChild(o);const q=s=>o.querySelector(s);
+ const plan=()=>{const a=q('#frA').value;if(!a)return null;const re=new RegExp(a.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'+(q('#frC').checked?'':'i')),sc=[...o.querySelectorAll('[data-sc]:checked')].map(x=>x.dataset.sc);let n=0;const hit=[];
+  b.entries.forEach((e,i)=>{let c=0;const cnt=s=>{const m=(s||'').match(re);c+=m?m.length:0};if(sc.includes('t'))cnt(e.comment);if(sc.includes('k'))(e.keys||[]).forEach(cnt);if(sc.includes('c'))cnt(e.content);if(c){n+=c;hit.push(i)}});return{re,sc,n,hit}};
+ const draw=()=>{const p=plan();q('#frR').textContent=!p?T('พิมพ์คำที่ต้องการค้นหา','Type what to find'):p.n?T(`จะเปลี่ยน ${p.n} ที่ ใน ${p.hit.length} Entry`,`Will change ${p.n} spots in ${p.hit.length} entries`):T('ไม่พบคำนี้','No matches');q('#frGo').disabled=!p||!p.n};
+ draw();q('#frA').focus();o.addEventListener('input',draw);o.addEventListener('change',draw);
+ o.onclick=e=>{const k=e.target.closest('[data-q]');if(e.target===o||(k&&k.dataset.q==='0'))o.remove();else if(k){const p=plan();if(!p||!p.n)return;const rep=q('#frB').value,f=s=>(s||'').replace(p.re,()=>rep);verSave('fr');
+  b.entries.forEach(e=>{if(p.sc.includes('t'))e.comment=f(e.comment);if(p.sc.includes('k'))e.keys=[...new Set((e.keys||[]).map(f).filter(x=>x.trim()))];if(p.sc.includes('c'))e.content=f(e.content)});b.u=Date.now();save();o.remove();render(true);toast(T(`แทนที่ ${p.n} ที่แล้ว`,`Replaced ${p.n} spots`))}}}
+/* duplicate finder */
+function dupScan(b,th){const G=b.entries.map(e=>{const s=(e.content||'').replace(/\s+/g,'');const g=new Set();for(let i=0;i+3<=s.length;i++)g.add(s.slice(i,i+3));return g}),out=[];
+ for(let i=0;i<G.length;i++){if(G[i].size<10)continue;for(let j=i+1;j<G.length;j++){if(G[j].size<10)continue;const[a,c]=G[i].size<G[j].size?[G[i],G[j]]:[G[j],G[i]];let x=0;for(const t of a)if(c.has(t))x++;const sim=x/(G[i].size+G[j].size-x);if(sim>=th)out.push([i,j,sim])}}return out.sort((p,q)=>q[2]-p[2]).slice(0,40)}
+function dupOpen(){if(!cb())return;const o=document.createElement('div');o.className='ov kg';let th=.6;
+ const draw=()=>{const bk=cb(),P=dupScan(bk,th);o.innerHTML=`<div class="glass" role="dialog" aria-modal="true"><h3 style="margin:0">${T('หาเนื้อหาซ้ำ','Find duplicate content')}</h3><label class="fld"><span class="lb">${T('ความคล้ายขั้นต่ำ','Minimum similarity')}: ${Math.round(th*100)}%</span><input type="range" id="dpT" min="40" max="95" value="${Math.round(th*100)}"></label>`+(P.length?P.map(([i,j,s])=>{const A=bk.entries[i],B=bk.entries[j];return`<div class="vrow" style="display:grid"><div><b>${esc(etitle(A))}</b> ↔ <b>${esc(etitle(B))}</b><small>${Math.round(s*100)}%</small></div><details><summary>${T('เทียบเนื้อหา','Compare')}</summary><div class="g2"><pre class="dpp">${esc(A.content||'')}</pre><pre class="dpp">${esc(B.content||'')}</pre></div></details><div class="row"><button class="btn sm" data-dm="${i},${j}">${T('รวมเข้าอันแรก','Merge into first')}</button><button class="btn sm dg" data-dd="${j}">${T('ลบอันหลัง','Delete the second')}</button></div></div>`}).join(''):`<p class="nt">${T('ไม่พบคู่ที่คล้ายกันที่ระดับนี้','No similar pairs at this level')}</p>`)+`<div class="row" style="justify-content:flex-end"><button class="btn" data-q="0">${T('ปิด','Close')}</button></div></div>`};
+ o.onclick=async e=>{const q=e.target.closest('[data-q]'),m=e.target.closest('[data-dm]'),d=e.target.closest('[data-dd]');if(e.target===o||q){o.remove();return}const bk=cb();
+  if(m){const[i,j]=m.dataset.dm.split(',').map(Number),A=bk.entries[i],B=bk.entries[j];verSave('dup');A.keys=[...new Set([...(A.keys||[]),...(B.keys||[])])];const have=new Set((A.content||'').split('\n').map(x=>x.trim())),add=(B.content||'').split('\n').filter(x=>x.trim()&&!have.has(x.trim()));if(add.length)A.content=(A.content||'')+'\n'+add.join('\n');bk.entries.splice(j,1);bk.u=Date.now();BSEL.clear();save();render(true);draw();toast(T('รวมแล้ว','Merged'))}
+  else if(d){const j=+d.dataset.dd;if(await ask(T(`ลบ “${etitle(bk.entries[j])}” ใช่ไหม`,`Delete “${etitle(bk.entries[j])}”?`))){verSave('dup');bk.entries.splice(j,1);bk.u=Date.now();BSEL.clear();save();render(true);draw();toast(T('ลบแล้ว','Deleted'))}}};
+ o.addEventListener('change',e=>{if(e.target.id==='dpT'){th=e.target.value/100;draw()}});draw();document.body.appendChild(o)}
+/* chat simulator */
+const SK2='fm_sim';let SM={b:null,m:[],bud:2000,dep:4};try{Object.assign(SM,JSON.parse(localStorage.getItem(SK2)))}catch(e){}
+const smSave=()=>{try{localStorage.setItem(SK2,JSON.stringify(SM))}catch(e){}};
+function simHit(b,upto){const txt=SM.m.slice(Math.max(0,upto-SM.dep+1),upto+1).join('\n').toLowerCase(),has=a=>(a||[]).some(k=>k.trim()&&txt.includes(k.trim().toLowerCase())),out=[];
+ b.entries.forEach((e,i)=>{if(!e.enabled)return;let on=!!e.constant;if(!on&&has(e.keys))on=e.selective&&(e.keys2||[]).length?has(e.keys2):true;if(on)out.push({i,e})});
+ out.sort((a,c)=>a.e.order-c.e.order||a.i-c.i);let used=0;out.forEach(x=>{x.t=tok(x.e.content||'');used+=x.t;x.cut=used>SM.bud});return out}
+function pSim(){const bs=S.books,H1=`<h1>${T('แชตจำลอง','Chat simulator')}</h1>`;if(!bs.length)return`<div class="pg">${H1}<div class="empty"><b>${T('ยังไม่มีลอร์บุ๊ค','No lorebook yet')}</b>${T('สร้างลอร์บุ๊คก่อน แล้วกลับมาลองแชต','Create a lorebook first, then try chatting.')}</div></div>`;
+ const b=bs.find(x=>x.id===SM.b)||bs[0];SM.b=b.id;const con=b.entries.filter(e=>e.enabled&&e.constant),ct=con.reduce((s,e)=>s+tok(e.content||''),0);
+ return`<div class="pg">${H1}<p class="lead">${T('พิมพ์ข้อความสมมติ แล้วดูว่า Entry ไหนจะติดขึ้นมาในแต่ละข้อความ','Type pretend messages and see which entries would trigger on each one.')}</p>
+<section class="glass" style="padding:14px;margin-bottom:12px"><div class="g3"><label class="fld"><span class="lb">${T('ลอร์บุ๊ค','Lorebook')}</span><select class="in" data-sim="b">${bs.map(x=>`<option value="${x.id}" ${x.id===b.id?'selected':''}>${esc(x.name)}</option>`).join('')}</select></label><label class="fld"><span class="lb">${T('งบโทเคน','Token budget')}</span><input class="in" type="number" min="0" data-sim="bud" value="${SM.bud}"></label><label class="fld"><span class="lb">${T('อ่านย้อนหลัง (ข้อความ)','Scan depth (messages)')}</span><input class="in" type="number" min="1" max="50" data-sim="dep" value="${SM.dep}"></label></div><p class="nt" style="margin:10px 0 0">${T(`Constant ${con.length} Entry รวม ${ct} โทเคน`,`${con.length} constant entries, ${ct} tokens`)}</p></section>
+<section class="chat">${SM.m.length?SM.m.map((t,k)=>{const h=simHit(b,k);return`<div class="msg" style="margin-bottom:14px"><div class="bub"><span class="who">${T('คุณ','You')} #${k+1}</span>${esc(t).replace(/\n/g,'<br>')}<div class="sch">${h.map(x=>`<button class="chip ${x.cut?'cut':''} ${x.e.constant?'k':''}" data-a="simGo" data-i="${x.i}" title="${x.t} tok">${x.e.constant?'● ':''}${esc(etitle(x.e))}<small>${x.t}</small></button>`).join('')||`<small class="nt">${T('ไม่มี Entry ติด','No entries triggered')}</small>`}</div></div></div>`}).join(''):`<div class="empty" style="padding:24px">${T('ยังไม่มีข้อความ','No messages yet')}</div>`}</section>
+<div class="row" style="margin-top:12px;align-items:flex-end;flex-wrap:nowrap"><textarea id="simT" rows="2" style="flex:1" placeholder="${T('พิมพ์ข้อความสมมติ…','Type a pretend message…')}"></textarea><button class="btn pri" data-a="simSend">${T('ส่ง','Send')}</button><button class="btn" data-a="simClr">${T('ล้าง','Clear')}</button></div></div>`}
+document.addEventListener('click',e=>{const el=e.target.closest&&e.target.closest('[data-a]');if(!el)return;const a=el.dataset.a;
+ if(a==='frOpen')frOpen();else if(a==='dupOpen')dupOpen();else if(a==='cf'){CF=el.dataset.id||'';clrBar()}else if(a==='clr')clrOpen(el);
+ else if(a==='simSend'){const t=$('#simT');if(t&&t.value.trim()){SM.m.push(t.value.trim());SM.m=SM.m.slice(-40);smSave();render(true);const c=$('#main .chat');c&&c.lastElementChild&&c.lastElementChild.scrollIntoView({block:'end'})}}
+ else if(a==='simClr'){SM.m=[];smSave();render(true)}
+ else if(a==='simGo'){const b=S.books.find(x=>x.id===SM.b);if(!b)return;const i=+el.dataset.i;S.cb=b.id;if(b.entries[i])b.entries[i].open=true;S.page='lore';save();render();setTimeout(()=>{const n=$('#en'+i);if(n){n.scrollIntoView({block:'center'});n.classList.add('flash');setTimeout(()=>n.classList.remove('flash'),1800)}},80)}});
+document.addEventListener('change',e=>{const f=e.target.dataset&&e.target.dataset.sim;if(!f)return;if(f==='b')SM.b=e.target.value;else SM[f]=Math.max(f==='dep'?1:0,+e.target.value||0);smSave();render(true)});
+/* render wiring */
+function lore(){if(S.page!=='lore')return;const tb=$('#main .tb');if(tb&&!tb.querySelector('[data-a="frOpen"]'))tb.insertAdjacentHTML('beforeend',`<button class="btn" data-a="frOpen">${T('ค้นหา/แทนที่','Find & replace')}</button><button class="btn" data-a="dupOpen">${T('หาเนื้อหาซ้ำ','Find duplicates')}</button>`);clrBar()}
+function addNav2(){const n=$('#nav'),mr=n&&n.querySelector('.more');if(mr&&!n.querySelector('[data-id="sim"]'))mr.insertAdjacentHTML('beforebegin',`<button class="nv mo" data-a="nav" data-id="sim"><svg class="i" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></svg><span>${T('แชตจำลอง','Chat sim')}</span></button>`)}
+const _r8=render;render=function(k){if(S.page!=='sim'){_r8(k);addNav2();lore();const m=document.getElementById('mf');if(m&&(S.page==='rx')) m.style.display='';return}
+ S.page='home';_r8(k);addNav2();S.page='sim';$$('#nav .nv[data-id]').forEach(b=>b.classList.toggle('on',b.dataset.id==='sim'));const mo=$('#nav .more');if(mo)mo.classList.add('on');const m=document.getElementById('mf');if(m)m.style.display='';
+ $('#main').innerHTML=pSim();if(!k)scrollTo({top:0})};
+addNav2();if(S.page==='sim')render(true);
+})();
 </script>
 </body>
 </html>
